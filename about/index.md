@@ -17,22 +17,22 @@ B.S in Mathematics, minor in Industrial engineering
 
 #### [](#header-4)_Jan. 2019 - Feb. 2019:_ Intern at LG electronics in Seoul, South Korea  
 Home electronics company, Research & Development center, Intern  
-Participated in a CRM project.....
-<br/><br/>
+Participated in a CRM project.....  
+<br/>
 
 #### [](#header-4)_Jun. 2018 - Sep. 2018:_ Intern at Wesley Quest in Seoul, South Korea  
 Strategic consulting firm, Research Associate  
 Participated in two big data projects. Made deep-learning based prediction model using Python  
 _1. Improvement of the management system and air quality in Seoul Metro (Client: Seoul Digital Foundation)_  
 _2. Inventing the model of predicting the workers compensation using big data (Client: Korea Workers Compensation and Welfare Service)_  
-<br/><br/>
+<br/>
 
 #### [](#header-4)_Mar. 2017 - Nov. 2018:_ Intern at Lab for Probability and Statistical Modeling  
 Lab of professor Suk-Joo Bae in Hanyang University, Undergraduate Intern  
 Participated in Hyundae Motors reliability analysis projects  
 _1. Improvement on the component reliability using the warranty claims data_  
 _2. OBD sensor data analysis_  
-<br/><br/>
+<br/>
 
 #### [](#header-4)_Mar. 2016 - Aug. 2016:_ Intern at Actors Theatre Workshop in New York, NY, USA  
 - _Program staff: Helped unprivileged children in NYC with therapeutic programs_  

@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Thoughts on Gates of Long Short Term Memory"
+date: 2018-05-12 17:00:00
 tagline: "For the deep understanding of types of gates in long short term memory"
 categories: [DL]
-image: /thumbnail-mobile.png
+tags: [LSTM]
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
 ---
