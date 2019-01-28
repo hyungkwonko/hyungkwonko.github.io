@@ -4,7 +4,9 @@ title: "OS Lecture Note 3"
 date: 2019-01-07 17:00:00
 tagline: "3rd lecture of Fall 2010 at Berkeley"
 categories: [OS]
-tags: [concurrency, parallelism]
+tags:
+- concurrency
+- parallelism
 image: /thumbnail-mobile.png
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
