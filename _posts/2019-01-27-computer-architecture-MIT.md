@@ -146,17 +146,36 @@ BEQ(,,R28)에서 R28은 처음에는 보면 0x104인데 처음 실행된 BEQ를 
 
 ### [](#header-3) 컴퓨터 과학이 여는 세계 1-3강
 
+- 자연수의 무한함 < 실수의 무한함
+- 튜링기계를 만들면 항상 mapping 되는 한개의 자연수가 있다. 따라서 튜링기계 하나면 자연수 하나
+- 따라서 튜링 기계의 수는 무한할 수 있지만 자연수의 무한함을 벗어나지 못한다. = 튜링 기계의 급소이다. = 괴델의 불완전선 정리 증명 = 따라서 튜링 기계로는 모든 참인 명제를 만들어 내지는 못한다.
+- 따라서 사람이 짤 수 있는 소프트웨어(튜링머신)의 개수 역시 자연수의 개수를 넘지 못한다.
 
 
+**튜링 머신 하나가 자연수 하나이다.**
 
+- Universal Turing machine: 하나의 튜링기계이지만, 그 입력에 따라 모든 종류의 튜링 기계를 흉내낼 수 있는 특별한 기계
 
+- 칸토르의 대각선 논법: 자연수의 개수보다 자연수의 power set의 개수가 더 많다.
 
+$$ |N| < | 2^N |. $$
 
+- 따라서 무한에도 차이가 있다.
 
+- 유한 시간안에 끝나는지를 판단하는 기계를 만들 수 있다? - halting problem
 
+#### [](#header-4) Halting problem example code
 
-
-
+```C++
+bool check(string s) {
+  if(halt(s, s) == false)
+    return true
+  else
+    loop forever
+}
+```
+- if the program **_check(check)_** ends, that means **_halt(s, s) == false_**, which is a contradiction. Likewise, if it loops forever it means **_halt(s, s) == true_** which also results in a contradictory situation.  
+- So we have proved Godel's incompleteness theorem using Turing machine.  
 
 
 ### [](#header-3)References
