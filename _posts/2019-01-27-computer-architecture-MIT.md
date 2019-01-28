@@ -147,7 +147,7 @@ BEQ(,,R28)에서 R28은 처음에는 보면 0x104인데 처음 실행된 BEQ를 
 ### [](#header-3) 컴퓨터 과학이 여는 세계 1-3강
 
 
-https://www.youtube.com/watch?v=HTWSPoDLmHI&index=1&list=PL0Nf1KJu6Ui7yoc9RQ2TiiYL9Z0MKoggH
+
 
 
 
