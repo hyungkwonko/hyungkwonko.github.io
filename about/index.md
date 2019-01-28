@@ -1,6 +1,5 @@
 ---
 layout: page
-type: about
 ---
 
 ### [](#header-3)Hyung-Kwon Ko  
