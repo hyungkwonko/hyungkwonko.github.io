@@ -4,6 +4,9 @@ layout: page
 
 Senior at Hanyang University in South Korea who is studying mathematics, industrial engineering and computer science. The goal of life is to become a data scientist who has the real vision and insight. Currently working on the CRM project at LG electronics.  
 
+Starting to write blog posts mainly for the purpose of neatly documenting what I have learned so I can look up whenever they are required. Will mainly cover the range from basic statistics to the state-of-the-art deep learning techniques.
+
+Currently interested in big data, machine learning, abstract topology and quantum mechanics.
 
 [Download CV](https://github.com/hyungkwonko/CV)   
 <br/>
