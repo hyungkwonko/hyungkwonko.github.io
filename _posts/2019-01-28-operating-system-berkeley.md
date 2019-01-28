@@ -1,10 +1,9 @@
 ---
 layout: post
 title: OS Lecture Note 10 - Deadlock & thread scheduling
-date: 2018-03-19 17:00:00
+date: 2019-01-29 17:00:00
 categories:
 - OS
-- machine learning
 tags:
 - mytag1
 author: "Hyung-Kwon Ko"
