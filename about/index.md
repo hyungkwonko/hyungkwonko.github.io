@@ -11,14 +11,14 @@ Currently interested in big data, machine learning, abstract topology and quantu
 [Download CV](https://github.com/hyungkwonko/CV)   
 <br/>
 
-## [](#header-2)<span style="color:#848484"> Education </span>  
+## [](#header-2)<span style="color:#088A08"> Education </span>  
 
 #### [](#header-4)_Mar. 2014 - Aug. 2019:_ Hanyang University in Seoul, South Korea (expected)  
 B.S in Mathematics, minor in Industrial engineering   
 <br/><br/><br/>
 
 
-## [](#header-2)<span style="color:#848484"> Experience </span>  
+## [](#header-2)<span style="color:#088A08"> Experience </span>  
 
 #### [](#header-4)_Jan. 2019 - Feb. 2019:_ Intern at LG electronics in Seoul, South Korea  
 Home electronics company, Research & Development center, Intern  
@@ -28,7 +28,7 @@ Participated in a CRM project.....
 #### [](#header-4)_Jun. 2018 - Sep. 2018:_ Intern at Wesley Quest in Seoul, South Korea  
 Strategic consulting firm, Research Associate  
 Participated in two big data projects. Made deep-learning based prediction model using Python  
-_1. Improvement of the management system and air quality in Seoul Metro (Client: Seoul Digital Foundation)_  
+_1. Improvement of the management system and air quality in Seoul Metro (E2A9F3ent: Seoul Digital Foundation)_  
 _2. Inventing the model of predicting the workers compensation using big data (Client: Korea Workers Compensation and Welfare Service)_  
 <br/>
 
@@ -44,7 +44,9 @@ _2. OBD sensor data analysis_
 - _Fundraising work: Wrote proposal letters to NYC councilman for fundraising_
 <br/><br/><br/>
 
-### [](#header-3)Awards
+
+## [](#header-2)<span style="color:#088A08"> Awards </span>  
+
 #### [](#header-4)_Aug. 2018 - Oct. 2018:_ 3rd place in Big Contest
 _Open contest held by National Information Society Agency and Korea Bigdata Forum_  
 _Developed `Financial Information Index for Individual User' with Shinhan Bank data_
@@ -62,19 +64,21 @@ _Predicted the number of visitors of children's grand park with regression, SVR 
 <br/><br/><br/>
 
 
-### [](#header-3)Programming skills
-_Languages:_ Python, R, C++ (Advanced) C, Java, MATLAB (Moderate)
-_Technologies:_ Git, AWS, LATEX
+## [](#header-2)<span style="color:#088A08"> Programming skills </span>  
+
+_Languages:_ Python(Tensorflow, Keras, Matplotlib, ...), R(ggplot2, ...), C/C++, Java, MATLAB, SQL  
+_Technologies:_ Git, Vim, AWS, LATEX  
 <br/><br/><br/>
 
-### [](#header-3)Military Service  
+## [](#header-2)<span style="color:#088A08"> Military Service </span>  
+
 #### [](#header-4)_Jun. 2011 - Mar. 2013:_ Transferred from active service to first reserve
 _11th Division, Administrative Clerk_
 <br/><br/><br/>
 
 
 
-### [](#header-3)Contact  
+## [](#header-2)<span style="color:#088A08"> Contact </span>  
 
 You may reach me with the contact info listed below  
 
