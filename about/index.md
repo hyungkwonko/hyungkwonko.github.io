@@ -8,7 +8,7 @@ Starting to write blog posts mainly for the purpose of neatly documenting what I
 
 Currently interested in big data, machine learning, abstract topology and quantum mechanics.
 
-[Download CV](https://github.com/hyungkwonko/CV)   
+[*Download CV (.pdf file)*](https://github.com/hyungkwonko/CV)   
 <br/>
 
 ## [](#header-2)<span style="color:#088A08"> *Education* </span>  
@@ -22,7 +22,7 @@ B.S in Mathematics, minor in Industrial engineering
 
 #### [](#header-4)_Jan. 2019 - Feb. 2019:_ Intern at LG electronics in Seoul, South Korea  
 Home electronics company, Research & Development center, Intern  
-Participated in a CRM project.....  
+Worked on data mining project in customer relationship management(CRM) for sales promotion  
 <br/>
 
 #### [](#header-4)_Jun. 2018 - Sep. 2018:_ Intern at Wesley Quest in Seoul, South Korea  
