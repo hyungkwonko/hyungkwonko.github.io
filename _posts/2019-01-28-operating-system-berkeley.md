@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OS Lecture Note 11 - Thread scheduling & Protection: Address spaces
+title: OS Lecture Note 11 - Thread scheduling & Protection
 date: 2019-01-29 17:00:00
 categories:
 - Operating systems
@@ -52,6 +52,10 @@ select a waiting process from the ready queue and allocating the CPU to it.
 - give each thread a small amount of CPU time when it executes: cycle between all ready threads
 - Pros: better for short jobs (+)
 - Cons: poor when jobs are same length (-) because in this case we don't have to switch processes from time to time, the only thing we are getting here is overhead(context switch).
+
+we want to do FCFS with ideal time, because it's always the best only if we can sort them from min to max by time consumed by each process.
+
+shortest - second shortest - ...
 
 <br/><br/><br/>
 
