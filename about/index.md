@@ -11,12 +11,14 @@ Currently interested in big data, machine learning, abstract topology and quantu
 [Download CV](https://github.com/hyungkwonko/CV)   
 <br/>
 
-### [](#header-3)<span style="color:blue">Education</span>  
+## [](#header-2)<span style="color:#848484"> Education </span>  
+
 #### [](#header-4)_Mar. 2014 - Aug. 2019:_ Hanyang University in Seoul, South Korea (expected)  
 B.S in Mathematics, minor in Industrial engineering   
 <br/><br/><br/>
 
-### [](#header-3)Experience
+
+## [](#header-2)<span style="color:#848484"> Experience </span>  
 
 #### [](#header-4)_Jan. 2019 - Feb. 2019:_ Intern at LG electronics in Seoul, South Korea  
 Home electronics company, Research & Development center, Intern  
