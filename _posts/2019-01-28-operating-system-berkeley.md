@@ -170,7 +170,7 @@ what kind of behavior do we get out of this? shortest jobs end up running first
 
 <br/>
 
-#### Scheduling details
+#### [](#header-4)Scheduling details
 - result approximates SRTF:
   - CPU bound jobs drop like a rock
   - short running I/O bound jobs stay near top
@@ -186,7 +186,7 @@ what kind of behavior do we get out of this? shortest jobs end up running first
 
 <br/>
 
-### Scheduling fairness
+### [](#header-3)Scheduling fairness
 - strict fixed-priority scheduling between queues is unfair
 - must give long running jobs a fraction of the CPU even when there are shorter jobs to run
 - Tradeoff: fairness gained by hurting average response time! (당연)
@@ -195,7 +195,7 @@ what kind of behavior do we get out of this? shortest jobs end up running first
 
 <br/>
 
-### Lottery scheduling
+### [](#header-3)Lottery scheduling
 
 the CPU time is proportional to the number of tickets. The more tickets you have, the more chances to win, and therefore the more CPU time you get
 
@@ -215,7 +215,7 @@ Notice that nobody here is zero.
 
 <br/>
 
-### How to evaluate a scheduling algorithm
+### [](#header-3)How to evaluate a scheduling algorithm
 
 - deterministic modeling
   - takes a predetermined workload and compute the performance of each algorithm for that workload
@@ -226,7 +226,7 @@ Notice that nobody here is zero.
 
 <br/>
 
-### Final word on scheduling
+### [](#header-3)Final word on scheduling
 
 when do the details of the scheduling policy and fairness really matter?
 - when there are not enough resources to go around
@@ -241,7 +241,7 @@ when should you simply buy a faster computer instead of modifying your schedulin
 
 
 
-##<span style="color:#088A08"> *Virtualizing Resources* </span>
+## [](#header-2)<span style="color:#088A08"> *Virtualizing Resources* </span>
 
 Memory holds the complete working state of the process.
 
@@ -250,11 +250,21 @@ CPU is a kind of transient thing, while the memory has the state
 <br/>
 
 
-### Important aspects of memory multiplexing
+### [](#header-3)Important aspects of memory multiplexing
 
 - controlled overlap:
-  - separate state of threads should not collide in physical memory
-
+  - separate state of threads should not collide in physical memory. Obviously, unexpected overlap causes chaos.
+- Translation:
+  - ability to translate accesses from one address space(virtual) to a different one(physical)
+  - when translation exists, processor uses virtual addresses, physical memory uses physical addresses
+  - side effects:
+    - can be used to avoid overlap
+    - can be used to give uniform view of memory to programs
+- protection
+  - prevent access to private memory of other processes
+    - different pages of memory can be given special behavior
+    - kernel data protected from user programs
+    - programs protected from themselves
 
 
 <br/><br/><br/>
