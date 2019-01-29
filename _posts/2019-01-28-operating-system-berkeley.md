@@ -11,8 +11,7 @@ author: "Hyung-Kwon Ko"
 meta: "Seoul"
 ---
 
-
-### [](#header-3) Review
+## [](#header-2)<span style="color:#088A08"> *Review* </span>
 Last time we talked about
 - Deadlock
 - Banker's algorithm
@@ -62,7 +61,10 @@ shortest - second shortest - ...
 
 <br/><br/><br/>
 
-### [](#header-3) Review
+
+
+## [](#header-2)<span style="color:#088A08"> *Review* </span>
+
 Last time we talked about
 
 
