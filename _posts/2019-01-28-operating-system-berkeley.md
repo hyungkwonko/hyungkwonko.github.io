@@ -245,6 +245,15 @@ when should you simply buy a faster computer instead of modifying your schedulin
 
 Memory holds the complete working state of the process.
 
+CPU is a kind of transient thing, while the memory has the state
+
+<br/>
+
+
+### Important aspects of memory multiplexing
+
+- controlled overlap:
+  - separate state of threads should not collide in physical memory
 
 
 
