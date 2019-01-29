@@ -137,14 +137,18 @@ We are going to approximate SRTF. The real problem is that how to approximate it
 <br/>
 
 ### [](#header-3) Predicting the length of the next CPU burst
-Adaptive: changing policy based on past behavior(not actually predicting, guessing based on the past experience)
-- CPU scheduling, in virtual memory, in file systems, etc
-- works because programs have predictable behavior
-  - if program was I/O bound in past, likely in future
-  - **if computer behavior were random, would not help**... 쩝...
+- Adaptive: changing policy based on past behavior(not actually predicting, guessing based on the past experience)
+  - CPU scheduling, in virtual memory, in file systems, etc
+  - works because programs have predictable behavior
+    - if program was I/O bound in past, likely in future
+    - **if computer behavior were random, would not help**... 쩝...
 
+- Example: SRTF with estimated burst length
+  - use an estimator function on previous bursts:
 
+$$\tau_n = f(t_{n-1}, t_{n-2}, t_{n-3}, ...)$$
 
+  - function $$f$$ could be one of many different time series estimation schemes (Kalman filters, etc)
 
 <br/>
 
@@ -201,7 +205,7 @@ Last time we talked about
 
 - *[Operating Systems and System Programming by John Kubiatowicz][ref1]*   
 
-- *[qodadsfdsfa][ref2]*   
+- *[은행원 알고리즘 설명][ref2]*   
 
 [ref1]:https://www.youtube.com/watch?v=YwECz0Lr1Bk&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws&index=11
 
