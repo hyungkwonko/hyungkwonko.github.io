@@ -219,7 +219,21 @@ Notice that nobody here is zero.
 
 - deterministic modeling
   - takes a predetermined workload and compute the performance of each algorithm for that workload
-  - 
+- Queueing models
+  - mathematical approach for handling stochastic workloads
+- implementation / simulation
+  - build system which allows actual algorithms to be run against actual data. Most flexible / general
+
+<br/>
+
+### Final word on scheduling
+
+when do the details of the scheduling policy and fairness really matter?
+- when there are not enough resources to go around
+
+when should you simply buy a faster computer instead of modifying your scheduling algorithm?
+- most scheduling algorithms work fine in the **"linear"** portion of the load curve, fails otherwise
+- argues for buying a faster X when hit **"knee"** of curve
 
 
 
@@ -227,6 +241,9 @@ Notice that nobody here is zero.
 
 
 
+##<span style="color:#088A08"> *Virtualizing Resources* </span>
+
+Memory holds the complete working state of the process.
 
 
 
