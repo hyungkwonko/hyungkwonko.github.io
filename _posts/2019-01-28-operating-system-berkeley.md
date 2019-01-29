@@ -243,9 +243,7 @@ when should you simply buy a faster computer instead of modifying your schedulin
 
 ## [](#header-2)<span style="color:#088A08"> *Virtualizing Resources* </span>
 
-Memory holds the complete working state of the process.
-
-CPU is a kind of transient thing, while the memory has the state
+Memory holds the complete working state of the process. CPU is a kind of transient thing, while the memory has the state.
 
 <br/>
 
@@ -266,8 +264,73 @@ CPU is a kind of transient thing, while the memory has the state
     - kernel data protected from user programs
     - programs protected from themselves
 
+<br/>
 
-<br/><br/><br/>
+### [](#header-3)Binding of instructions and data to memory
+- binding of instructions and data to addresses:
+  - choose addresses for instructions and data from the standpoint of the processor
+
+there are all symbols
+
+part of making a program runnable is choosing the addresses that it accesses
+
+<br/>
+
+### [](#header-3)Uniprogramming
+
+- Uniprogramming (no translation or protection)
+  - application always runs at same place in physical memory since only one application at a time
+  - application can access any physical address
+  - application given illusion of dedicated machine by giving it reality of a dedicated machine
+
+<br/>
+
+### [](#header-3)Multiprogramming
+
+- Multiprogramming without translation or protection
+  - must somehow prevent address overlap between threads
+- trick: use loader / linker: adjust addresses while program loaded into memory (loads, stores, jumps)
+  - everything adjusted to memory location of program
+  - translation done by a linker-loader
+  - was pretty common in early days
+- with this solution, no protection: bugs in any program can cause other programs to crash or even the OS
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic86.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, limit, <a href="https://www.youtube.com/watch?v=YwECz0Lr1Bk&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws&index=11">source</a> </div>
+
+<br/>
+
+THEN HOW TO PREVENT? limit the range of addresses we let other application to use
+
+- use two special registers Base and Limit to prevent user from straying outside designated area
+
+<br/>
+
+### [](#header-3)Issues with simple segmentation method
+- fragmentation problem
+  - not every process is the same size
+  - over time, memory space becomes fragmented
+- hard to do inter-process sharing
+  - want to share code segments when possible
+  - want to share memory between processes
+  - helped by providing multiple segments per process
+- need enough physical memory for every process
+
+fragmentation is going to get worse over time
+
+- problem: run multiple applications in such a way that they are protected from one another
+- Goals:
+  - isolate processes and kernel from one another
+  - allow flexible translation that:
+    - does not lead to fragmentation
+    - allows easy sharing between processes
+    - allows only part of process to be resident in physical memory
+  - hardware mechanisms:
+    - general address translation: page(fixed size segment)
+
+
+   <br/><br/><br/>
 
 
 
