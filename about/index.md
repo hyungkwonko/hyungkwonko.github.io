@@ -11,7 +11,7 @@ Currently interested in big data, machine learning, abstract topology and quantu
 [Download CV](https://github.com/hyungkwonko/CV)   
 <br/>
 
-### [](#header-3)Education  
+### [](#header-3)<span style="color:blue">Education</span>  
 #### [](#header-4)_Mar. 2014 - Aug. 2019:_ Hanyang University in Seoul, South Korea (expected)  
 B.S in Mathematics, minor in Industrial engineering   
 <br/><br/><br/>
