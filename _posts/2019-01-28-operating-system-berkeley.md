@@ -29,15 +29,18 @@ Last time we talked about
 
 It acts like a bank, trying its best to avoid bankruptcy, and this is why it's called BANKER's algorithm.
 
-read [this][ref2] if you are not fully getting it, especially the Italic formula above. 여기 부분 잘 이해하고 넘어갈 것
+read [**this**][ref2] if you are not fully getting it, especially the Italic formula above. 여기 부분 잘 이해하고 넘어갈 것
+
 <br/>
 
 ##### [](#header-5) is there any case that the Banker's algorithm won't work?
 if the threads end execution and don' release resources, you're in trouble. often times operating systems will release resources automatically even if you exit without releasing them. (But you should make sure about them!)
+
 <br/>
 
 ##### [](#header-5) Dining lawyer's table with one chopstick
 it could never start running since single chopstick is always not enough to run even a single thread.
+
 <br/>
 
 #### [](#header-4) Scheduling
