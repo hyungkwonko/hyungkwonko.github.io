@@ -7,6 +7,7 @@ categories:
 tags:
 - scheduling
 - protection
+- virtual memory
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
 use_math: true
@@ -329,9 +330,58 @@ fragmentation is going to get worse over time
   - hardware mechanisms:
     - general address translation: page(fixed size segment)
 
+<br/>
 
-   <br/><br/><br/>
+### [](#header-3)Two views of memory
+- all the addresses and state a process can touch
+- each process and kernel has different address space
+- two view of Memory
+  - view from the CPU (virtual memory)
+  - view from memory (physical memory)
+  - translation box converts between the two views
+- with translation, every program can be linked / loaded into same region of user address space
+  - overlap avoided through translation, not relocation
 
+page: a unit of memory translatable by memory management unit (MMU)
+
+[PAGE... we will talk more about this next time]
+
+
+
+<br/><br/><br/>
+
+
+
+## [](#header-2)<span style="color:#088A08"> *Summary* </span>
+- Shortest job first(SJF) / Shortest remaining time first(SRTF):
+  - run whatever job has the least amount of computation to do / least remaining amount of computation to do
+  - pros: optimal (average response time)
+  - cons: hard to predict future, unfair
+- multi-level feedback scheduling:
+  - multiple queues of different priorities
+  - automatic promotion / demotion of process priority in order to approximate SJF / SRTF
+- Lottery scheduling:
+  - give each thread a priority-dependent number of tokens
+  - reserve a minimum number of tokens for every thread to ensure forward progress  / fairness
+- evaluation of mechanisms:
+  - analytical, queuing theory, simulation
+- memory is a resource that must be shared
+  - controlled overlap: only shared when appropriate
+  - translation: change virtual addresses into physical addresses
+  - protection: prevent unauthorized sharing of resources
+- simple protection through segmentation
+  - base + limit registers restrict memory accessible to user
+  - can be used to translate as well
+- MMU
+  - every access translated through page table
+  - changing of page tables only available to users
+- Dual mode
+  - kernel / user distinction
+  - user $$\rarr$$ kernel: system calls, traps, or interrupts
+  - inter-process communication: shared memory, or through kernel
+
+
+<br/><br/><br/>
 
 
 ## [](#header-2)<span style="color:#088A08"> *References* </span>
