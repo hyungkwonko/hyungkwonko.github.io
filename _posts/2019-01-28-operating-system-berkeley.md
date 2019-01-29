@@ -19,7 +19,7 @@ Last time we talked about
 
 <br/>
 
-#### [](#header-4) Banker's algorithm for preventing deadlock
+### [](#header-3) Banker's algorithm for preventing deadlock
 - Banker's algorithm:
   - allocate resources dynamically
     - evaluate each request and grant if some ordering of threads is still deadlock free afterward
@@ -32,17 +32,17 @@ read [**this**][ref2] if you are not fully getting it, especially the Italic for
 
 <br/>
 
-##### [](#header-5) is there any case that the Banker's algorithm won't work?
+#### [](#header-4) is there any case that the Banker's algorithm won't work?
 if the threads end execution and don' release resources, you're in trouble. often times operating systems will release resources automatically even if you exit without releasing them. (But you should make sure about them!)
 
 <br/>
 
-##### [](#header-5) Dining lawyer's table with one chopstick
+#### [](#header-4) Dining lawyer's table with one chopstick
 it could never start running since single chopstick is always not enough to run even a single thread.
 
 <br/>
 
-#### [](#header-4) Scheduling
+### [](#header-3) Scheduling
 select a waiting process from the ready queue and allocating the CPU to it.
 
 1. First come first served
@@ -86,7 +86,7 @@ Last time we talked about
 
 
 
-### [](#header-3) References
+## [](#header-2)<span style="color:#088A08"> *References* </span>
 
 - *[Operating Systems and System Programming by John Kubiatowicz][ref1]*   
 
