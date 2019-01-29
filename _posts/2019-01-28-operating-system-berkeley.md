@@ -153,22 +153,73 @@ $$\tau_n = f(t_{n-1}, t_{n-2}, t_{n-3}, ...)$$
 
 <br/>
 
+### [](#header-3)Multi-level feedback scheduling
+This is another way to estimate SRT / approximate SRTF.
 
+- using n ready queues, feeding into each other, each with different priority
+  - higher priority queues often considered "foreground" tasks
+- each queue has its own scheduling algorithm
+  - e.g. foreground = RR, background = FCFS
 
+Adjust each job's priority as follows
+- jobs starts in highest priority queue
+- if timeout expires, drop one level
+- if timeout doesn't expire, push up one level
 
+what kind of behavior do we get out of this? shortest jobs end up running first
 
+<br/>
 
+#### Scheduling details
+- result approximates SRTF:
+  - CPU bound jobs drop like a rock
+  - short running I/O bound jobs stay near top
+- Scheduling must be done between the queues
+  - fixed priority scheduling:
+    - serve all from highest priority, then next priority, etc
+  - time slice:
+    - each queue gets a certain amount of CPU time
+    - e.g. 70% to highest, 20% to next, 10% lowest.
+  - 한마디로 스케줄링을 줄 세워놓고 hierarchical하게 순서를 매기는 것이다. 첫째 방법(fixed)은 제일 우선순위 높은 것부터 차례로 그냥 무식하게 하는거고, 그러면 starvation문제가 생기니까 두번째 말하는거(time slice)는 비율로 할당해서 주는 것이다. 예를 들면 highest=70 / middle=20 / lowest=10 이런식으로
+  - 그럼 70 / 20 / 10 이건 어떻게 고르냐...?? nobody could fully explain it... just a magic (그냥 대충 때려 맞춘다는 말인 것 같음)
+  - **what if something hasn't been run for a very long time? slowly crank its priority up until it starts running** (kind of another heuristic problem...)
 
+<br/>
 
+### Scheduling fairness
+- strict fixed-priority scheduling between queues is unfair
+- must give long running jobs a fraction of the CPU even when there are shorter jobs to run
+- Tradeoff: fairness gained by hurting average response time! (당연)
+- how to implement fairness?
+  - could give each queue some fraction of the CPU
 
+<br/>
 
+### Lottery scheduling
 
+the CPU time is proportional to the number of tickets. The more tickets you have, the more chances to win, and therefore the more CPU time you get
 
+we want short jobs to have more tickets than the long jobs
 
+to avoid starvation, we want to make sure that every jobs gets at least one ticket
 
+the advantage over strict priority scheduling is this behaves gracefully as the load changes so as you add or delete jobs then everybody kind of proportionately slows down or speeds up, and you still make sure that there is no starvation
 
+<br/>
 
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic85.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, Lottery scheduling example, <a href="https://www.youtube.com/watch?v=YwECz0Lr1Bk&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws&index=11">source</a> </div>
 
+<br/>
+
+Notice that nobody here is zero.
+
+<br/>
+
+### How to evaluate a scheduling algorithm
+
+- deterministic modeling
+  - takes a predetermined workload and compute the performance of each algorithm for that workload
+  - 
 
 
 
@@ -176,26 +227,8 @@ $$\tau_n = f(t_{n-1}, t_{n-2}, t_{n-3}, ...)$$
 
 
 
-## [](#header-2)<span style="color:#088A08"> *Review* </span>
-
-Last time we talked about
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic69.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, RR example, <a href="https://www.youtube.com/watch?v=YwECz0Lr1Bk&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws&index=11">source</a> </div>
 
 
 <br/><br/><br/>
