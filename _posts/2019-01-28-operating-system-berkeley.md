@@ -146,18 +146,16 @@ We are going to approximate SRTF. The real problem is that how to approximate it
 
 - Example: SRTF with estimated burst length
   - use an estimator function on previous bursts:
-
-$\tau_n = f(t_{n-1}, t_{n-2}, t_{n-3}, ...)$
-
-  - function $f$ could be one of many different time series estimation schemes (Kalman filters, etc)
+$$\tau_n = f(t_{n-1}, t_{n-2}, t_{n-3}, ...)$$
+  - function $$f$$ could be one of many different time series estimation schemes (Kalman filters, etc)
 
 <br/>
 
 
 
-`$$\tau_n = f(t_{n-1}, t_{n-2}, t_{n-3}, ...)$$`
-$$\tau_n = f(t_{n-1}, t_{n-2}, t_{n-3}, ...)$$
-$$$\tau_n = f(t_{n-1}, t_{n-2}, t_{n-3}, ...)$$$
+
+
+
 
 
 
