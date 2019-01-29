@@ -59,6 +59,43 @@ we want to do FCFS with ideal time, because it's always the best only if we can 
 
 shortest - second shortest - ...
 
+<br/>
+
+#### [](#header-4) What if we knew the future
+- can we always mirror best FCFS?
+- shortest job first (SJF):
+  - run whatever job has the least amount of computation to do
+  - sometimes called shortest time to completion first (STCF)
+- shortest remaining time first (SRTF):
+  - preemptive version of SJF: if job arrives and has a shorter time to completion than the remaining time on the current job, immediately preempt CPU
+  - sometimes called shortest remaining time to completion first (SRTCF)
+  - (well... this thing coming in is even shorter than the thing I am running therefore run it RIGHT NOW!)
+- there can be applied either to a whole program or the current CPU burst of each program
+  - idea is to get short jobs out of the system
+  - big effect on short jobs, only small effect on long ones (kind of way to mediate in the bad effect)
+  - result is better average response time
+
+- **The biggest problem with this is that WE NEED TO PREDICT THE FUTURE in order to make this work**
+
+<br/>
+
+#### [](#header-4) Discussion
+- SJF / SRTF are the best you can do at minimizing average response time
+  - provably optimal
+  - since SRTF is always at least as good as SJF, focus on SRTF
+- comparison of SRTF with FCFS and RR
+  - what if all jobs the same length
+    - SRTF becomes the same as FCFS
+  - what if jobs have varying length?
+    - SRTF and RR: short jobs not stuck behind long ones (two are not the same but similar with respect to the point they both try to get those short jobs first)
+  - 이 부분 다 이해 하겠지?? 여러번 했던 부분이고 어렵지는 않으니 읽어 볼 것.
+
+
+<br/>
+
+
+
+
 <br/><br/><br/>
 
 
