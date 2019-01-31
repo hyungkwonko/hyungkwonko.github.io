@@ -186,6 +186,70 @@ if the limit for a given segment is exceeded by the offset, that is an error. We
   - segment table stored in CPU, not in memory (small)
   - might store all of processes memory onto disk when switched
 
+<br/>
+
+### [](#header-3) Schematic view of swapping
+can we have more memory use than we have? **YES** by Swapping
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic93.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, swapping, <a href="https://www.youtube.com/watch?v=6AH5d1aPKB0&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws&index=12">source</a> </div>
+
+<br/>
+
+- extreme form of context switch: swapping
+  - in order to make room for next process, some or all of the previous process is moved to disk
+  - this greatly increases the cost of context-switching
+- can have more flexibility in my memory management - so I can have a process that's not running doesn't have to be taking space in memory anymore. It can be out of disk.
+- this is kind of expensive (have to fix a little bit, will cover)
+- instead, wouldn't it be nice if we could put parts of a process out to memory? (you don't have to swap a whole segment in this case, better with respect to the cost)
+
+- HOW TO IMPORT PART OF A SEGMENT?? $$\rightarrow$$ **WE NEED TO MAKE IT FINER CHOPPING UP THE SEGMENT** $$\rightarrow$$ **_PAGING_**
+
+
+<br/><br/><br/>
+
+
+## [](#header-2)<span style="color:#088A08"> *PAGING: physical memory in fixed size chunks* </span>
+
+- problems with segmentation?
+  - must fit variable-size chunks into physical memory
+  - may move processes multiple times to fit everything
+  - limited options for swapping to disk
+- Fragmentation: wasted space
+  - External: free gaps between allocated chunks
+  - Internal: don't need all memory within allocated chunks
+  - 그러니까 external은 덩어리와 덩어리 사이 낭비되는 공간이고 internal은 한 덩어리 안에서 사용중이지 않은 공간. 낭비되고 있다는 점에서 공통적이다.
+- solution to fragmentation from segments?
+  - allocate physical memory in fixed size chunks ("PAGES")
+  - every chunk of physical memory is equivalent
+    - can use simple vector of bits to handle allocation: 00110010100...10010
+    - each bit represents page of physical memory: 1 = allocated, 0 = free
+
+
+<br/>
+
+### [](#header-3)How to implement paging?
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic94.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, page table & its pointer, <a href="https://www.youtube.com/watch?v=6AH5d1aPKB0&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws&index=12">source</a> </div>
+
+<br/>
+
+- page table (one per process)
+  - resides in physical memory
+  - contains physical page and permission for each virtual page
+    - permissions include: valid bits, read, write, etc
+
+
+
+
+
+
+
+
+
 
 
 
