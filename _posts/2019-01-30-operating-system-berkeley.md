@@ -5,7 +5,7 @@ date: 2019-01-30 17:00:00
 categories:
 - Operating systems
 tags:
-- protection
+- segmentation
 - virtual memory
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
@@ -301,25 +301,93 @@ can we have more memory use than we have? **YES** by Swapping
   - contents of top-level segment registers
   - pointer to top-level table (page table)
 
+<br/>
+
+### [](#header-3)What about sharing?
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic97.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, sharing, <a href="https://www.youtube.com/watch?v=6AH5d1aPKB0&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws&index=12">source</a> </div>
+
+<br/>
+
+- we can completely handle
+
+<br/>
+
+### [](#header-3)Two-level page table
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic98.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, two-level page table, <a href="https://www.youtube.com/watch?v=6AH5d1aPKB0&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws&index=12">source</a> </div>
+
+<br/>
+
+- valid bits on page table entries
+  - don't need every 2nd level table
+  - even when exist, 2nd level tables can reside on disk if not in use
+- Pros:
+  - only need to allocate as many page table entries as we need for application
+    - sparse address spaces are easy
+  - easy memory allocation
+  - easy sharing (share at segment or page level)
+- Cons:
+  - one pointer per page
+  - page tables need to be contiguous
+  - two(or more) lookups per reference
+    - seems very expensive
+
+<br/>
+
+### [](#header-3)Inverted page table
+- whti all previous examples ("Forward page tables")
+  - size of page table is at least as large as amount of virtual memory allocated to processes
+  - physical memory may be much less
+    - much of process space may be out on disk or not in use
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic99.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, inverted page table, <a href="https://www.youtube.com/watch?v=6AH5d1aPKB0&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws&index=12">source</a> </div>
+
+<br/>
+
+- answer: to use a hash table
+  - called an "inverted page table"
+  - size is independent of virtual address space
+  - directly related to amount of physical memory
+  - very attractive option for 64bit address spaces(WHY? 64비트면 엄청나게 남으니까 굳이 다 할당할 필요가 없기 때문에)
+- Cons: complexity of managing hash table
+
+<br/>
+
+### [](#header-3)Dual mode
+- will cover next time
 
 
+<br/>
 
-
-
-
-
-
-
-
-
-
-
-
-
+### [](#header-3)Summary
+- Memory is a resource that must be shared
+  - controlled overlap: only shared when appropriate
+  - translation: change virtual addresses into physical addresses
+  - protection: prevent unauthorized sharing of resources
+- segment mapping
+  - segment registers within processor
+  - segment ID associated with each access
+  - each segment contains base and limit information
+- page tables
+  - memory divided into fixed size chunks of memory
+  - virtual page number from virtual address mapped through page table to physical page number
+  - offset of virtual address same as physical address
+  - large page tables can be places into virtual memory
+- multi-level tables
+  - virtual address mapped to series of tables
+  - permit sparse population of address space
 
 
 
 <br/><br/><br/>
+
 
 
 ## [](#header-2)<span style="color:#088A08"> *References* </span>
