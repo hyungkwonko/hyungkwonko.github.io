@@ -119,6 +119,12 @@ still have an issue. what is that? if the size of chunk is same, it wouldn't be 
 
 ### [](#header-3)Implementation of multi-segment model
 
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic92.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, segment model, <a href="https://www.youtube.com/watch?v=6AH5d1aPKB0&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws&index=12">source</a> </div>
+
+<br/>
+
 - Segment map resides in processor
   - segment number mapped into base / limit pair
   - base added to offset to generate physical address
@@ -163,13 +169,31 @@ if the limit for a given segment is exceeded by the offset, that is an error. We
 - when fetching 0x4050, virtual segment #? 1. why? 0x4050 = (**01** 00 0000 0000 0050)2
 - why the offset is 0x50?: if we mask off the 01 at the meginning everything else is (01 **00 0000 0050**)2
 
-
-
-
-
-### [](#header-3) Banker's algorithm for preventing deadlock
-
 <br/>
+
+### [](#header-3) Observations about segmentation
+- virtual address space has holes
+  - segmentation efficient for sparse address spaces
+  - a correct program should never address gaps
+- when it is OK to address outside valid range:
+  - this is how the stack and heap are allowed to grow
+  - for instance, stack takes fault, system automatically increases size of stack
+- need protection mode in segment table
+  - for example, code segment would be read-only
+  - data and stack would be read-write
+  - shared segment could be read-only or read-write
+- what must be saved / restored on context switch?
+  - segment table stored in CPU, not in memory (small)
+  - might store all of processes memory onto disk when switched
+
+
+
+
+
+
+
+
+
 
 #### [](#header-4) is there any case that the Banker's algorithm won't work?
 

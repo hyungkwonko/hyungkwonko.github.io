@@ -377,7 +377,7 @@ page: a unit of memory translatable by memory management unit (MMU)
   - changing of page tables only available to users
 - Dual mode
   - kernel / user distinction
-  - user $$\rarr$$ kernel: system calls, traps, or interrupts
+  - user $$\rightarrow$$ kernel: system calls, traps, or interrupts
   - inter-process communication: shared memory, or through kernel
 
 
