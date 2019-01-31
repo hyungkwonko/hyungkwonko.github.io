@@ -241,28 +241,78 @@ can we have more memory use than we have? **YES** by Swapping
   - resides in physical memory
   - contains physical page and permission for each virtual page
     - permissions include: valid bits, read, write, etc
+- virtual address mapping
+  - offset from virtual address copied to physical address
+    - example: 10 bit offset $$\Rightarrow$$ 1024-byte pages
+  - virtual page # is all remaining bits
+    - example for 32-bits: 32-10 = 22 bits, i.e. 4 million entries
+    - physical page # copied from table into physical address
+    - check page table bounds(page table size error: check how many pages are in page table) and permissions(access error: whether it's read-only / write-only...)
+    - why we are not checking the offset to see whether it's too big or not? because they are all the same size - offset part is not checked and it doesn't need to be(SIMPLE)
+    - it doesn't have to be contiguously distributed in DRAM at all
+
+- 설명하자면 페이징 기법에서는 p(페이지번호)와 d(offset) 두가지가 있어서 가상주소를 물리주소로 바꿀 때 p를 이용해서 페이지 번호를 알아내고 거기에 d를 더해서 실제 물리 주소를 알아낸다고 생각하면 된다. 페이지의 크기는 전체 동일하기 때문에 페이지 번호만 알면 해당 번호에 해당하는 페이지에 쉽게 접근할 수가 있다.
+- 또한 p = page의 수, d = 페이지의 크기 라고 생각하면 된다. 따라서 p역시 page table 내부적인 offset이라고 생각할 수 있다.
+- 페이지의 physical mapping은 연속적이지 않아도 된다는 장점이 있다.
+
+<br/>
+
+### [](#header-3)What about sharing?
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic95.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, shared page, <a href="https://www.youtube.com/watch?v=6AH5d1aPKB0&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws&index=12">source</a> </div>
+
+<br/>
 
 
+### [](#header-3)Simple page table discussion
+- what needs to be switched on a context switch?
+  - page table pointer and limit (much simpler than before)
+- Pros:
+  - simple
+  - easy to share
+- Cons:
+  - what if address space is sparse?
+    - e.g. on UNIX, code starts at 0, stack starts at ($$2^{31} - 1$$)
+    - with 1K pages, need 4 million page table entries
+  - what if table really big?
+    - not all pages used all the time $$\Rightarrow$$ would be nice to have working set of page table in memory
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### [](#header-4) is there any case that the Banker's algorithm won't work?
 
 
 <br/><br/><br/>
+
+
+
+## [](#header-2)<span style="color:#088A08"> *Multi-level translation: segments + pages* </span>
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic96.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, multi-level scheme, <a href="https://www.youtube.com/watch?v=6AH5d1aPKB0&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws&index=12">source</a> </div>
+
+<br/>
+
+- what about a tree of tables?
+  - lowest level page table = memory still allocated with bitmap
+  - higher levels often segmented
+- could have any number of levels
+- what must be saver / restored on context switch?
+  - contents of top-level segment registers
+  - pointer to top-level table (page table)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
