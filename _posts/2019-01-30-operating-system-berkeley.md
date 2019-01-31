@@ -364,9 +364,11 @@ can we have more memory use than we have? **YES** by Swapping
 - will cover next time
 
 
-<br/>
+<br/><br/><br/>
 
-### [](#header-3)Summary
+
+## [](#header-2)<span style="color:#088A08"> *Summary* </span>
+
 - Memory is a resource that must be shared
   - controlled overlap: only shared when appropriate
   - translation: change virtual addresses into physical addresses
