@@ -89,15 +89,88 @@ main:   CMOVE(3, r1)    // pass argument
   - variables that compiler can't fit in registers
   - space to save caller's register values for registers that we overwrite
 
+Each of these is specific to a particular **activation** of a procedure. We call them the procedure's **activation record**
+
+<br/>
+
+### [](#header-3) Activation records
+
+```C
+int fact(int n) {
+  if (n > 0) return n * fact(n-1);
+  else return 1;
+}
+```
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic100.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, Activation records, <a href="https://www.youtube.com/watch?v=TW2peBbHfH8&index=9&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+1. A procedure call creates a new activation record.
+2. Caller's record is preserved because we will need it when callee finally returns.
+3. return to previous activation record when procedure finishes, permanently discarding activation record created by call we are returning from (kind of Last In First Out algorithm $$\rightarrow$$ this is where **STACK** comes out)
+- 그러니까 fact(3)은 fact(2)를 호출하고 fact(2)는 fact(1)을 호출하고.. 이게 계속 연쇄적으로 발생하게 되고, 그 동안 fact(3)은 끝나지 못한다. 이런 LIFO 구조가 되기 때문에 stack이 적절하다.
 
 
 
-### [](#header-3) Datapath for factorial
-
-<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic70.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, Circuit for factorial, <a href="https://www.youtube.com/watch?v=TW2peBbHfH8&index=9&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+<br/><br/><br/>
 
 
+## [](#header-2)<span style="color:#088A08"> *Insight: we need a stack!* </span>
 
+- need data structure to hold activation records
+- activation records are created and discarded in last-in-first-out(LIFO) order
+- only need access to activation record of currently executing procedure
+- STACK: push, pop, access to top element
+
+<br/>
+
+### [](#header-3)Stack implementation
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic101.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, stack implementation, <a href="https://www.youtube.com/watch?v=TW2peBbHfH8&index=9&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+- _CONVENTIONS_:
+  - Dedicate a register for the stack pointer (SP), R29.
+  - Builds up (towards higher addresses) on push
+  - SP points to **FIRST UNUSED location**; locations below SP are allocated (protected).
+  - Discipline: can use stack at any time; but leave it as you found it.
+  - Reserve a large block of memory well away from our program and its data
+- We use only software conventions to implement our stack (many architectures dedicate hardware)
+- Other possible implementations include stacks that grow "down", SP points to top of stack, etc.
+
+<br/>
+
+### [](#header-3)Stack management macros
+
+- PUSH (RX): push reg[x] onto stack
+  - reg[SP] $$\leftarrow$$ reg[SP] + 4;
+  - mem[reg[SP] - 4] $$\leftarrow$$ reg[x]
+  - first allocate the location by moving the stack pointer
+  - second reach back and fill it in
+- POP (RX): pop value on top of the stack into reg[x]
+  - reg[SP] $$\leftarrow$$ mem[reg[SP] - 4];
+  - reg[SP] $$\leftarrow$$ reg[SP] - 4;
+  - (reverse order compared to above PUSH instruction)first take the value out of the memory
+  - second carefully move the pointer
+- ALLOCATE (k): reserve k words of stack
+  - reg[SP] $$\leftarrow$$ reg[SP] + 4*k
+- DEALLOCATE (k): release k words of stack
+  - ref[SP] $$\leftarrow$$ reg[SP] - 4*k
+
+All of this are manipulating the contents of the SP register which is an memory address.
+
+We are going to use the stack as a place to build our activation records, and when we look at the stack after running a program we will see many procedure calls in it which are currently active procedure calls.
+
+
+
+
+
+
+<br/><br/><br/>
 
 ## [](#header-2)<span style="color:#088A08"> *References* </span>
 
