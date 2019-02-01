@@ -151,11 +151,14 @@ int fact(int n) {
   - mem[reg[SP] - 4] $$\leftarrow$$ reg[x]
   - first allocate the location by moving the stack pointer
   - second reach back and fill it in
+  - allocate the location before we use it
 - POP (RX): pop value on top of the stack into reg[x]
   - reg[SP] $$\leftarrow$$ mem[reg[SP] - 4];
   - reg[SP] $$\leftarrow$$ reg[SP] - 4;
-  - (reverse order compared to above PUSH instruction)first take the value out of the memory
+  - (reverse order compared to above PUSH instruction)
+  - first take the value out of the memory
   - second carefully move the pointer
+  - we don't deallocate it until we are completely done with it
 - ALLOCATE (k): reserve k words of stack
   - reg[SP] $$\leftarrow$$ reg[SP] + 4*k
 - DEALLOCATE (k): release k words of stack
@@ -164,6 +167,59 @@ int fact(int n) {
 All of this are manipulating the contents of the SP register which is an memory address.
 
 We are going to use the stack as a place to build our activation records, and when we look at the stack after running a program we will see many procedure calls in it which are currently active procedure calls.
+
+<br/>
+
+### [](#header-3)Fun with stacks
+
+we can squirrel away(나중에 쓰려고 감춰두다) for later.
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic102.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, save variables for later, <a href="https://www.youtube.com/watch?v=TW2peBbHfH8&index=9&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+- data is popped off the stack in the opposite order that it is pushed on
+
+<br/>
+
+### [](#header-3)Solving procedure linkage problems
+
+- Reminder: procedure storage needs
+  1. we need a way to pass arguments into procedures
+  2. procedures need their own LOCAL storage
+  3. procedures need to call other procedures
+  4. procedures might call themselves (recursion)
+- BUT first, we will commit some more registers:
+  - r27 = BP: base pointer, points into stack to the local variables of callee
+  - r28 = LP: linkage pointer, return address to caller
+  - r29 = SP: stack pointer, points to 1st unused word
+
+<br/>
+
+### [](#header-3)Stack frames as activation records
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic103.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, stack frame as activation record, <a href="https://www.youtube.com/watch?v=TW2peBbHfH8&index=9&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+- CALLEE uses stack for all of the following storage needs:
+  1. saving return address back to the caller
+  2. saving the CALLER's base ptr
+  3. creating its own local / temp variables
+
+
+
+
+
+
+
+
+
+
 
 
 
