@@ -243,7 +243,7 @@ can we have more memory use than we have? **YES** by Swapping
     - permissions include: valid bits, read, write, etc
 - virtual address mapping
   - offset from virtual address copied to physical address
-    - example: 10 bit offset $$\Rightarrow$$ 1024-byte pages
+    - example: 10 bit offset $$\rightarrow$$ 1024-byte pages
   - virtual page # is all remaining bits
     - example for 32-bits: 32-10 = 22 bits, i.e. 4 million entries
     - physical page # copied from table into physical address
@@ -277,7 +277,7 @@ can we have more memory use than we have? **YES** by Swapping
     - e.g. on UNIX, code starts at 0, stack starts at ($$2^{31} - 1$$)
     - with 1K pages, need 4 million page table entries
   - what if table really big?
-    - not all pages used all the time $$\Rightarrow$$ would be nice to have working set of page table in memory
+    - not all pages used all the time $$\rightarrow$$ would be nice to have working set of page table in memory
 
 
 
