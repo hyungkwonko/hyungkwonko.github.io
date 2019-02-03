@@ -8,7 +8,7 @@ Started writing a blog post mainly for the purpose of neatly documenting what I 
 
 Currently interested in big data, machine learning, abstract topology and quantum mechanics.
 
-[*Download CV (.pdf file)*](https://github.com/hyungkwonko/CV)   
+[*Download CV.pdf (as of Feb. 2019)*](https://github.com/hyungkwonko/CV)   
 <br/>
 
 ## [](#header-2)<span style="color:#088A08"> *Education* </span>  
