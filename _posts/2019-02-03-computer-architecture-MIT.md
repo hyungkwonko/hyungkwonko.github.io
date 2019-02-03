@@ -97,8 +97,7 @@ Interpretation and compilation: two ways to execute high-level languages
 
 <br/>
 
-----
-### [](#header-3)Pros & Cons
+### [](#header-3)Interpretation vs. compilation
 - 두가지 방법의 장단점 비교
 
 Compilation:
@@ -116,7 +115,8 @@ Interpretation:
 - Cons:
   - slower
   - public source
-----
+
+<br/>
 
 |      | Interpretation     | Compilation |
 | :------------- | :------------- | :------------- |
@@ -125,10 +125,19 @@ Interpretation:
 |what it complicates   |program execution   |program development   |
 |decision made at   |run time   |compile time   |
 
+- major choice we will see repeatedly: do it at compile time or at run time?
+  - which is faster?
+  - which is more general?
+
+**YOU SEE ALL SORT OF MIXED STRATEGIES THESE DAYS**
 
 
 
+<br/><br/><br/>
 
+
+
+## [](#header-2)<span style="color:#088A08"> *Compilers* </span>
 
 
 
