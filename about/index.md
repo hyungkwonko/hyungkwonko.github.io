@@ -4,7 +4,7 @@ layout: page
 
 Senior at Hanyang University in South Korea who is studying mathematics, industrial engineering and computer science. The goal of life is to become a data scientist who has the real vision and insight. Currently working on the CRM project at LG electronics.  
 
-Starting to write blog posts mainly for the purpose of neatly documenting what I have learned so I can look up whenever they are required. Will mainly cover the range from basic statistics to the state-of-the-art deep learning techniques.
+Started writing a blog post mainly for the purpose of neatly documenting what I have learned so I can look up whenever it is required. Will mainly cover the range from basic CS course to the state-of-the-art deep learning techniques.
 
 Currently interested in big data, machine learning, abstract topology and quantum mechanics.
 
@@ -67,7 +67,7 @@ _Predicted the number of visitors of children's grand park with regression, SVR 
 ## [](#header-2)<span style="color:#088A08"> *Programming skills* </span>  
 
 _Languages:_ Python(Tensorflow, Keras, Matplotlib, ...), R(ggplot2, ...), C/C++, Java, MATLAB, SQL  
-_Technologies:_ Git, Vim, AWS, LATEX  
+_Technologies:_ Git, Vim, AWS, Latex  
 <br/><br/><br/>
 
 ## [](#header-2)<span style="color:#088A08"> *Military Service* </span>  

@@ -152,6 +152,99 @@ Interpretation:
     - even better: meaningful warnings
   - produce fast, optimized code
 
+- this lecture:
+  - simple techniques to compile a C procedure into assembly
+  - overview of how modern compilers work
+
+<br/>  
+
+### [](#header-3)Compiling expressions
+
+We are going to use load & store, and it actually needs the address of given variables.
+
+- Variables are assigned memory locations and accessed via LD or ST
+- Operators translate to ALU instructions
+- Small constants translate to ALU instructions with constant
+- Large constants translate to initialized variables
+
+<br/>
+
+### [](#header-3)Data structures: Arrays
+
+Address: Constant base address + variable offset computed from index
+
+<br/>
+
+### [](#header-3)Conditionals & Loops
+
+...
+
+<br/>
+
+
+## [](#header-2)<span style="color:#088A08"> *Anatomy of a modern compiler* </span>
+
+ORDER: Source code $$\rightarrow$$ **Frontend - Optimizer - Backend** $$\rightarrow$$ Machine code
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic117.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Dave Xiang, LLVM architecture, <a href="https://www.youtube.com/watch?v=KA8hFBh2eiw">source</a> </div>
+
+<br/>
+
+LLVM의 3단계 구성
+
+1. Front-end **(NOT Javascript)**
+  - takes our favorite languages, and translates it LLVM-IR
+2. The middle
+  - the most important part of LLVM (intermediate representation)
+  - think of this as LLVM's special language. we will call this LLVM-IR from now on.
+3. Back-end
+  - take LLVM-IR, and translates it into architecture=specific machine code. e.g., X86 / ARM etc
+
+
+### [](#header-3)Frontend stages
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic114.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, Lexical anaylsis, <a href="https://www.youtube.com/watch?v=6X8fVZcD3aY&index=12&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic115.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, syntactic analysis, <a href="https://www.youtube.com/watch?v=6X8fVZcD3aY&index=12&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic116.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, semantic analysis, <a href="https://www.youtube.com/watch?v=6X8fVZcD3aY&index=12&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+- Lexical analysis (scanning): source to tokens: the lexical analyzer basically turns it into a list of tokens, so it understands the syntax of the language
+- syntactic analysis (parsing): tokens to syntax tree: figure out the structure you have described. what the expression trees are... and so on.
+- semantic analysis (mainly, type checking): show warnings
+
+<br/>
+
+### [](#header-3)intermediate representation (IR)
+
+we turn everything to bits right away, we lose some opportunities to do an intelligent jobs of optimizing the program
+
+
+
+
+
+
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -170,11 +263,13 @@ Interpretation:
 
 - *[Computer Architecture MIT 6.004 2015 by Chris Terman][ref1]*   
 
-- *[Alternative video for better sound quality, content is the same though][ref1]*   
+- *[Alternative video for better sound quality, content is the same though][ref2]*   
 
 - *[컴퓨터 과학이 여는 세계 - 상위언어의 해설실행, 서울대학교 이광근][ref3]*   
 
 - *[Compilation vs Interpretation][ref4]*  
+
+- *[What is LLVM? What Makes Swift Possible?][ref5]*
 
 [ref1]:https://www.youtube.com/watch?v=6X8fVZcD3aY&index=12&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7
 
@@ -183,3 +278,5 @@ Interpretation:
 [ref3]:https://www.youtube.com/watch?v=8yMdCnVNai0&list=PL0Nf1KJu6Ui7yoc9RQ2TiiYL9Z0MKoggH&index=50
 
 [ref4]:https://www.youtube.com/watch?v=JNMy969SjyU
+
+[ref5]:https://www.youtube.com/watch?v=KA8hFBh2eiw
