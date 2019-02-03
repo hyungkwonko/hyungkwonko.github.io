@@ -192,7 +192,7 @@ ORDER: Source code $$\rightarrow$$ **Frontend - Optimizer - Backend** $$\rightar
 
 <br/>
 
-LLVM의 3단계 구성
+**LLVM**: A collection of compiler and toolchain(bunch of tools), which consists of three layers.
 
 1. Front-end **(NOT Javascript)**
   - takes our favorite languages, and translates it LLVM-IR
@@ -202,6 +202,9 @@ LLVM의 3단계 구성
 3. Back-end
   - take LLVM-IR, and translates it into architecture=specific machine code. e.g., X86 / ARM etc
 
+*[LLVM에 대한 자세한 설명 GOOD][ref5]*
+
+<br/>
 
 ### [](#header-3)Frontend stages
 
@@ -227,23 +230,65 @@ LLVM의 3단계 구성
 
 we turn everything to bits right away, we lose some opportunities to do an intelligent jobs of optimizing the program
 
-
-
-
-
+- internal compiler language that is:
+  - language-independent
+  - machine-independent
+  - easy to optimize
+- why yet another language?
+  - assembly does not have enough info to optimize it well
+  - enables modularity and reuse
 
 <br/>
 
+### [](#header-3)Common IR: control flow graph
 
+- basic block: sequence of assignments with an optional branch at the end
+- control flow graph:
+  - nodes: basic blocks
+  - edges: jumps or branches between basic blocks
 
+<br/>
 
+#### [](#header-4)Control flow graph for GCD
 
+<br/>
 
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic118.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, CFG of GCD, <a href="https://www.youtube.com/watch?v=6X8fVZcD3aY&index=12&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
 
+<br/>
 
+- looks like a high level FSM
 
+<br/>
 
+### [](#header-3)IR optimization
 
+- perform a set of passes over the CFG
+  - each pass does a specific, simple task over the CFG
+  - by repeating multiple simple passes on the CFG over and over, compilers achieve very complex optimizations
+- example optimizations:
+  - dead code elimination: eliminate assignments to variables that are never used, or basic blocks that are never reached (안쓰면, 안가면 제거)
+  - constant propagation: identify variables that are constant, substitute the constant elsewhere (변수를 상수로)
+  - constant folding: compute and substitute constant expressions
+
+<br/>
+
+#### [](#header-4)Example IR optimizations
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic119.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, CFG of GCD, <a href="https://www.youtube.com/watch?v=6X8fVZcD3aY&index=12&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+- we can get rid of the instructions that are never used in the program (dead code elim)
+- variable $$\rightarrow$$ constant (constant propagation)
+- we now can do constant folding make it constant if possible (constant folding)
+- 이해 안되면 동영상 40-41분 참고하기
+
+- repeat the process.... until it reaches the unchangeable state (final tree)
+
+- More optimizations by adding passes: common subexpression elimination, loop-invariant code motion, loop unrolling
 
 
 
