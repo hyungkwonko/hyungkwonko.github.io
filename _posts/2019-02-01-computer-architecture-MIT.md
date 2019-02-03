@@ -290,6 +290,11 @@ why push args in **REVERSE ORDER?**
   - static links in stack frames, pointing to frames of statically enclosing blocks. This allows a run-time discipline which correctly accesses variables in enclosing blocks. BUT enclosing block may no longer exist. (C avoids this problem by outlawing nested procedure declarations!)
 
 - 클로저: 내부 함수가 외부함수의 지역 변수에 접근할 수 있도록 하는 것. 위에 영어 설명이 이해가 안간다면 [생활코딩 링크를 참조 (1-4강)][ref2]
+
+<br/>
+
+### [](#header-3)Dangling references
+
 <br/>
 
 <div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic106.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, Dangling reference, <a href="https://www.youtube.com/watch?v=TW2peBbHfH8&index=9&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
@@ -319,24 +324,6 @@ What do we expect? _crashes, undefined / unreproducible behaviors..._
   - language does not have constructs that can lead to dangling references
   - storage managed automatically: garbage collection, reference counting
   - (easier to write correct programs, and that is why these languages are widely used these days)
-
-<br/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
