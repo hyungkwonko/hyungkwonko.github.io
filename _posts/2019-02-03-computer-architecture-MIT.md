@@ -139,7 +139,18 @@ Interpretation:
 
 ## [](#header-2)<span style="color:#088A08"> *Compilers* </span>
 
+- bare minimum for a functional compiler:
 
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic112.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, compilers, <a href="https://www.youtube.com/watch?v=6X8fVZcD3aY&index=12&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+- good compilers:
+  - produce meaningful errors on incorrect programs
+    - even better: meaningful warnings
+  - produce fast, optimized code
 
 
 
@@ -161,7 +172,7 @@ Interpretation:
 
 - *[Alternative video for better sound quality, content is the same though][ref1]*   
 
-- *[컴퓨터 과학기 여는 세계 - 상위 언어의 해설 실행, 서울대학교 이광근][ref3]*   
+- *[컴퓨터 과학이 여는 세계 - 상위언어의 해설실행, 서울대학교 이광근][ref3]*   
 
 - *[Compilation vs Interpretation][ref4]*  
 
