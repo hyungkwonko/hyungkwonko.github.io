@@ -211,14 +211,51 @@ we can squirrel away(나중에 쓰려고 감춰두다) for later.
   2. saving the CALLER's base ptr
   3. creating its own local / temp variables
 
+BP register holds the address of this data structure (all the local and temporary stuff get added into this)
+
+BP is a convention: in theory, it is possible to use SP to access stack frame, but offsets will change due to PUSHs and POPs. For convenience we use BP so we can use constant offsets to find, e.g., the first argument.
+
+<br/>
+
+### [](#header-3)Stack frames details
+
+F(1,2,3,4) translate to:
+```C
+ADDC(R31, 4, R0)
+PUSH(R0)
+ADDC(R31, 3, R0)
+PUSH(R0)
+ADDC(R31, 2, R0)
+PUSH(R0)
+ADDC(R31, 1, R0)
+PUSH(R0)
+BR(F, LP)
+```
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic104.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, stack frame details, <a href="https://www.youtube.com/watch?v=TW2peBbHfH8&index=9&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+`F(1,2,3,4)` $$\rightarrow$$ `4 - 3 - 2 - 1`
+In C / Java or any of these language, it will evaluate the right expression first $$\rightarrow$$ left expression second.
+
+why push args in **REVERSE ORDER?**
+1. it allows the BP to serve double duties when accessing the local frame
+  - to access k-th local variable:
+    - LD(BP, k*4, rx) or ST(rx, k*4, BP)
+  - to access j-th argument:
+    - LD(BP, -4*(j+3), rx) or ST(rx, -4*(j+3), BP)
+
+
+    <div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic105.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, argument accessing, <a href="https://www.youtube.com/watch?v=TW2peBbHfH8&index=9&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
 
 
 
+2. CALLEE can access the first few arguments without knowing how many arguments have been passed
 
-
-
-
-
+- 한글로 설명하면 BP를 중심으로 위로는 arg[0]를 fixed offset으로 접근하고 local[0]를 fixed offset으로 접근하는 더블 듀티 / 변수가 몇개인지 모르는 상황에서도(n개라고 치면 n개가 몇개인지 몰라도) 처음 몇 개에 접근할 수 있다는 장점이 있다.
 
 
 
@@ -227,6 +264,8 @@ we can squirrel away(나중에 쓰려고 감춰두다) for later.
 
 
 <br/><br/><br/>
+
+
 
 ## [](#header-2)<span style="color:#088A08"> *References* </span>
 
