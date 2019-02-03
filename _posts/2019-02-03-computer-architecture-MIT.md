@@ -290,12 +290,29 @@ we turn everything to bits right away, we lose some opportunities to do an intel
 
 - More optimizations by adding passes: common subexpression elimination, loop-invariant code motion, loop unrolling
 
+<br/>
+
+### [](#header-3)Putting it all together: GCD
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic120.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, GCD code, <a href="https://www.youtube.com/watch?v=6X8fVZcD3aY&index=12&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+- we can make it compact at last
 
 
 
+<br/><br/><br/>
 
 
 
+## [](#header-2)<span style="color:#088A08"> *Summary: Modern compilers* </span>
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic121.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, modern compilers, <a href="https://www.youtube.com/watch?v=6X8fVZcD3aY&index=12&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
 
 
 
