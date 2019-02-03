@@ -248,14 +248,61 @@ why push args in **REVERSE ORDER?**
   - to access j-th argument:
     - LD(BP, -4*(j+3), rx) or ST(rx, -4*(j+3), BP)
 
-
     <div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic105.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, argument accessing, <a href="https://www.youtube.com/watch?v=TW2peBbHfH8&index=9&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
-
-
 
 2. CALLEE can access the first few arguments without knowing how many arguments have been passed
 
 - 한글로 설명하면 BP를 중심으로 위로는 arg[0]를 fixed offset으로 접근하고 local[0]를 fixed offset으로 접근하는 더블 듀티 / 변수가 몇개인지 모르는 상황에서도(n개라고 치면 n개가 몇개인지 몰라도) 처음 몇 개에 접근할 수 있다는 장점이 있다.
+
+<br/>
+
+### [](#header-3)Procedure linkage: the contract
+
+1. The caller will:
+  - push args onto stack, in reverse order
+  - branch to callee, putting return address into LP
+  - remove args from stack on return
+2. The callee will:
+  - perform promised computation, leaving result in R0
+  - branch to return address
+  - leave stacked data intact, including stacked args
+  - leave regs (except R0) unchanged
+
+<br/>
+
+
+### [](#header-3)Dangling references
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic106.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, Dangling reference, <a href="https://www.youtube.com/watch?v=TW2peBbHfH8&index=9&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+```C
+int* p;
+
+int h(int x) {
+  int y = x*3;
+  p = &y;
+  return 37;
+}
+h(10);
+print(*p); // garbage printed. what happened?
+```
+What do we expect?
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
