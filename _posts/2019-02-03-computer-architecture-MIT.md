@@ -75,7 +75,68 @@ Layers of interpretation:
 
 <br/>
 
-model of compilation: 
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic111.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, compilation, <a href="https://www.youtube.com/watch?v=6X8fVZcD3aY&index=12&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7">source</a> </div>
+
+<br/>
+
+model of compilation:
+- given some hard-to-program machine, say M1...
+- find some easier-to-program language L2 (perhaps for a more complicated machine, M2), write programs in that language
+- build a translator (compiler) that translates programs from M2's language to M1's language. may run on M1, M2, or some other machine
+
+Interpretation and compilation: two ways to execute high-level languages
+- both allow changes in the programming language
+- both afford programming applications in platform independent languages
+- both are widely used in modern computer systems!
+
+
+
+- what the semantics are of a high level language statement, each time it needs to be executed, we think about it once at compile time, we make all the decisions, and then we produce exactly the machine instructions that should be executed
+- higher execution performance (we never look at the source code again)
+- Java actually uses a hybrid strategy, as they started off as interpreters and they use what's called a just-in-time compiler to convert often use fragment of your code into machine language, which then executes much more efficiently.
+
+<br/>
+
+----
+### [](#header-3)Pros & Cons
+- 두가지 방법의 장단점 비교
+
+Compilation:
+- Pros:
+  - fast
+  - source code private
+- Cons:
+  - not cross-platform
+  - requires extra compiling step (longer to develop)
+Interpretation:
+- Pros:
+  - cross platform
+  - no extra step
+  - easier debugging
+- Cons:
+  - slower
+  - public source
+----
+
+|      | Interpretation     | Compilation |
+| :------------- | :------------- | :------------- |
+| How it treats input "x+2"       | computes x+2       |generates a program that computes x+2|
+|when it happens   |  during execution |before execution   |
+|what it complicates   |program execution   |program development   |
+|decision made at   |run time   |compile time   |
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -91,6 +152,14 @@ model of compilation:
 
 - *[Alternative video for better sound quality, content is the same though][ref1]*   
 
+- *[컴퓨터 과학기 여는 세계 - 상위 언어의 해설 실행, 서울대학교 이광근][ref3]*   
+
+- *[Compilation vs Interpretation][ref4]*  
+
 [ref1]:https://www.youtube.com/watch?v=6X8fVZcD3aY&index=12&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7
 
 [ref2]:https://www.youtube.com/watch?v=_njvKwIizzQ
+
+[ref3]:https://www.youtube.com/watch?v=8yMdCnVNai0&list=PL0Nf1KJu6Ui7yoc9RQ2TiiYL9Z0MKoggH&index=50
+
+[ref4]:https://www.youtube.com/watch?v=JNMy969SjyU
