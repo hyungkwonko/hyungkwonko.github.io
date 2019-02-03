@@ -119,7 +119,7 @@ Interpretation:
 <br/>
 
 |      | Interpretation     | Compilation |
-| :------------- | :------------- | :------------- |
+| :--------- | :--------- | :--------- |
 | How it treats input "x+2"       | computes x+2       |generates a program that computes x+2|
 |when it happens   |  during execution |before execution   |
 |what it complicates   |program execution   |program development   |
