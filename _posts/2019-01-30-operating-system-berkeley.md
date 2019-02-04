@@ -13,7 +13,6 @@ use_math: true
 ---
 
 ## [](#header-2)<span style="color:#088A08"> *Review* </span>
-
 We started out by talking about multiplexing of memory resources.
 
 Goals of memory resources:

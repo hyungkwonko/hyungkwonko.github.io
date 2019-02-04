@@ -13,7 +13,6 @@ use_math: true
 ---
 
 ## [](#header-2)<span style="color:#088A08"> *What we are going to learn* </span>
-
 To understand how the compilers do their job of translating what you write as a program into machine instructions, and partly we're evaluating our machine instructions to make sure we have everything we need.
 
 

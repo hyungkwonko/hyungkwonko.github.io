@@ -20,8 +20,6 @@ The size of segments are different? YES and NO
 
 The reason two-level page table is advantageous is because just by marking things invalid at the first level, we could get rid of the things at the second level.
 
-Do they exist or don't?
-
 Multi-level translation 등에 대한 부분은 저번에 많이 했으므로 skip하겠음.
 
 <br/>
