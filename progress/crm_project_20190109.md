@@ -25,7 +25,7 @@ There are systematic algorithms that you can use to generate synthetic samples. 
 _Anomaly detection_
 Anomaly detection is the detection of rare events. This might be a machine malfunction indicated through its vibrations or a malicious activity by a program indicated by it’s sequence of system calls. The events are rare and when compared to normal operation. This shift in thinking considers the minor class as the outliers class which might help you think of new ways to separate and classify samples.  
 
-<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/anomaly.png" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Devin Soni, Visualization of clustering method for anomaly detection, <a href="https://towardsdatascience.com/dealing-with-imbalanced-classes-in-machine-learning-d43d6fa19d2">source</a> </div>
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic0.png" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Devin Soni, Visualization of clustering method for anomaly detection, <a href="https://towardsdatascience.com/dealing-with-imbalanced-classes-in-machine-learning-d43d6fa19d2">source</a> </div>
 
 _Change detection_
 Change detection is similar to anomaly detection except rather than looking for an anomaly it is looking for a change or difference. This might be a change in behavior of a user as observed by usage patterns or bank transactions.  

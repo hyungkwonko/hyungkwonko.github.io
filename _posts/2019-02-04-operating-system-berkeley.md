@@ -84,7 +84,7 @@ For detailed explanation, please refer to:
 
 <br/>
 
-<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic124.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Washington Univ., Two-level page table, <a href="https://courses.cs.washington.edu/courses/cse451/13wi/lectures/11%20-%20MM%20Hardware%20Support.pdf">source</a> </div>
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic124.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Gary Kimura at Univ. of Washington, Two-level page table, <a href="https://courses.cs.washington.edu/courses/cse451/13wi/lectures/11%20-%20MM%20Hardware%20Support.pdf">source</a> </div>
 
 <br/>
 
@@ -119,7 +119,9 @@ For detailed explanation, please refer to:
 
 [가상 메모리 쓰기 시 복사 (copy-on-write) / zero-fill-on-demand 설명][ref5]
 
+<br/>
 
+### [](#header-3)How is the translation accomplished?
 
 
 

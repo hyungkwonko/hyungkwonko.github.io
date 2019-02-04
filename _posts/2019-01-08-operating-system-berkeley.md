@@ -18,12 +18,12 @@ meta: "Seoul"
 ### [](#header-3) Process vs. Thread
 1. Process: an executing instance of a program
   :: independent of one another  
-  <img src="/images/process.png">  
+  <img src="/images/pic126.png">  
 
 2. Thread: a path of execution within a process. A process can contain multiple threads.
   :: share with other threads their code section, data section, and OS resources  
   :: should be careful to do the synchronization  
-  <img src="/images/thread.png">  
+  <img src="/images/pic127.png">  
 <br/><br/>
 
 **_Advantages of Thread over Process_**  
