@@ -123,14 +123,67 @@ For detailed explanation, please refer to:
 
 ### [](#header-3)How is the translation accomplished?
 
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic125.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, translation, <a href="https://www.youtube.com/watch?v=wQcKjMCC_Zk&index=13&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws">source</a> </div>
+
+<br/>
+
+- what appens inside MMU?
+- one possibility: hardware tree traversal
+  - for each virtual address, takes page table base pointer and traverses the page table in hardware
+  - generates a page fault if it encounters invalid PTE
+    - fault handler will decide what to do
+    - more on this next lecture
+  - pros: relatively fast (but still many memory accesses)
+  - cons: inflexible, complex hardware
+- another possibility: software
+  - each traversal done in software
+  - pros: very inflexible
+  - cons: SLOW..., every translation must invoke fault
+
+**In fact, need way to cache translations for either case!**
 
 
 
+<br/><br/><br/>
 
 
 
+## [](#header-2)<span style="color:#088A08"> *Dual mode operation* </span>
+
+- can application modify its own translation tables?
+  - if it could, could get access to all of physical memory
+  - has to be restricted somehow
+- to assist with protection, hardware provides at least two modes (dual-mode operation):
+  - **kernel** mode (or **supervisor** or **protected**)
+  - **user** mode (normal program mode)
+  - mode set with bits in special control register only accessible in kernel-mode
+- Intel processor actually has four rings of protection:
+  - PL(privilege level) from 0 - 3
+    - PL0 has full access(highest), PL3 has least(lowest)
+  - privilege level set in code segment descriptor (CS)
+  - mirrored "IOPL" bits in condition register gives permission to programs to use the I/O instructions
+  - typical OS kernels on intel processors only use PLO(kernel) and PL3(user)
+
+<br/>
+
+### [](#header-3)How to get from kernel to user
+- what does the kernel do to create a new user process
+  - allocate and initialize address space control block
+  - read program off disk and store in memory
+  - allocate and initialize translation table
+    - point at code in memory so program can execute
+    - possibly point at statically initialized data
+  - run program:
+    - set machine registers
+    - set hardware pointer to translation table
+    - set processor status word for user mode
+    - jump to start of program
 
 
+
+<br/>
 
 
 
