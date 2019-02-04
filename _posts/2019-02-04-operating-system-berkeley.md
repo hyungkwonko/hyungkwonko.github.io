@@ -168,7 +168,7 @@ For detailed explanation, please refer to:
 
 <br/>
 
-### [](#header-3)How to get from kernel to user
+### [](#header-3)How to get from kernel $$\rightarrow$$ user
 - what does the kernel do to create a new user process
   - allocate and initialize address space control block
   - read program off disk and store in memory
@@ -180,10 +180,90 @@ For detailed explanation, please refer to:
     - set hardware pointer to translation table
     - set processor status word for user mode
     - jump to start of program
-
-
+- how does kernel switch between processes?
+  - same saving/restoring of registers as before
+  - save/restore PSL (hardware pointer to translation table)
 
 <br/>
+
+### [](#header-3)user $$\rightarrow$$ kernel (system call)
+- Can't let inmate get out of padded cell on own
+  - would defeat purpose of protection
+  - so, how does the user program get back into kernel?
+- system call: voluntary procedure call into kernel
+  - hardware for controlled user $$\rightarrow$$ kernel transition
+  - can any kernel routine be called?
+    - No, only specific ones
+  - system call ID encoded into system call instruction
+    - index forces well-defined interface with kernel
+
+<br/>
+
+### [](#header-3)System call
+
+- what are some system calls?
+  - I/O: open, close, read, write, lseek
+  - files: delete, mkdir, rmdir, truncate, chown, ...
+  - process: fork, exit, wait
+  - network: socket create, set options
+- are system calls constant across operating systems?
+  - not entirely, but there are lots of commonalities **(most of them are similar)**
+  - also some standardization attempts (POSIX)
+- what happens at beginning of system call?
+  - on entry to kernel, sets system to kernel mode
+  - handler address fetched from table/handler started
+- system call argument passing:
+  - in registers
+  - write into user memory, kernel copies into kernel mem
+    - user addresses must be translated
+    - kernel has different view of memory than user
+    - every argument must be explicitly checked
+
+_**Why do we copy data from user space to kernel space?**_
+- it is all about making sure the user can't mess things up
+- whether the users pages are pinned when you are in the kernel or not, so if the user sort of gives you some data and then the kernel starts executing maybe the data will go away because it goes out to disk, and so you gotta make sure it's copied into the kernel, so it won't go away.
+- 첫째는 보호(security)를 위해, 둘째는 데이티가 페이지테이블 교체되면서 디스크로 들어가서 작업중에 날라갈 수 있어서 그걸 방지하기 위해
+
+<br/>
+
+### [](#header-3)User to Kernel (exceptions: traps and interrupts)
+
+- A system call instruction causes a synchronous exception (or "trap")
+  - in fact, often called a software "trap" instruction
+- Other sources of synchronous exceptions ("Trap")
+  - divide by zero, illegal instruction, bus error
+  - segmentation fault (address out of range)
+  - page fault (for illusion of infinite sized memory)
+- Interrupts are asynchronous exceptions
+  - examples: timer, disk ready, network, etc...
+  - **interrupts can be disabled, traps cannot!** (why? when you hit a bad point in the instruction stream, you got to stop)
+- On system call, exception, or interrupt:
+  - hardware enters kernel mode with interrupts disabled
+  - saves PC, then jumps to appropriate handler in kernel
+  - in x86, it saves register, changes stack, etc
+- Actual handler typically saves registers, other CPU state, and switches to kernel stack
+
+<br/>
+
+
+### [](#header-3)Closing thought: protection without hardware
+- does protection require hardware support for translation and dual mode behavior
+  - no: normally use hardware, but anything you can do in hardware can also do in software (possibly expensive)
+- protection via strong typing:
+  - restrict programming language so that you cannot express program that would trash another program
+  - loader needs to make sure that program produced by valid compiler or all bets are off
+  - example languages: LISP, Ada, **Java**...
+- protection via software fault isolation:
+  - language independent approach: have compiler generate object code that provably can't step out of bounds
+    - compiler puts in checks for every dangerous operation
+    - alternative, compiler generates proof that code cannot do certain things
+- OR: user virtual machine to guarantee safe behavior (load and stores recompiled on check bounds)
+
+
+
+
+
+
 
 
 
