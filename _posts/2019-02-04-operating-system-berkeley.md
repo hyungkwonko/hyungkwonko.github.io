@@ -22,6 +22,49 @@ The reason two-level page table is advantageous is because just by marking thing
 
 Multi-level translation 등에 대한 부분은 저번에 많이 했으므로 skip하겠음.
 
+
+<br/><br/><br/>
+
+
+
+## [](#header-2)<span style="color:#088A08"> *Goals for today* </span>
+- finish up address translation & protection
+- caching and TLBs
+
+
+
+<br/><br/><br/>
+
+
+
+## [](#header-2)<span style="color:#088A08"> *More on Address Translation* </span>
+
+### [](#header-3)What is in a PTE (page table entry)
+
+- what is in a PTE?
+  - pointer to next-level page table or to actual page
+  - permission bits: valid, read-only, read-write, write-only
+- example: Intel x86 architecture PTE:
+  - address same format previous slide (10, 10, 12-bit offset)
+  - intermediate page tables called "directions"
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic123.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, page table entry, <a href="https://www.youtube.com/watch?v=wQcKjMCC_Zk&index=13&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws">source</a> </div>
+
+<br/>
+
+- P: present (same as valid bit in other architecture)
+- W: writeable
+- U: user accessible
+- PWT: page write transparent: external cache write-through
+- PCD: page cache disabled (page cannot be cached)
+- A: accessed: page has been accessed recently
+- D: dirty (PTE only): page has been modified recently
+- L: if L=1, there is only **single level page table.** Bottom 22 bits of virtual address serve as offset (you don't need to swap a lot)
+
+---
+
 <br/>
 
 <div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic122.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, Two-level page table, <a href="https://www.youtube.com/watch?v=wQcKjMCC_Zk&index=13&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws">source</a> </div>
@@ -39,11 +82,57 @@ For detailed explanation, please refer to:
 - *[링크1 - Page table entries][ref3]*
 - *[링크2 - 위키피디아][ref4]*
 
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic124.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Washington Univ., Two-level page table, <a href="https://courses.cs.washington.edu/courses/cse451/13wi/lectures/11%20-%20MM%20Hardware%20Support.pdf">source</a> </div>
+
+<br/>
+
+- master page table contains secondary page table number
+- secondary page table contains page frame number (physical address)
+---
+
+<br/>
+
+#### [](#header-4)Examples of how to use a PTE
+
+- how do we use the PTE?
+  - invalid PTE can imply different things:
+    - Region of address space is actually invalid or
+    - page/directory is just somewhere else than memory
+  - validity checked first
+    - OS can use other 31 bits for location info
+- usage example: demand paging
+  - keep inly active pages in memory
+  - place others on disk and mark their PTEs invalid
+- usage example: copy on write
+  - UNIX fork gives copy of parent address space to child
+    - address spaces disconnected after child created
+  - how to do this cheaply?
+    - make copy of parent's page tables (point at same memory)
+    - mark entries in both sets of page tables as read-only
+    - page fault on write creates two copies
+  - usage example: zero fill on demand
+    - new data pages must carry no information (say be zeroed)
+    - mark PTEs as invalid; page fault on use gets zeroed page
+    - often, OS creates zeroed pages in background
+
+[가상 메모리 쓰기 시 복사 (copy-on-write) / zero-fill-on-demand 설명][ref5]
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br/><br/><br/>
-
-
 
 
 ## [](#header-2)<span style="color:#088A08"> *References* </span>
@@ -56,6 +145,8 @@ For detailed explanation, please refer to:
 
 - *[페이지테이블 엔트리 - 위키피디아][ref4]*   
 
+- *[가상 메모리 쓰기 시 복사 (copy-on-write)][ref5]*
+
 [ref1]:https://www.youtube.com/watch?v=wQcKjMCC_Zk&index=13&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws
 
 [ref2]:https://www.youtube.com/watch?v=Z4kSOv49GNc
@@ -63,3 +154,5 @@ For detailed explanation, please refer to:
 [ref3]:https://www.youtube.com/watch?v=OaTR3S3MPRw
 
 [ref4]:https://ko.wikipedia.org/wiki/%ED%8E%98%EC%9D%B4%EC%A7%80_%ED%85%8C%EC%9D%B4%EB%B8%94
+
+[ref5]:https://sqlangeles.com/2018/01/11/%EA%B0%80%EC%83%81-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%93%B0%EA%B8%B0-%EC%8B%9C-%EB%B3%B5%EC%82%AC-copy-on-write/
