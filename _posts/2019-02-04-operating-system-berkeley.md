@@ -5,6 +5,8 @@ date: 2019-02-04 17:00:00
 categories:
 - Operating systems
 tags:
+- address translation
+- paging
 - cache
 - TLB
 author: "Hyung-Kwon Ko"
@@ -260,8 +262,12 @@ _**Why do we copy data from user space to kernel space?**_
 - OR: user virtual machine to guarantee safe behavior (load and stores recompiled on check bounds)
 
 
+<br/><br/><br/>
 
 
+## [](#header-2)<span style="color:#088A08"> *Caching* </span>
+
+- Cache: 
 
 
 
