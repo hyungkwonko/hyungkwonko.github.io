@@ -267,7 +267,78 @@ _**Why do we copy data from user space to kernel space?**_
 
 ## [](#header-2)<span style="color:#088A08"> *Caching* </span>
 
-- Cache: 
+- Cache: a repository for copies that can be accessed more quickly than the original
+  - make frequent case fast and infrequent case less dominant
+- caching underlies many of the techniques that are used today to make computers fast
+  - can cache: memory locations, address translations, pages, file blocks, file names, etc...
+- only good if:
+  - frequent case frequent enough
+  - infrequent case not too expensive
+- important measure: **Average access time = (Hit Rate * Hit Time) + (Miss Rate * Miss Time)**
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic128.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, why bother with caching, <a href="https://www.youtube.com/watch?v=wQcKjMCC_Zk&index=13&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws">source</a> </div>
+
+<br/>
+
+### [](#header-3)Major reason to deal with caching
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic129.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, too many accesses, <a href="https://www.youtube.com/watch?v=wQcKjMCC_Zk&index=13&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws">source</a> </div>
+
+<br/>
+
+- cannot afford to translate on every access
+  - at least three DRAM accesses per actual DRAM access
+  - or: perhaps I/O if page table partially on disk!
+- **even worse: what if we are using caching to make memory access faster than DRAM access?**
+- SOLUTION: Cache translation
+  - translation cache: TLB (translation lookaside buffer)
+
+<br/>
+
+### [](#header-3)Why does caching help? - Locality
+
+- Temporal locality (locality in time):
+  - keep recently accessed data items closer to processor
+- Spatial locality (locality in space):
+  - move contiguous blocks to the upper levels
+
+<br/>
+
+### [](#header-3)Memory hierarchy of a modern computer system
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic130.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, memory hierarchy, <a href="https://www.youtube.com/watch?v=wQcKjMCC_Zk&index=13&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws">source</a> </div>
+
+<br/>
+
+- take advantage of the principle of locality to:
+  - present as much memory as in the cheapest technology
+  - provide access at speed offered by the fastest technology
+
+<br/>
+
+### [](#header-3) A summary on sources of cache misses
+- compulsory: first access to a block
+  - Note: if you are going to run billions of instruction, compulsory misses are insignificant
+- capacity:
+  - cache cannot contain all block access by the program
+  - solution: increase cache size
+- conflict (collision):
+  - multiple memory locations mapped to the same cache location
+  - solution 1: increase cache size
+  - solution 2: increase associativity
+- coherent (invalidation)L other process updates memory
+
+
+- 컴펄저리: 처음이라 없는거
+- 캐패씨티: 공간이 없어서 나중에 빠져서 없는거
+- 컨플릭트: 나중에 설명하겠음
+- 코히런트: 다른 프로세스가 업데이트 해가지고 없는거
 
 
 
