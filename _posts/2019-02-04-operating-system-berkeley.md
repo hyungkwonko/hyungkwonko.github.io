@@ -276,13 +276,15 @@ _**Why do we copy data from user space to kernel space?**_
   - infrequent case not too expensive
 - important measure: **Average access time = (Hit Rate * Hit Time) + (Miss Rate * Miss Time)**
 
+### [](#header-3)Major reason to deal with caching
+
 <br/>
 
 <div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic128.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, why bother with caching, <a href="https://www.youtube.com/watch?v=wQcKjMCC_Zk&index=13&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws">source</a> </div>
 
 <br/>
 
-### [](#header-3)Major reason to deal with caching
+- the gap between CPU speed and memory accessing speed gets bigger $$\rightarrow$$ how to optimize the best memory architecture??
 
 <br/>
 
@@ -339,6 +341,27 @@ _**Why do we copy data from user space to kernel space?**_
 - 캐패씨티: 공간이 없어서 나중에 빠져서 없는거
 - 컨플릭트: 나중에 설명하겠음
 - 코히런트: 다른 프로세스가 업데이트 해가지고 없는거
+
+https://lolki.tistory.com/2
+https://lolki.tistory.com/2
+https://lolki.tistory.com/2
+https://lolki.tistory.com/2
+https://lolki.tistory.com/2
+
+<br/>
+
+### [](#header-3) Set associative cache
+
+
+
+
+
+
+
+
+
+
+
 
 
 
