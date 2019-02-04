@@ -339,32 +339,106 @@ _**Why do we copy data from user space to kernel space?**_
 
 - 컴펄저리: 처음이라 없는거
 - 캐패씨티: 공간이 없어서 나중에 빠져서 없는거
-- 컨플릭트: 나중에 설명하겠음
+- 컨플릭트: 캐시 상에서 같은 공간에 mapping된 것
 - 코히런트: 다른 프로세스가 업데이트 해가지고 없는거
 
-https://lolki.tistory.com/2
-https://lolki.tistory.com/2
-https://lolki.tistory.com/2
-https://lolki.tistory.com/2
-https://lolki.tistory.com/2
+<br/>
+
+### [](#header-3) How is a block found in a cache?
+
+lay address our & start dividing bits up
+- block offset: full address is divided into a block offset which looks like a page offset but typically only a few bits like 5-7
+- index: selects the set (look up things in the cache)
+- tag: used to see whether it's in the cache or not
+
+<br/>
+
+### [](#header-3) Direct mapped cache
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic131.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, direct mapped cache, <a href="https://www.youtube.com/watch?v=wQcKjMCC_Zk&index=13&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws">source</a> </div>
+
+<br/>
+
+- direct mapped $$2^{N}$$ byte cache:
+  - the uppermost (32 - N) bits are always the cache tag (in this case, 32 - 10 = 22)
+  - the lowest M bits are the byte select (block size = $$2^{M}$$)
+- example: 1 KB direct mapped cache with 32 B blocks
+  - index chooses potential block
+  - tag checked to verify block
+- valid bits are all set to 0 at first
+
+- Byte select 부분은 Byte31, ..., Byte1, Byte0 이렇게 가로로 된 부분이고 Cache index 부분은 0, 1, 2, ..., 31 이렇게 row부분이고
+- 그래서 cache index로 확인해가지고 그 찾은 부분의 tag를 cache tag랑 매칭해서 같으면 cache hit이고 다르면 cache miss
+
+**_Why is this called a direct mapped cache?_** because the index picks out exactly one ache line as a candidate and either it matches or it doesn't. So it is directly indexed cache.
 
 <br/>
 
 ### [](#header-3) Set associative cache
 
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic132.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, set associative cache, <a href="https://www.youtube.com/watch?v=wQcKjMCC_Zk&index=13&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws">source</a> </div>
+
+<br/>
+
+- N way set associative: N entries per cache index
+  - N direct mapped caches operates in parallel
+- example: two-way set associative cache
+  - cache index selects a **set** from the cache
+  - two tags in the set are compared to input in parallel
+
+<br/>
+
+### [](#header-3) Fully associative cache
+
+<br/>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic133.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>John Kubiatowicz, fully associative cache, <a href="https://www.youtube.com/watch?v=wQcKjMCC_Zk&index=13&list=PLggtecHMfYHA7j2rF7nZFgnepu_uPuYws">source</a> </div>
+
+<br/>
+
+- fully associative: every block can hold any line
+  - address does not include a cache index
+  - compare cache tags of all cache entries in parallel
+- example: block size = 32B blocks
+
+- there is no longer an index at all because every cache line is compared in parallel. the one that happens to match is the one that I use
+- the direct map has the limited place where an item could go. So every address can go in exactly one place in the cache which is fast but we get more conflict. Because if two things happen to map in the same place in the cache, they will kick each other out. in case of fully mapped cache, we will never have conflicts because the only time we kick something out of the cache is if we don't have enough space, not because of a conflict. But it is expensive from a space standpoint.
+- 장단점이 있는 듯. fully쓰면 느리고 공간 많이 차지해서 비용측면에서 안좋은 대신 conflict없고 direct는 장단점이 각각 반대
 
 
+<br/><br/><br/>
 
 
+## [](#header-2)<span style="color:#088A08"> *Summary* </span>
 
-
-
-
-
-
-
-
-
+- The principle of locality:
+  - program likely to access a relatively small portion of the address space at any instant of time
+    - temporal locality
+    - spatial locality
+- Three (+1) major categories of cache misses:
+  - compulsory misses: cold start
+  - conflict misses: increase cache size and/or associativity
+  - capacity misses: increase cache size
+  - coherence misses: caused by external processors or I/O devices
+- Cache organizations:
+  - direct mapped: single block per set
+  - set associative: more than one block per set
+  - fully associative: all entries equivalent
+- PTE: page table entries
+  - includes physical page number
+  - control info
+- A cache of translations called a TLB(translation lookaside buffer)
+  - relatively small number of entries
+  - fully associative
+  - TLB entries contain PTE and optional process ID
+- On TLB miss, page table must be traversed
+  - if located PTE is invalid, cause page fault
+- On context switch/change in page table
+  - TLB entries must be invalidated somehow
 
 
 <br/><br/><br/>
