@@ -20,28 +20,28 @@ B.S in Mathematics, minor in Industrial engineering
 
 ## [](#header-2)<span style="color:#088A08"> *Experience* </span>  
 
-#### [](#header-4)_Jan. 2019 - Feb. 2019:_ Intern at LG electronics in Seoul, South Korea  
-Home electronics company, Research & Development center, Intern  
+#### [](#header-4)_Jan. 2019 - Feb. 2019:_ Intern at LG electronics in Seoul, South Korea
+_Home electronics company, Research & Development center, Intern_
 Worked on data mining project in customer relationship management(CRM) for sales promotion  
 <br/>
 
 #### [](#header-4)_Jun. 2018 - Sep. 2018:_ Intern at Wesley Quest in Seoul, South Korea  
-Strategic consulting firm, Research Associate  
+_Strategic consulting firm, Research Associate_
 Participated in two big data projects. Made deep-learning based prediction model using Python
-  1. _Improvement of the management system and air quality in Seoul Metro (E2A9F3ent: Seoul Digital Foundation)_  
-  2. _Inventing the model of predicting the workers compensation using big data (Client: Korea Workers Compensation and Welfare Service)_  
+1. Improvement of the management system and air quality in Seoul Metro (E2A9F3ent: Seoul Digital Foundation)  
+2. Inventing the model of predicting the workers compensation using big data (Client: Korea Workers Compensation and Welfare Service)
 <br/>
 
 #### [](#header-4)_Mar. 2017 - Nov. 2018:_ Intern at Lab for Probability and Statistical Modeling  
-Lab of professor Suk-Joo Bae in Hanyang University, Undergraduate Intern  
-Participated in Hyundae Motors reliability analysis projects  
-  1. _Improvement on the component reliability using the warranty claims data_  
-  2. _OBD sensor data analysis_  
+_Lab of professor Suk-Joo Bae in Hanyang University, Undergraduate Intern_
+Participated in Hyundae Motors reliability analysis projects
+1. Improvement on the component reliability using the warranty claims data  
+2. OBD sensor data analysis
 <br/>
 
-#### [](#header-4)_Mar. 2016 - Aug. 2016:_ Intern at Actors Theatre Workshop in New York, NY, USA  
-  - _Program staff: Helped unprivileged children in NYC with therapeutic programs_  
-  - _Fundraising work: Wrote proposal letters to NYC councilman for fundraising_
+#### [](#header-4)_Mar. 2016 - Aug. 2016:_ Intern at Actors Theatre Workshop in New York, NY, USA
+- Program staff: Helped unprivileged children in NYC with therapeutic programs
+- Fundraising work: Wrote proposal letters to NYC councilman for fundraising
 <br/><br/><br/>
 
 
