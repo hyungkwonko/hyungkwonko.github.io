@@ -28,20 +28,20 @@ Worked on data mining project in customer relationship management(CRM) for sales
 #### [](#header-4)_Jun. 2018 - Sep. 2018:_ Intern at Wesley Quest in Seoul, South Korea  
 Strategic consulting firm, Research Associate  
 Participated in two big data projects. Made deep-learning based prediction model using Python  
-_1. Improvement of the management system and air quality in Seoul Metro (E2A9F3ent: Seoul Digital Foundation)_  
-_2. Inventing the model of predicting the workers compensation using big data (Client: Korea Workers Compensation and Welfare Service)_  
+  1. _Improvement of the management system and air quality in Seoul Metro (E2A9F3ent: Seoul Digital Foundation)_  
+  2. _Inventing the model of predicting the workers compensation using big data (Client: Korea Workers Compensation and Welfare Service)_  
 <br/>
 
 #### [](#header-4)_Mar. 2017 - Nov. 2018:_ Intern at Lab for Probability and Statistical Modeling  
 Lab of professor Suk-Joo Bae in Hanyang University, Undergraduate Intern  
 Participated in Hyundae Motors reliability analysis projects  
-_1. Improvement on the component reliability using the warranty claims data_  
-_2. OBD sensor data analysis_  
+  1. _Improvement on the component reliability using the warranty claims data_  
+  2. _OBD sensor data analysis_  
 <br/>
 
 #### [](#header-4)_Mar. 2016 - Aug. 2016:_ Intern at Actors Theatre Workshop in New York, NY, USA  
-- _Program staff: Helped unprivileged children in NYC with therapeutic programs_  
-- _Fundraising work: Wrote proposal letters to NYC councilman for fundraising_
+  - _Program staff: Helped unprivileged children in NYC with therapeutic programs_  
+  - _Fundraising work: Wrote proposal letters to NYC councilman for fundraising_
 <br/><br/><br/>
 
 
@@ -66,7 +66,7 @@ _Predicted the number of visitors of children's grand park with regression, SVR 
 
 ## [](#header-2)<span style="color:#088A08"> *Programming skills* </span>  
 
-_Languages:_ Python(Tensorflow, Keras, Matplotlib, ...), R(ggplot2, ...), C/C++, Java, MATLAB, SQL  
+_Languages:_ Python(Tensorflow, Keras, Matplotlib, ...), R, C/C++, Java, MATLAB, SQL  
 _Technologies:_ Git, Vim, AWS, Latex  
 <br/><br/><br/>
 
