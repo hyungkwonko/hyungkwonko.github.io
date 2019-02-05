@@ -28,8 +28,8 @@ Worked on data mining project in customer relationship management(CRM) for sales
 #### [](#header-4)_Jun. 2018 - Sep. 2018:_ Intern at Wesley Quest in Seoul, South Korea  
 _Strategic consulting firm, Research Associate_
 Participated in two big data projects. Made deep-learning based prediction model using Python
-1. Improvement of the management system and air quality in Seoul Metro (E2A9F3ent: Seoul Digital Foundation)  
-2. Inventing the model of predicting the workers compensation using big data (Client: Korea Workers Compensation and Welfare Service)
+1.Improvement of the management system and air quality in Seoul Metro (client: Seoul Digital Foundation)  
+2.Inventing the model of predicting the workers compensation using big data (Client: Korea Workers Compensation and Welfare Service)
 <br/>
 
 #### [](#header-4)_Mar. 2017 - Nov. 2018:_ Intern at Lab for Probability and Statistical Modeling  
