@@ -40,8 +40,8 @@ Participated in Hyundae Motors reliability analysis projects
 <br/>
 
 #### [](#header-4)_Mar. 2016 - Aug. 2016:_ Intern at Actors Theatre Workshop in New York, NY, USA  
-- Program staff: Helped unprivileged children in NYC with therapeutic programs  
-- Fundraising work: Wrote proposal letters to NYC councilman for fundraising  
+1 - Program staff: Helped unprivileged children in NYC with therapeutic programs  
+2 - Fundraising work: Wrote proposal letters to NYC councilman for fundraising  
 
 
 <br/><br/><br/>
@@ -61,7 +61,7 @@ Received an opportunity to participate in KT's next project and 20,000,000 KRW o
 <br/><br/>
 
 #### [](#header-4)_Mar. 2017 - Nov. 2017:_ 2nd Place in Academical team research
-_Natural science college of Hanyang University_
+_Natural science college of Hanyang University_  
 Predicted the number of visitors of children's grand park with regression, SVR and time series model
 <br/><br/><br/>
 
