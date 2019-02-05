@@ -28,15 +28,15 @@ Worked on data mining project in customer relationship management(CRM) for sales
 #### [](#header-4)_Jun. 2018 - Sep. 2018:_ Intern at Wesley Quest in Seoul, South Korea  
 _Strategic consulting firm, Research Associate_  
 Participated in two big data projects. Made deep-learning based prediction model using Python  
-1.Improvement of the management system and air quality in Seoul Metro (client: Seoul Digital Foundation)  
-2.Inventing the model of predicting the workers compensation using big data (Client: Korea Workers Compensation and Welfare Service)  
+1 - Improvement of the management system and air quality in Seoul Metro (client: Seoul Digital Foundation)  
+2 - Inventing the model of predicting the workers compensation using big data (Client: Korea Workers Compensation and Welfare Service)  
 <br/>
 
 #### [](#header-4)_Mar. 2017 - Nov. 2018:_ Intern at Lab for Probability and Statistical Modeling  
 _Lab of professor Suk-Joo Bae in Hanyang University, Undergraduate Intern_  
 Participated in Hyundae Motors reliability analysis projects  
-1. Improvement on the component reliability using the warranty claims data  
-2. OBD sensor data analysis  
+1 - Improvement on the component reliability using the warranty claims data  
+2 - OBD sensor data analysis  
 <br/>
 
 #### [](#header-4)_Mar. 2016 - Aug. 2016:_ Intern at Actors Theatre Workshop in New York, NY, USA  
@@ -51,18 +51,18 @@ Participated in Hyundae Motors reliability analysis projects
 
 #### [](#header-4)_Aug. 2018 - Oct. 2018:_ 3rd place in Big Contest
 _Open contest held by National Information Society Agency and Korea Bigdata Forum_  
-_Developed `Financial Information Index for Individual User' with Shinhan Bank data_
+Developed "Financial Information Index for Individual User" with Shinhan Bank data
 <br/><br/>
 
 #### [](#header-4)_Mar. 2018 - Aug. 2018:_ 2nd Place in Articial Intelligence Novel Competition
 _Open contest held by KT and KOCCA_  
-_Made deep learning-based Korean sentence recommender which uses BiLSTM and Doc2Vec algorithm_  
-_Received an opportunity to participate in KT's next project and 20,000,000 KRW of prize money_
+Made deep learning-based Korean sentence recommender which uses BiLSTM and Doc2Vec algorithm  
+Received an opportunity to participate in KT's next project and 20,000,000 KRW of prize money
 <br/><br/>
 
 #### [](#header-4)_Mar. 2017 - Nov. 2017:_ 2nd Place in Academical team research
 _Natural science college of Hanyang University_
-_Predicted the number of visitors of children's grand park with regression, SVR and time series model_
+Predicted the number of visitors of children's grand park with regression, SVR and time series model
 <br/><br/><br/>
 
 
