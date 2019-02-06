@@ -17,7 +17,7 @@ We started out by talking about multiplexing of memory resources.
 
 Goals of memory resources:
 1. Controlled overlap:
-  - separate state of threads should not collide in physical memory.
+  - separate state of threads should not collide in physical memory. 
   - conversely, would like the ability to overlap when desired (for communication)
 2. Translation:
   - ability to translate accesses from one address space to a different one (virtual to physical, V2P, kind of hiding)

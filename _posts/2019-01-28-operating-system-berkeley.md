@@ -17,7 +17,7 @@ use_math: true
 Last time we talked about
 - Deadlock
 - Banker's algorithm
-- scheduling
+- scheduling 
 
 <br/>
 

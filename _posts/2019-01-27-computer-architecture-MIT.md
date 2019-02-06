@@ -1,13 +1,15 @@
 ---
 layout: post
-title: "CA Lecture Note 10 - Beta ISA, models of computation"
-tagline: "Spring 2015 at MIT"
-categories: [CA]
-image: /thumbnail-mobile.png
+title: CA Lecture Note 10 - Beta ISA, models of computation
+date: 2019-01-27 17:00:00
+categories:
+- Computer architecture
+tags:
+- ISA
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
+use_math: true
 ---
-
 
 ### [](#header-3) CPU = ALU + CU + Register
 

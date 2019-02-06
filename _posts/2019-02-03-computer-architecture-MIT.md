@@ -16,7 +16,7 @@ use_math: true
 
 <br/>
 
-- last time we talked about assembly language, now we will talk about high level language
+- last time we talked about assembly language, now we will talk about high level language 
 
 
 <br/><br/><br/>
