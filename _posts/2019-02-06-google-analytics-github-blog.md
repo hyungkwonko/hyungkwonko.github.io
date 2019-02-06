@@ -12,13 +12,12 @@ meta: "Seoul"
 use_math: true
 ---
 ## [](#header-2)<span style="color:#088A08"> *References* </span>
-
 **Google analytics** <br>
 - *[google analytics 실시간 개요][ref1]*   
 - **[github에서 Google analytics 사용하기][ref2]**   
 - *[Jekyll을 사용한 blog에 Google Analytics 적용하기][ref3]*   
 - *[Google Analytics(구글 어낼리틱스) 초간단 정리][ref4]*  
-- *[[Google Analtyics 삽질냠냠 #1] 구글 애널리틱스 설치부터 적용까지][ref5]*  
+- *[[Google Analtyics 삽질냠냠 #1] 구글 애널리틱스 설치부터 적용까지][ref5]*
 
 <br>
 
