@@ -31,7 +31,7 @@ use_math: true
 **Google search** <br>
 - *[github page 를 google 검색에 노출][ref9]*   
 - *[[Jekyll] 검색엔진에 블로그 등록하기 _Google편][ref10]*   
-
+- **[지킬 블로그 구글 검색 가능하게 하는 방법][ref11]**   
 
 
 
@@ -54,3 +54,5 @@ use_math: true
 [ref9]:https://inasie.github.io/it%EC%9D%BC%EB%B0%98/3/
 
 [ref10]:https://gmlwjd9405.github.io/2017/10/20/include-blog-in-a-GoogleSearchEngine.html
+
+[ref11]:https://wayhome25.github.io/etc/2017/02/20/google-search-sitemap-jekyll/
