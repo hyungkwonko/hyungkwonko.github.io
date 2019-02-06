@@ -11,6 +11,7 @@ tags:
 - TLB
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
+comments: true
 use_math: true
 ---
 
@@ -19,7 +20,7 @@ The size of segments are different? YES and NO
 - the actual part that I can address in the segments are clearly different sizes, however, if you were to look at the segment's in virtual space, you'd see that they are spaced out regularly.
 - this address space has all the space there but the actual physical memory I've allocated is varying in sizes (what is allocated to each segment at the time is different)
 - 한마디로 현재 상황에는 다르게 할당되어 있긴한데 실제로는 더 늘릴 수 있는 공간이 있기 때문에 다르다고 딱 잘라 말하기는 뭣함..
- 
+
 The reason two-level page table is advantageous is because just by marking things invalid at the first level, we could get rid of the things at the second level.
 
 Multi-level translation 등에 대한 부분은 저번에 많이 했으므로 skip하겠음.
