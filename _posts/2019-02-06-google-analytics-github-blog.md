@@ -12,7 +12,7 @@ meta: "Seoul"
 use_math: true
 ---
 
-특히 2번째 링크가 도움 많이 되었음.
+특히 2번째 링크가 도움 많이 되었음. 
 
 ## [](#header-2)<span style="color:#088A08"> *References* </span>
 
