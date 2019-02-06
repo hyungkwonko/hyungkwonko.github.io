@@ -33,8 +33,6 @@ use_math: true
 - *[[Jekyll] 검색엔진에 블로그 등록하기 _Google편][ref10]*   
 - **[지킬 블로그 구글 검색 가능하게 하는 방법][ref11]**   
 
-
-
 [ref1]:https://analytics.google.com/analytics/web/?authuser=0#/realtime/rt-overview/a133945979w193901253p189365364/
 
 [ref2]:https://jybaek.github.io/dev/2016/07/04/use-google-analytics/
