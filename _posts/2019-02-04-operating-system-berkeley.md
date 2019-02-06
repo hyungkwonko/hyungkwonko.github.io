@@ -11,7 +11,6 @@ tags:
 - TLB
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
-comments: true
 use_math: true
 ---
 
