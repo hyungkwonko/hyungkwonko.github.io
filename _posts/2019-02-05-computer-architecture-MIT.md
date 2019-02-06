@@ -24,6 +24,8 @@ We are going to have our entire instructions executed in a single cycle $$\right
 
 **_Is it possible to make CPI less than 1?_** if two instructions are in a cycle, then CPI = 0.5
 
+- but today: we will build a model with CRI = 1 and low frequency Beta
+  - later: pipelining to increase frequency
 
 ## [](#header-2)<span style="color:#088A08"> *Reminder: programming languages* </span>
 <div style="width:image width px; font-size:80%; text-align:center;"><img src="/images/pic108.PNG" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" /><br/>Chris Terman, outline of what we are learning, <a href="https://www.youtube.com/watch?v=EZJGLkoUw9M&list=PLWokBk9W7kzGqZYZz6BiaqtsrHQK_22u7&index=13">source</a> </div>
