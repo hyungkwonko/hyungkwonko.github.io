@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CA Lecture Note 14 - Memory hierarchy
+title: CA Lecture Note 13 - Building the beta
 date: 2019-02-05 17:00:00
 categories:
 - Computer architecture
