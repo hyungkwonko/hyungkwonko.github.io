@@ -1,9 +1,12 @@
 ---
 layout: post
-title: Google analytics & Github blog 링크 정리
+title: Google analytics, Github blog 링크 정리
 date: 2019-02-06 17:00:00
 categories:
 - Link
+tags:
+- google analytics
+- github
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
 use_math: true
