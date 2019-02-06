@@ -26,6 +26,15 @@ use_math: true
 - *[[깃허브(Github)] 20. 깃허브 블로그 만들기(1)][ref7]*   
 - *[GitHub 블로그 빠르게 시작하기!][ref8]*   
 
+<br>
+
+**Google search** <br>
+- *[github page 를 google 검색에 노출][ref9]*   
+- *[[Jekyll] 검색엔진에 블로그 등록하기 _Google편][ref10]*   
+
+
+
+
 [ref1]:https://analytics.google.com/analytics/web/?authuser=0#/realtime/rt-overview/a133945979w193901253p189365364/
 
 [ref2]:https://jybaek.github.io/dev/2016/07/04/use-google-analytics/
@@ -41,3 +50,7 @@ use_math: true
 [ref7]:https://recoveryman.tistory.com/321
 
 [ref8]:https://thdev.net/653
+
+[ref9]:https://inasie.github.io/it%EC%9D%BC%EB%B0%98/3/
+
+[ref10]:https://gmlwjd9405.github.io/2017/10/20/include-blog-in-a-GoogleSearchEngine.html
