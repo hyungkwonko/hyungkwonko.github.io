@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "CA Lecture Note 6 - Finite state machine"
-tagline: "6th lecture of Spring 2015 at MIT"
-categories: [CA]
-image: /thumbnail-mobile.png
+title: CA Lecture Note 6 - Finite state machine
+date: 2019-01-18 17:00:00
+categories:
+- Computer architecture
+tags:
+- finite state machine
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
+use_math: true
 ---
 
 Now we can build the systems of any size and expect them to be reliable and we can predict exactly how they behave from the behavior of the individual components

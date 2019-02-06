@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "CA Lecture Note 3 - CMOS technology"
-tagline: "3rd lecture of Spring 2015 at MIT"
-categories: [CA]
-image: /thumbnail-mobile.png
+title: CA Lecture Note 3 - CMOS technology
+date: 2019-01-11 17:00:00
+categories:
+- Computer architecture
+tags:
+- CMOS
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
+use_math: true
 ---
 
 ### [](#header-3) Today's lecture

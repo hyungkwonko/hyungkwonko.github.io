@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "CA Lecture Note 8 - Design tradeoffs"
-tagline: "Spring 2015 at MIT"
-categories: [CA]
-image: /thumbnail-mobile.png
+title: CA Lecture Note 8 - Design tradeoffs
+date: 2019-01-21 17:00:00
+categories:
+- Computer architecture
+tags:
+- design tradeoffs
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
+use_math: true
 ---
 
 ### [](#header-3)Optimizing your design

@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "CA Lecture Note 7 - Pipelining"
-tagline: "7th lecture of Spring 2015 at MIT"
-categories: [CA]
-image: /thumbnail-mobile.png
+title: CA Lecture Note 7 - Pipelining
+date: 2019-01-20 17:00:00
+categories:
+- Computer architecture
+tags:
+- pipelining
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
+use_math: true
 ---
 
 ### [](#header-3)Pipelining

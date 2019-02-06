@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "CA Lecture Note 9 - Programmable machines"
-tagline: "Spring 2015 at MIT"
-categories: [CA]
-image: /thumbnail-mobile.png
+title: CA Lecture Note 9 - Programmable machines
+date: 2019-01-24 17:00:00
+categories:
+- Computer architecture
+tags:
+- programmable machine
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
+use_math: true
 ---
 
 

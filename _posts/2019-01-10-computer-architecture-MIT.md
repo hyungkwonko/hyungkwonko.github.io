@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "CA Lecture Note 2 - Digital abstraction"
-tagline: "2nd lecture of Spring 2015 at MIT"
-categories: [CA]
-image: /thumbnail-mobile.png
+title: CA Lecture Note 2 - Digital abstraction
+date: 2019-01-10 17:00:00
+categories:
+- Computer architecture
+tags:
+- digital abstraction
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
+use_math: true
 ---
 
 ### [](#header-3) Today's lecture

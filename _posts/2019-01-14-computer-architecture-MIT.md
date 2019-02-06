@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "CA Lecture Note 4 - Synthesis of combinational logic"
-tagline: "4th lecture of Spring 2015 at MIT"
-categories: [CA]
-image: /thumbnail-mobile.png
+title: CA Lecture Note 4 - Synthesis of combinational logic
+date: 2019-01-14 17:00:00
+categories:
+- Computer architecture
+tags:
+- combinational logic
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
+use_math: true
 ---
 
 ### [](#header-3) Functional specifications  

@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "CA Lecture Note 5 - Sequential logic"
-tagline: "5th lecture of Spring 2015 at MIT"
-categories: [CA]
-image: /thumbnail-mobile.png
+title: CA Lecture Note 5 - Sequential logic
+date: 2019-01-17 17:00:00
+categories:
+- Computer architecture
+tags:
+- sequential logic
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
+use_math: true
 ---
 
 Something that we cannot build yet
