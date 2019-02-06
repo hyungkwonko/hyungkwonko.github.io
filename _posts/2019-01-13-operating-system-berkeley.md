@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "OS Lecture Note 5 - Cooperating Threads"
-tagline: "5th lecture of Fall 2010 at UCB"
-categories: [OS]
-image: /thumbnail-mobile.png
+title: OS Lecture Note 5 - Cooperating Threads
+date: 2019-01-13 17:00:00
+categories:
+- Operating systems
+tags:
+- cooperating thread
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
 ---

@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "OS Lecture Note 6 - synchronization"
-tagline: "6th lecture of Fall 2010 at UCB"
-categories: [OS]
-image: /thumbnail-mobile.png
+title: OS Lecture Note 6 - synchronization
+date: 2019-01-14 17:00:00
+categories:
+- Operating systems
+tags:
+- synchronization
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
 ---

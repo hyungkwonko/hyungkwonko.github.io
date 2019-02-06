@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "OS Lecture Note 8 - language support for synchronization"
-tagline: "8th lecture of Fall 2010 at UCB"
-categories: [OS]
-image: /thumbnail-mobile.png
+title: OS Lecture Note 8 - language support for synchronization
+date: 2019-01-20 17:00:00
+categories:
+- Operating systems
+tags:
+- synchronization
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
 ---

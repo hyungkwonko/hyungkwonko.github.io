@@ -1,9 +1,12 @@
 ---
 layout: post
-title: "OS Lecture Note 10 - Deadlock & thread scheduling"
-tagline: "10th lecture of Fall 2010 at UCB"
-categories: [OS]
-image: /thumbnail-mobile.png
+title: OS Lecture Note 10 - Deadlock & thread scheduling
+date: 2019-01-22 17:00:00
+categories:
+- Operating systems
+tags:
+- deadlock
+- scheduling
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
 ---

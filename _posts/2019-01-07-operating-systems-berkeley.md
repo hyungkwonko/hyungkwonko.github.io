@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "OS Lecture Note 3"
+title: OS Lecture Note 3
 date: 2019-01-07 17:00:00
-tagline: "3rd lecture of Fall 2010 at Berkeley"
-categories: [OS]
+categories:
+- Operating systems
 tags:
 - concurrency
 - parallelism

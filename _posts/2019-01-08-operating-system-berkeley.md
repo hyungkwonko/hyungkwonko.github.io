@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "OS Lecture Note 4 - Thread Dispatching"
-tagline: "4th lecture of Fall 2010 at Berkeley"
-categories: [OS]
-image: /thumbnail-mobile.png
+title: OS Lecture Note 4 - Thread Dispatching
+date: 2019-01-08 17:00:00
+categories:
+- Operating systems
+tags:
+- thread dispatching
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
 ---

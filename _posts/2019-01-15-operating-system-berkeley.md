@@ -1,9 +1,14 @@
 ---
 layout: post
-title: "OS Lecture Note 7 - mutual exclusion, semaphores, monitors, and condition variables"
-tagline: "7th lecture of Fall 2010 at UCB"
-categories: [OS]
-image: /thumbnail-mobile.png
+title: OS Lecture Note 7 - mutual exclusion, semaphores, monitors, and condition variables
+date: 2019-01-15 17:00:00
+categories:
+- Operating systems
+tags:
+- mutual exclusion
+- semaphore
+- monitor
+- condition variable
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
 ---

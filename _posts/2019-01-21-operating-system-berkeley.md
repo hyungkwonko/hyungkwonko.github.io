@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "OS Lecture Note 9 - Cooperating processes and deadlock"
-tagline: "9th lecture of Fall 2010 at UCB"
-categories: [OS]
-image: /thumbnail-mobile.png
+title: OS Lecture Note 9 - Cooperating processes and deadlock
+date: 2019-01-21 17:00:00
+categories:
+- Operating systems
+tags:
+- deadlock
 author: "Hyung-Kwon Ko"
 meta: "Seoul"
 ---
