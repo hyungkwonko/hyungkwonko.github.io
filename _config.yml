@@ -8,7 +8,7 @@ title: Hyung-Kwon Ko's blog
 subtitle:
 description:
 author: Hyung-Kwon Ko
-# Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
+# Support language: de, en, fr-FR, id, ja,   ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
 date_format: '%Y-%m-%d'
 
@@ -62,7 +62,7 @@ defaults:
 
 # Atom feed
 feed:
-  path: atom.xml
+  path: feed.xml
 
 # Plugins
 ## Docs: https://help.github.com/articles/configuring-jekyll-plugins/
@@ -228,8 +228,8 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  Twitter: twitter
-  Weibo: weibo
+  # Twitter: twitter
+  # Weibo: weibo
 
 
 # Sidebar Avatar
