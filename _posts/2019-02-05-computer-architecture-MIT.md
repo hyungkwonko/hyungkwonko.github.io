@@ -15,11 +15,7 @@ use_math: true
 
 <br>
 
-$$\frac{Time}{Program} = \frac{Instructions}{Program} \cdot \frac{Cycles}{Instructions} \cdot \frac{Time}{Cycle}$$
-
-<br>
-
-$$Perf = \frac{1}{Time}$$
+$$\frac{Time}{Program} = \frac{Instructions}{Program} \cdot \frac{Cycles}{Instructions} \cdot \frac{Time}{Cycle}, \qquad Perf = \frac{1}{Time}$$
 
 <br>
 
