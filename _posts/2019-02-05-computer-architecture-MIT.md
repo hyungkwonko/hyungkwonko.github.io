@@ -11,9 +11,17 @@ meta: "Seoul"
 use_math: true
 ---
 ## [](#header-2)<span style="color:#088A08"> *Processor performance* </span>
-- "Iron Law" of performance: <br>
-$$\frac{Time}{Program} = \frac{Instructions}{Program} \cdot \frac{Cycles}{Instructions} \cdot \frac{Time}{Cycle}$$ <br>
+- "Iron Law" of performance:
+
+<br>
+
+$$\frac{Time}{Program} = \frac{Instructions}{Program} \cdot \frac{Cycles}{Instructions} \cdot \frac{Time}{Cycle}$$
+
+<br>
+
 $$Perf = \frac{1}{Time}$$
+
+<br>
 
 - options to reduce execution time:
   - LOW executed Instructions (HIGH work/instruction)
