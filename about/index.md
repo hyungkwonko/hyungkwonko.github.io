@@ -2,11 +2,11 @@
 layout: page
 ---
 
-Senior at Hanyang University in South Korea who is studying mathematics, industrial engineering and computer science. The goal of life is to become a data scientist who has the real vision and insight. Currently working on the CRM project at LG electronics.  
+Senior at Hanyang University in South Korea who is studying mathematics, industrial engineering, and computer science. The goal of life is to become a data scientist who has real vision and insight. Currently working on the CRM project at LG electronics.  
 
 Started writing a blog post mainly for the purpose of neatly documenting what I have learned so I can look up whenever it is required. Will mainly cover the range from basic CS courses to the state-of-the-art deep learning techniques.
 
-Currently interested in big data, machine learning, abstract topology and quantum mechanics.
+Currently interested in big data, machine learning, abstract topology, and quantum mechanics.
 
 [*Download CV.pdf (as of Feb. 2019)*](https://github.com/hyungkwonko/CV)   
 <br/>
@@ -32,8 +32,8 @@ Participated in two big data projects. Made deep-learning based prediction model
 2 - Inventing the model of predicting the workers compensation using big data (Client: Korea Workers Compensation and Welfare Service)  
 <br/>
 
-#### [](#header-4)_Mar. 2017 - Nov. 2018:_ Intern at Lab for Probability and Statistical Modeling  
-_Lab of professor Suk-Joo Bae in Hanyang University, Undergraduate Intern_  
+#### [](#header-4)_Mar. 2017 - Nov. 2018:_ Intern at Probability and Statistical Modeling Laboratory  
+_Laboratory of professor Suk-Joo Bae in Hanyang University, Undergraduate Intern_  
 Participated in Hyundae Motors reliability analysis projects  
 1 - Improvement on the component reliability using the warranty claims data  
 2 - OBD sensor data analysis  
@@ -68,8 +68,8 @@ Predicted the number of visitors of children's grand park with regression, SVR a
 
 ## [](#header-2)<span style="color:#088A08"> *Programming skills* </span>  
 
-_Languages:_ Python(Tensorflow, Keras, Matplotlib, ...), R, C/C++, Java, MATLAB, SQL  
-_Technologies:_ Git, Vim, AWS, Latex  
+_Languages:_ Python(Tensorflow, Keras), R, C/C++, Java, Javascript(node), Matlab, SQL  
+_Technologies:_ git, vim, AWS EC2, Latex  
 <br/><br/><br/>
 
 ## [](#header-2)<span style="color:#088A08"> *Military Service* </span>  
