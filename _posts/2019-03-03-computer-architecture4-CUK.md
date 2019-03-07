@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 서효중 교수 컴퓨터 구조 수업 노트 3-2
-date: 2019-03-03 17:00:00
+date: 2019-03-03 17:03:00
 categories:
 - Computer architecture
 tags:
