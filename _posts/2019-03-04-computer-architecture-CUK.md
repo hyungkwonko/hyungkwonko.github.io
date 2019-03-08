@@ -26,14 +26,17 @@ use_math: true
 
 ## [](#header-2)<span style="color:#088A08"> *Conditional operation* </span>
 - 조건부 분기를 뺴면 프로그램이 순차적으로 진행이 되어 왔는데, 뛰어넘는게 생긴다. 그래서 그 특정 부분에 label을 붙여놓는다. 여길 뛰어라 이렇게.
+- Branch if equal
 ```
 CMP reg1, reg2  ;  이렇게 빼보기만 한다. 빼서 0이 되면 두 값이 같은 거다.
 BEQ L1          ;  계산 결과가 0면 L1으로 뛴다 라는 얘기다. (Branch if equal)
 ```
+- Branch if NOT equal
 ```
 CMP reg1, reg2  ;
 BNE L1          ;  0이 아니면 뛰는 것이다. (Branch if not equal)
 ```
+- Unconditional jump
 ```
 B exit          ;  무조건 뛰어라 조건 없음. (go to exit, unconditional jump)
 ```
