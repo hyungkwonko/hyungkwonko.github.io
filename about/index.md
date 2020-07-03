@@ -2,6 +2,9 @@
 layout: page
 ---
 
+# This website is no longer maintained. Please visit my new website: https://hyungkwonko.info/.
+
+
 Senior at Hanyang University in South Korea who is studying mathematics, industrial engineering, and computer science. The goal of life is to become a data scientist who has real vision and insight. Currently working on the CRM project at LG electronics.  
 
 Started writing a blog post mainly for the purpose of neatly documenting what I have learned so I can look up whenever it is required. Will mainly cover the range from basic CS courses to the state-of-the-art deep learning techniques.
@@ -84,5 +87,4 @@ _11th Division, Administrative Clerk_
 
 You may reach me with the contact info listed below  
 
-> *email:* hyungkwonko@gmail.com   
-> *mobile:* +82-10-4845-5874   
+> *email:* hkko@hcil.snu.ac.kr
