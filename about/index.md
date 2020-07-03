@@ -2,8 +2,9 @@
 layout: page
 ---
 
-# This website is no longer maintained. Please visit my new website: https://hyungkwonko.info/.
+## This website is no longer maintained. Please visit my new website: [Here](https://hyungkwonko.info/).
 
+----
 
 Senior at Hanyang University in South Korea who is studying mathematics, industrial engineering, and computer science. The goal of life is to become a data scientist who has real vision and insight. Currently working on the CRM project at LG electronics.  
 
