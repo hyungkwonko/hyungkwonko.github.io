@@ -98,3 +98,8 @@ span.highlight {
     font-size: 40px;
   }
 }
+
+.cryptedmail:after {
+  text-transform: uppercase;
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+}

@@ -29,7 +29,19 @@
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mb-4">
       <div class="col f2 py-1"><a href="./data/hkko_cv.pdf" class="f2">Curriculum Vitae</a></div>
-      <div class="col py-1"><a href="mailto:hyungkwonko@gmail.com" class="f1">HYUNGKWONKO@GMAIL.COM</a></div>
+      <div class="col py-1">
+        <!-- <a href="mailto:hyungkwonko@gmail.com" class="f1">HYUNGKWONKO@GMAIL.COM</a> -->
+        <a href="#" class="cryptedmail f1"
+        data-name="hyungkwonko"
+        data-domain="gmail"
+        data-tld="com"
+        onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
+        </a>
+      </div>
+
+
+      
+
       <div class="col f1 py-1 f1">BLOG (Korean)</div>
       <!-- <div class="col f1 py-1"><a href="https://www.google.com" class="f1">BLOG (Korean)</a></div> -->
     </div>
