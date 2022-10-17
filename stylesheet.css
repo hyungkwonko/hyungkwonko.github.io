@@ -101,5 +101,66 @@ span.highlight {
 
 .cryptedmail:after {
   text-transform: uppercase;
-  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
 }
+
+/* 6-1개만 display 되고 나머지는 숨겨짐 */
+/* https://stackoverflow.com/questions/70227092/create-a-table-collapsible-with-less-more-button */
+tr:nth-child(n+6) {display : none}
+
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1 */
+.button {
+  all: unset;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button h4 {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button h4:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover h4 {
+  padding-right: 25px;
+}
+
+.button:hover h4:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* https://css-tricks.com/css-link-hover-effects/ */
+/* .headline {
+  background:
+    linear-gradient(
+      to right,
+      #2569E6,
+      #2569E6
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 100, 200, 1),
+      rgba(255, 0, 180, 1),
+      rgba(255, 0, 0, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.headline:hover {
+  background-size: 0 3px, 100% 3px;
+} */

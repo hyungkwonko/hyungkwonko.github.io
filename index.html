@@ -28,18 +28,13 @@
     <h1 class="mb-4 h1-title">Hyung-Kwon Ko</h1>
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mb-4">
-      <div class="col f2 py-1"><a href="https://github.com/hyungkwonko/CV/blob/master/hkko-cv.pdf" class="f2">Curriculum Vitae</a></div>
+      <div class="col f2 py-1"><a href="https://github.com/hyungkwonko/CV/blob/master/hkko-cv.pdf" class="f2">Curriculum
+          Vitae</a></div>
       <div class="col py-1">
-        <a href="#" class="cryptedmail f1"
-        data-name="hyungkwonko"
-        data-domain="gmail"
-        data-tld="com"
-        onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
+        <a href="#" class="cryptedmail f1" data-name="hyungkwonko" data-domain="gmail" data-tld="com"
+          onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
         </a>
       </div>
-
-
-      
 
       <div class="col f1 py-1 f1">BLOG (Korean)</div>
       <!-- <div class="col f1 py-1"><a href="https://www.google.com" class="f1">BLOG (Korean)</a></div> -->
@@ -52,12 +47,13 @@
       </div>
       <div style="text-align: justify;" class="my-4 col-sm-8">
         <p style="border-style: solid; border-color: #2569E6; padding: 10px">
+          <span style="text-decoration: underline; font-weight: bold; font-style: italic;">** I am a
+            prospective Ph.D. student for Fall 2023 admission. **</span>
+          <br>
           Currently I'm with <a class="f4" href="https://www.kixlab.org/">KIXLAB</a> at KAIST
           under the supervision of <a class="f4" href="https://juhokim.com/">Prof. Juho Kim</a>.
-          I'm working on two HCI projects: 1) "Enabling Prototyping of AI-infused UIs with Task-level Specifications"
-          , and 2) "Understanding Artists' Perception, Expectation, and Concern for Large-scale Text-to-Image Generative
-          Models", aiming to submit them to
-          <a class="f4" href="https://chi2023.acm.org/">CHI 2023</a> and <a class="f4" href="https://iui.acm.org/2023/">IUI 2023</a>, respectively.
+          I'm working on a HCI project "Enabling Prototyping of AI-infused UIs with Task-level Specifications" which we
+          aim to submit it to UIST 2023.
         </p>
 
         <p style="margin-bottom:16px">
@@ -91,27 +87,45 @@
     </div>
   </div>
 
+
   <div class="container my-2 py-3" style="max-width: 800px;">
-    <h4>NEWS</h4>
-    <table style="text-align:justify;" class="table">
+    <button onclick="extend_news()" class="button">
+      <h4>NEWS</h4>
+    </button>
+    <table style="text-align:justify;" class="table" id="news">
       <tbody>
+        <tr>
+          <td class="px-2" style="width:5%;">Oct</td>
+          <td class="px-0" style="width:5%;">2022</td>
+          <td style="padding-left:20px; padding-right:0px;">Attend UIST 2022 in person to present <a class="f4"
+              href="https://programs.sigchi.org/uist/2022/index/content/85050">my work</a> and to give a
+            lightning talk! Honered to receive <a class="f4"
+              href="https://sigchi.org/awards/gary-marsden-travel-awards/">Gary Marsden Travel Awards</a> to support my
+            traveling expense!</td>
+        </tr>
+        <tr>
+          <td class="px-2" style="width:5%;">Oct</td>
+          <td class="px-0" style="width:5%;">2022</td>
+          <td style="padding-left:20px; padding-right:0px;">Published an Arxiv paper about Large-scale Text-to-image
+            Generation Models (e.g., DALL-E).</td>
+        </tr>
         <tr>
           <td class="px-2" style="width:5%;">Jun</td>
           <td class="px-0" style="width:5%;">2022</td>
-          <td style="padding-left:20px; padding-right:0px;">Two papers, UMATO and We-toon, are accepted to IEEE VIS 2022 and ACM UIST 2022, respectively!</td>
+          <td style="padding-left:20px; padding-right:0px;">Two papers, UMATO and We-toon, are accepted to IEEE VIS 2022
+            and ACM UIST 2022, respectively!</td>
         </tr>
         <tr>
           <td class="px-2" style="width:5%;">Jun</td>
           <td class="px-0" style="width:5%;">2022</td>
           <td style="padding-left:20px; padding-right:0px;">Moved to KAIST at Daejeon, Korea to collaborate with KIXLAB
-            led by Prof.
-            Juho Kim</td>
+            led by Prof. Juho Kim.</td>
         </tr>
         <tr>
           <td class="px-2" style="width:5%;">Jan</td>
           <td class="px-0" style="width:5%;">2022</td>
-          <td style="padding-left:20px; padding-right:0px;">Published an arxiv paper about interactive brushing
-            technique</td>
+          <td style="padding-left:20px; padding-right:0px;">Published an Arxiv paper about interactive brushing
+            technique.</td>
         </tr>
         <tr>
           <td class="px-2" style="width:5%;">Oct</td>
@@ -133,8 +147,61 @@
 
   <div class="container my-2 py-3" style="max-width: 800px;">
     <h4>PUBLICATIONS</h4>
+
     <table>
       <tbody>
+        <tr onmouseout="ltgm_stop()" onmouseover="ltgm_start()" style="vertical-align:top;">
+          <td class="py-3 px-2 w-25">
+            <div class="one">
+              <div class="two" id="ltgm_image" style="opacity: 0;">
+                <img src="./images/ltgm_after.png" class="img1">
+              </div>
+              <img src="./images/ltgm_before.png" class="img1">
+            </div>
+            <script type="text/javascript">
+              function ltgm_start() {
+                document.getElementById('ltgm_image').style.opacity = "1";
+              }
+
+              function ltgm_stop() {
+                document.getElementById('ltgm_image').style.opacity = "0";
+              }
+              ltgm_stop()
+            </script>
+          </td>
+          <td class="py-3 w-75" style="padding-left:15px;">
+            <strong>Large-scale Text-to-Image Generation Models for Visual Artists' Creative Work
+            </strong>
+            <br>
+            Hyung-Kwon Ko, Gwanmo Park, Hyeon Jeon, Jaemin Jo, Juho Kim, Jinwook Seo
+            <br>
+            <em>Arxiv 2022 (Under Review)</em>
+            <br>
+            <div class="d-none d-sm-block">
+              <a class="f3" href="https://arxiv.org/abs/2107.07859">paper</a>
+              <!-- <a class="f3" href="https://github.com/hyungkwonko/progressive-umap">code</a> / -->
+              <!-- <a class="f3" href="https://www.youtube.com/watch?v=csZMW-e5cC0">video</a> -->
+              <!-- <a class="f3" href="./data/pumap.bib">bibtex</a> / -->
+              <!-- <a class="f3" href="https://doi.org/10.1145/3526113.3545612">doi</a> -->
+              <p style="font-size:11px; margin:0px; text-align:justify;">Large-scale Text-to-image Generation Models
+                (LTGMs) (e.g., DALL-E), self-supervised deep learning models trained on a huge dataset, have
+                demonstrated the capacity for generating high-quality open-domain images from multi-modal input.
+                Although they can even produce anthropomorphized versions of objects and animals, combine irrelevant
+                concepts in reasonable ways, and give variation to any user-provided images, we witnessed such rapid
+                technological advancement left many visual artists disoriented in leveraging LTGMs more actively in
+                their creative works. Our goal in this work is to understand how visual artists would adopt LTGMs to
+                support their creative works. To this end, we conducted an interview study as well as a systematic
+                literature review of 72 system/application papers for a thorough examination. A total of 28 visual
+                artists covering 35 distinct visual art domains acknowledged LTGMs’ versatile roles with high usability
+                to support creative works in automating the creation process (i.e., automation), expanding their ideas
+                (i.e., exploration), and facilitating or arbitrating in communication (i.e., mediation). We conclude by
+                providing four design guidelines that future researchers can refer to in making intelligent user
+                interfaces using LTGMs.
+              </p>
+            </div>
+          </td>
+        </tr>
+
         <tr onmouseout="wetoon_stop()" onmouseover="wetoon_start()" style="vertical-align:top;">
           <td class="py-3 px-2 w-25">
             <div class="one">
@@ -161,14 +228,14 @@
             <br>
             Hyung-Kwon Ko*, Subin An*, Gwanmo Park, Seung Kwon Kim, Daesik Kim, Bohyoung Kim, Jaemin Jo, Jinwook Seo
             <br>
-            <em>UIST 2022 (to appear)</em>
+            <em>UIST 2022</em>
             <br>
             <div class="d-none d-sm-block">
-              <!-- <a class="f3" href="./data/pumap.pdf">paper</a> / -->
+              <a class="f3" href="./data/wetoon.pdf">paper</a> /
               <!-- <a class="f3" href="https://github.com/hyungkwonko/progressive-umap">code</a> / -->
-              <a class="f3" href="https://www.youtube.com/watch?v=csZMW-e5cC0">video</a>
+              <a class="f3" href="https://www.youtube.com/watch?v=csZMW-e5cC0">video</a> /
               <!-- <a class="f3" href="./data/pumap.bib">bibtex</a> / -->
-              <!-- <a class="f3" href="https://doi.org/10.1145/3526113.3545612">doi</a> -->
+              <a class="f3" href="https://doi.org/10.1145/3526113.3545612">doi</a>
               <p style="font-size:11px; margin:0px; text-align:justify;">We present a communication support system,
                 namely We-toon, that
                 can bridge the webtoon writers and artists during sketch revision
@@ -215,7 +282,7 @@
             <br>
             Hyeon Jeon*, Hyung-Kwon Ko*, Soohyun Lee, Jaemin Jo, Jinwook Seo
             <br>
-            <em>VIS 2022 short (to appear)</em>
+            <em>VIS 2022 short</em>
             <br>
             <div class="d-none d-sm-block">
               <!-- <a href="http://yenchenlin.me/nerf-supervision/">project page</a> / -->
@@ -659,8 +726,14 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+  <script>
+    function extend_news() {
+      let newsRows = news.querySelectorAll("tr:nth-child(n+6)");
+      newsRows.forEach(row => row.style.display = window.getComputedStyle(row).display === "none" ? "table-row" : "none");
+    }
+  </script>
 </body>
 
 </html>
