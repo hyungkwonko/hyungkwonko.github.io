@@ -89,11 +89,12 @@
 
 
   <div class="container my-2 py-3" style="max-width: 800px;">
+    <!-- <h4>NEWS</h4> -->
     <button onclick="extend_news()" class="button">
       <h4>NEWS</h4>
     </button>
     <table style="text-align:justify;" class="table" id="news">
-      <tbody>
+      <tbody class="tbody">
         <tr>
           <td class="px-2" style="width:5%;">Oct</td>
           <td class="px-0" style="width:5%;">2022</td>
@@ -147,9 +148,14 @@
 
   <div class="container my-2 py-3" style="max-width: 800px;">
     <h4>PUBLICATIONS</h4>
+    <!-- <button onclick="extend_pub()" class="button">
+      <h4>PUBLICATIONS</h4>
+    </button> -->
 
     <table>
+    <!-- <table id="publ"> -->
       <tbody>
+        <!-- <tbody class="tbody"> -->
         <tr onmouseout="ltgm_stop()" onmouseover="ltgm_start()" style="vertical-align:top;">
           <td class="py-3 px-2 w-25">
             <div class="one">
@@ -733,6 +739,10 @@
       let newsRows = news.querySelectorAll("tr:nth-child(n+6)");
       newsRows.forEach(row => row.style.display = window.getComputedStyle(row).display === "none" ? "table-row" : "none");
     }
+    // function extend_pub() {
+    //   let publRows = publ.querySelectorAll("tr:nth-child(n+8)");
+    //   publRows.forEach(row => row.style.display = window.getComputedStyle(row).display === "none" ? "table-row" : "none");
+    // }
   </script>
 </body>
 
