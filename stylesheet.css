@@ -106,7 +106,7 @@ span.highlight {
 
 /* 6-1개만 display 되고 나머지는 숨겨짐 */
 /* https://stackoverflow.com/questions/70227092/create-a-table-collapsible-with-less-more-button */
-.tbody tr:nth-child(n+6) {
+.tbody-expand tr:nth-child(n+6) {
   display: none;
 }
 /* https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1 */

@@ -94,12 +94,12 @@
       <h4>NEWS</h4>
     </button>
     <table style="text-align:justify;" class="table" id="news">
-      <tbody class="tbody">
+      <tbody class="tbody-expand">
         <tr>
           <td class="px-2" style="width:5%;">Oct</td>
           <td class="px-0" style="width:5%;">2022</td>
           <td style="padding-left:20px; padding-right:0px;">Attend UIST 2022 in person to present <a class="f4"
-              href="https://programs.sigchi.org/uist/2022/index/content/85050">my work</a> and to give a
+              href="https://programs.sigchi.org/uist/2022/index/content/85050">my work</a>, perform SV-ing, and give a
             lightning talk! Honered to receive <a class="f4"
               href="https://sigchi.org/awards/gary-marsden-travel-awards/">Gary Marsden Travel Awards</a> to support my
             traveling expense!</td>
@@ -107,8 +107,8 @@
         <tr>
           <td class="px-2" style="width:5%;">Oct</td>
           <td class="px-0" style="width:5%;">2022</td>
-          <td style="padding-left:20px; padding-right:0px;">Published an Arxiv paper about Large-scale Text-to-image
-            Generation Models (e.g., DALL-E).</td>
+          <td style="padding-left:20px; padding-right:0px;">Submit two papers about <a class="f4"
+              href="https://arxiv.org/abs/2210.08477">DALL-E</a> and generative model's disentanglement to IUI 2023.</td>
         </tr>
         <tr>
           <td class="px-2" style="width:5%;">Jun</td>
@@ -119,27 +119,27 @@
         <tr>
           <td class="px-2" style="width:5%;">Jun</td>
           <td class="px-0" style="width:5%;">2022</td>
-          <td style="padding-left:20px; padding-right:0px;">Moved to KAIST at Daejeon, Korea to collaborate with KIXLAB
+          <td style="padding-left:20px; padding-right:0px;">Move to KAIST at Daejeon, Korea to collaborate with KIXLAB
             led by Prof. Juho Kim.</td>
         </tr>
         <tr>
           <td class="px-2" style="width:5%;">Jan</td>
           <td class="px-0" style="width:5%;">2022</td>
-          <td style="padding-left:20px; padding-right:0px;">Published an Arxiv paper about interactive brushing
+          <td style="padding-left:20px; padding-right:0px;">Publish an Arxiv paper about interactive brushing
             technique.</td>
         </tr>
         <tr>
           <td class="px-2" style="width:5%;">Oct</td>
           <td class="px-0" style="width:5%;">2021</td>
-          <td style="padding-left:20px; padding-right:0px;">Got a full-time posiiton as a research scientist at Naver
+          <td style="padding-left:20px; padding-right:0px;">Get a full-time posiiton as a research scientist at Naver
             Webtoon Corp.</td>
         </tr>
         <tr>
           <td class="px-2" style="width:5%;">Apr</td>
           <td class="px-0" style="width:5%;">2021</td>
-          <td style="padding-left:20px; padding-right:0px;">Graduated from Seoul National University receiving Master's
-            degree
-            in Computer Science and Engineering under the supervision of Prof. Jinwook Seo (specialty: HCI, InfoVis)
+          <td style="padding-left:20px; padding-right:0px;">Graduate from Seoul National University receiving Master's
+            degree in Computer Science and Engineering under the supervision of Prof. Jinwook Seo (specialty: HCI,
+            InfoVis)
           </td>
         </tr>
       </tbody>
@@ -153,9 +153,69 @@
     </button> -->
 
     <table>
-    <!-- <table id="publ"> -->
+      <!-- <table id="publ"> -->
       <tbody>
         <!-- <tbody class="tbody"> -->
+
+
+        <tr onmouseout="disentangle_stop()" onmouseover="disentangle_start()" style="vertical-align:top;">
+          <td class="py-3 px-2 w-25">
+            <div class="one">
+              <div class="two" id='disentangle'><video width=100% height=100% muted autoplay loop>
+                  <source src="images/disentangle_after.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video></div>
+              <img src='images/disentangle_before.png' class="img1">
+            </div>
+            <script type="text/javascript">
+              function disentangle_start() {
+                document.getElementById('disentangle').style.opacity = "1";
+              }
+
+              function disentangle_stop() {
+                document.getElementById('disentangle').style.opacity = "0";
+              }
+              disentangle_stop()
+            </script>
+          </td>
+          <td class="py-3 w-75" style="padding-left:15px;">
+            <strong>How Disentanglement Affects Users' Interpretation, Control, and Sentiment when Using Generative
+              Models
+            </strong>
+            <br>
+            Jeanyoon Choi*, Jiwon Song*, Hyeon Jeon, Youngtaek Kim, Hyung-Kwon Ko, Jinwook Seo
+            <br>
+            <em>(Under Review)</em>
+            <br>
+            <div class="d-none d-sm-block">
+              <!-- <a class="f3" href="https://arxiv.org/abs/2210.08477">paper</a> -->
+              <!-- <a class="f3" href="https://github.com/hyungkwonko/progressive-umap">code</a> / -->
+              <!-- <a class="f3" href="https://www.youtube.com/watch?v=csZMW-e5cC0">video</a> -->
+              <!-- <a class="f3" href="./data/pumap.bib">bibtex</a> / -->
+              <!-- <a class="f3" href="https://doi.org/10.1145/3526113.3545612">doi</a> -->
+              <p style="font-size:11px; margin:0px; text-align:justify;">The degree of disentanglement is commonly used
+                as a proxy for the interpretability of a generative model. A more disentangled model is assumed to be
+                more interpretable and thus easier for users to control effectively.
+                However, such an assumption has not been thoroughly examined. Moreover, there are no detailed
+                explanations about how disentanglement affects the way users control generative models and what they can
+                learn from the experience. Our research aims to fill this gap. By conducting a controlled user study
+                with 30 participants, we investigate how disentanglement affects users' interpretation, control and
+                sentiment when using generative models via a slider-based interface.
+                The results indicate that better disentanglement does not always lead to better interpretability.
+                However, having a high degree of disentanglement is still necessary, as users generally expect
+                well-disentangled model behaviour.
+                The study further reveals that the degree of disentanglement has different effects depending on users'
+                control(\textit{e.g}. there were minimal effects on the fine-tuning process of an image in a later stage
+                of adjustment).
+                Based on our findings, we propose four design guidelines for using generative models.
+                We conclude this paper after discussing the limitations of our study and proposing possible
+                improvements.
+              </p>
+            </div>
+          </td>
+        </tr>
+
+
         <tr onmouseout="ltgm_stop()" onmouseover="ltgm_start()" style="vertical-align:top;">
           <td class="py-3 px-2 w-25">
             <div class="one">
@@ -184,7 +244,7 @@
             <em>Arxiv 2022 (Under Review)</em>
             <br>
             <div class="d-none d-sm-block">
-              <a class="f3" href="https://arxiv.org/abs/2107.07859">paper</a>
+              <a class="f3" href="https://arxiv.org/abs/2210.08477">paper</a>
               <!-- <a class="f3" href="https://github.com/hyungkwonko/progressive-umap">code</a> / -->
               <!-- <a class="f3" href="https://www.youtube.com/watch?v=csZMW-e5cC0">video</a> -->
               <!-- <a class="f3" href="./data/pumap.bib">bibtex</a> / -->
