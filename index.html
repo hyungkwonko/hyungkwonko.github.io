@@ -94,6 +94,12 @@
     <table style="text-align:justify;" class="table" id="news">
       <tbody class="tbody-expand">
         <tr>
+          <td class="px-2" style="width:5%;">Mar</td>
+          <td class="px-0" style="width:5%;">2023</td>
+          <td style="padding-left:20px; padding-right:0px;"><i>ExGPTer</i> is accepted to CHI 2023 <a class="f4"
+              href="https://generativeaiandhci.github.io/">Gen-AI workshop</a>!</td>
+        </tr>
+        <tr>
           <td class="px-2" style="width:5%;">Jan</td>
           <td class="px-0" style="width:5%;">2023</td>
           <td style="padding-left:20px; padding-right:0px;">Our paper about DALL-E is accepted to IUI 2023!</td>
@@ -226,6 +232,51 @@
           </td>
         </tr> -->
 
+        <tr onmouseout="cs_stop()" onmouseover="cs_start()" style="vertical-align:top;">
+          <td class="py-3 px-2 w-25">
+            <div class="one">
+              <div class="two" id="cs_image" style="opacity: 0;">
+                <img src="./images/cs_after.png" class="img1">
+              </div>
+              <img src="./images/cs_before.png" class="img1">
+            </div>
+            <script type="text/javascript">
+              function cs_start() {
+                document.getElementById('cs_image').style.opacity = "1";
+              }
+
+              function cs_stop() {
+                document.getElementById('cs_image').style.opacity = "0";
+              }
+              cs_stop()
+            </script>
+          </td>
+          <td class="py-3 w-75" style="padding-left:15px;">
+            <strong>ChatGPT for Moderating Customer Inquiries and Responses to Alleviate Stress and Reduce Emotional Dissonance of Customer Service Representatives
+            </strong>
+            <br>
+            Hyung-Kwon Ko, Kihoon Son, Hyoungwook Jin, Yoonseo Choi, Xiang Anthony Chen
+            <br>
+            <em>CHI Gen-AI workshop 2023</em>
+            <br>
+            <div class="d-none d-sm-block">
+              paper (to be updated)
+              <!-- <a class="f3" href="https://hyungkwonko.info">paper</a> -->
+              <!-- <a class="f3" href="https://github.com/hyungkwonko/progressive-umap">code</a> / -->
+              <!-- <a class="f3" href="https://youtu.be/QU9XRchhESw">video</a> / -->
+              <!-- <a class="f3" href="./data/pumap.bib">bibtex</a> / -->
+              <!-- <a class="f3" href="https://doi.org/10.1145/3581641.3584078">doi</a> -->
+              <p style="font-size:11px; margin:0px; text-align:justify;">Customer service representatives (CSRs) face
+                significant levels of stress as a result of handling disrespectful customer inquiries and the emotional
+                dissonance that arises from concealing their true emotions to provide the best customer experience.
+                To solve this issue, we propose ExGPTer that uses ChatGPT to moderate the tone and manner of a customer
+                inquiry to be more gentle and appropriate, while ensuring that the content remains unchanged.
+                ExGPTer also augments CSRs' responses to answer customer inquiries, so they can conform to established
+                company protocol while effectively conveying the essential information that customers seek.
+              </p>
+            </div>
+          </td>
+        </tr>
 
         <tr onmouseout="ltgm_stop()" onmouseover="ltgm_start()" style="vertical-align:top;">
           <td class="py-3 px-2 w-25">
