@@ -6,14 +6,14 @@ p {
   /* font-family: 'Lato', sans-serif; */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-  color: #2D2926;
+  /* color: #2D2926; */
 }
 
 papertitle {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700;
-  color: #2D2926;
+  /* color: #2D2926; */
 }
 
 .one {
@@ -38,16 +38,22 @@ papertitle {
   /* border-radius: 10px; */
 }
 
+/* .f1.light,
+.f2.light,
+h1.light,
+h4.light {
+  color: #2D2926;
+} */
+
+
 .f1,
 h4 {
   font-family: 'Cantarell', sans-serif;
-  color: #2D2926;
   text-decoration: none;
 }
 
 .f2 {
   font-family: 'Pacifico', cursive;
-  color: #2D2926;
   text-decoration: none;
 }
 
@@ -72,7 +78,6 @@ h4 {
 
 h1 {
   font-family: 'Playfair Display SC', serif;
-  color: #2D2926;
 }
 
 .fade {
@@ -109,6 +114,7 @@ span.highlight {
 .tbody-expand tr:nth-child(n+6) {
   display: none;
 }
+
 /* https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1 */
 .button {
   all: unset;
