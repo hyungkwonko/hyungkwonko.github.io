@@ -100,6 +100,13 @@
     <table style="text-align:justify;" class="table" id="news">
       <tbody class="tbody-expand">
         <tr>
+          <td class="px-2" style="width:5%;">Aug</td>
+          <td class="px-0" style="width:5%;">2023</td>
+          <td style="padding-left:20px; padding-right:0px;">Two papers are accepted to <a class="f4"
+              href="https://ieeevis.org/year/2023/welcome">VIS 2023</a> and <a class="f4"
+              href="https://www.nlvizworkshop2023.com/">NLVIZ Workshop</a>, respectively!</td>
+        </tr>
+        <tr>
           <td class="px-2" style="width:5%;">Mar</td>
           <td class="px-0" style="width:5%;">2023</td>
           <td style="padding-left:20px; padding-right:0px;"><i>ExGPTer</i> is accepted to CHI 2023 <a class="f4"
@@ -238,6 +245,109 @@
           </td>
         </tr> -->
 
+        <tr onmouseout="vl_stop()" onmouseover="vl_start()" style="vertical-align:top;">
+          <td class="py-3 px-2 w-25">
+            <div class="one">
+              <div class="two" id="vl_image" style="opacity: 0;">
+                <img src="./images/vl_after.png" class="img1">
+              </div>
+              <img src="./images/vl_before.png" class="img1">
+            </div>
+            <script type="text/javascript">
+              function vl_start() {
+                document.getElementById('vl_image').style.opacity = "1";
+              }
+
+              function vl_stop() {
+                document.getElementById('vl_image').style.opacity = "0";
+              }
+              vl_stop()
+            </script>
+          </td>
+          <td class="py-3 w-75" style="padding-left:15px;">
+            <strong>A Vega-Lite Dataset and Natural Language Generation Pipeline with Large Language Models
+            </strong>
+            <br>
+            Hyung-Kwon Ko, Hyeon Jeon, Gwanmo Park, Dae Hyun Kim, Nam Wook Kim, Juho Kim, Jinwook Seo
+            <br>
+            <em>VIS 2023 NLVIZ Workshop</em>
+            <br>
+            <div class="d-none d-sm-block">
+              <a href="javascript:void(0)" style="color: darkblue;">paper</a> /
+              <a class="f3" href="https://github.com/hyungkwonko/chart-llm-data/">code</a> /
+              <a class="f3" href="https://hyungkwonko.info/chart-llm-data/">project-page</a>
+              <!-- <a class="f3" href="https://youtu.be/QU9XRchhESw">video</a> / -->
+              <!-- <a class="f3" href="./data/pumap.bib">bibtex</a> / -->
+              <!-- <a class="f3" href="https://doi.org/10.1145/3581641.3584078">doi</a> -->
+              <p style="font-size:11px; margin:0px; text-align:justify;">There is a growing trend of utilizing
+                Visualization-oriented Natural Language Interfaces (V-NLIs) to author charts. However, researchers
+                consistently highlight the lack of high-quality chart and natural language datasets, which impedes the
+                development of more sophisticated and data-driven systems using V-NLIs. In this study, we present a
+                meticulously curated collection of human-generated 1,981 Vega-Lite specifications, derived from
+                real-world data, and use Large Language Models (LLMs) for generating natural language queries for chart
+                generation tasks. Unlike previous datasets that relied on relatively simple and homogeneous templates,
+                our Vega-Lite dataset contains more complex and diverse (i.e., varying interactions, composite views,
+                and different chart types). Using this dataset, we demonstrate generating natural language queries for
+                chart generation, and how the results can be different when different input types are used (e.g.,
+                Vega-Lite, Image, both Vega-Lite and Image).
+              </p>
+            </div>
+          </td>
+        </tr>
+
+        <tr onmouseout="zd_stop()" onmouseover="zd_start()" style="vertical-align:top;">
+          <td class="py-3 px-2 w-25">
+            <div class="one">
+              <div class="two" id="zd_image" style="opacity: 0;">
+                <img src="./images/zd_after.png" class="img1">
+              </div>
+              <img src="./images/zd_before.png" class="img1">
+            </div>
+            <script type="text/javascript">
+              function zd_start() {
+                document.getElementById('zd_image').style.opacity = "1";
+              }
+
+              function zd_stop() {
+                document.getElementById('zd_image').style.opacity = "0";
+              }
+              zd_stop()
+            </script>
+          </td>
+          <td class="py-3 w-75" style="padding-left:15px;">
+            <strong>Zadu: A python library for evaluating the reliability of dimensionality reduction embeddings
+            </strong>
+            <br>
+            Hyeon Jeon, Aeri Cho, Jinhwa Jang, Soohyun Lee, Jake Hyun, Hyung-Kwon Ko, Jaemin Jo, Jinwook Seo
+            <br>
+            <em>VIS 2023 short</em>
+            <br>
+            <div class="d-none d-sm-block">
+              <a class="f3" href="https://arxiv.org/abs/2308.00282">paper</a> /
+              <a class="f3" href="https://github.com/hj-n/zadu">code</a>
+              <!-- <a class="f3" href="https://youtu.be/QU9XRchhESw">video</a> / -->
+              <!-- <a class="f3" href="./data/pumap.bib">bibtex</a> / -->
+              <!-- <a class="f3" href="https://doi.org/10.1145/3581641.3584078">doi</a> -->
+              <p style="font-size:11px; margin:0px; text-align:justify;">Dimensionality reduction (DR) techniques
+                inherently distort the original structure of input high-dimensional data, producing imperfect
+                low-dimensional embeddings. Diverse distortion measures have thus been proposed to evaluate the
+                reliability of DR embeddings. However, implementing and executing distortion measures in practice has so
+                far been time-consuming and tedious. To address this issue, we present ZADU, a Python library that
+                provides distortion measures. ZADU is not only easy to install and execute but also enables
+                comprehensive evaluation of DR embeddings through three key features. First, the library covers a wide
+                range of distortion measures. Second, it automatically
+                optimizes the execution of distortion measures, substantially reducing the running time required to
+                execute multiple measures. Last, the library informs how individual points contribute to the overall
+                distortions, facilitating the detailed analysis of DR embeddings. By simulating a real-world scenario of
+                optimizing DR embeddings, we verify that our optimization scheme substantially reduces the time required
+                to execute distortion measures. Finally, as an application of ZADU, we present another library called
+                ZADUVis that allows users to easily create distortion visualizations that depict the extent to which
+                each region of an embedding suffers from distortions.
+              </p>
+            </div>
+          </td>
+        </tr>
+
         <tr onmouseout="cs_stop()" onmouseover="cs_start()" style="vertical-align:top;">
           <td class="py-3 px-2 w-25">
             <div class="one">
@@ -264,7 +374,7 @@
             <br>
             Hyung-Kwon Ko, Kihoon Son, Hyoungwook Jin, Yoonseo Choi, Xiang Anthony Chen
             <br>
-            <em>CHI 2023 Generative AI and HCI workshop</em>
+            <em>CHI 2023 Generative AI and HCI Workshop</em>
             <br>
             <div class="d-none d-sm-block">
               <a class="f3" href="./data/customer.pdf">paper</a>
