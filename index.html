@@ -59,9 +59,7 @@
           <br> -->
           Currently I'm with <a class="f4" href="https://www.kixlab.org/">KIXLAB</a> at KAIST
           under the supervision of <a class="f4" href="https://juhokim.com/">Prof. Juho Kim</a>.
-          I'm working on HCI projects "A Step Toward Designing the Visualization Oracle using Large Language Models" and
-          "Moderating Customer Inquiries and Responses to Alleviate Stress and Reduce Emotional Dissonance
-          of Customer Service Representatives" which we aim to submit it to CHI 2024.
+          I am a prospective Ph.D. student for Fall 2024. I am one of the recipients of the Fulbright scholarship.
         </p>
 
         <p style="margin-bottom:16px">
@@ -99,6 +97,18 @@
     </button>
     <table style="text-align:justify;" class="table" id="news">
       <tbody class="tbody-expand">
+        <tr>
+          <td class="px-2" style="width:5%;">Sep</td>
+          <td class="px-0" style="width:5%;">2023</td>
+          <td style="padding-left:20px; padding-right:0px;">Chart-LLM is published on <a class="f4"
+              href="https://www.fulbrightprogram.org/">Arxiv</a></td>
+        </tr>
+        <tr>
+          <td class="px-2" style="width:5%;">Sep</td>
+          <td class="px-0" style="width:5%;">2023</td>
+          <td style="padding-left:20px; padding-right:0px;">Became one of the recipients of <a class="f4"
+              href="https://www.fulbrightprogram.org/">Fulbright scholarship</a></td>
+        </tr>
         <tr>
           <td class="px-2" style="width:5%;">Aug</td>
           <td class="px-0" style="width:5%;">2023</td>
@@ -265,31 +275,34 @@
             </script>
           </td>
           <td class="py-3 w-75" style="padding-left:15px;">
-            <strong>A Vega-Lite Dataset and Natural Language Generation Pipeline with Large Language Models
+            <strong>Natural Language Dataset Generation Framework for Visualizations Powered by Large Language Models
             </strong>
             <br>
             Hyung-Kwon Ko, Hyeon Jeon, Gwanmo Park, Dae Hyun Kim, Nam Wook Kim, Juho Kim, Jinwook Seo
             <br>
-            <em>VIS 2023 NLVIZ Workshop</em>
+            <em>Arxiv 2023</em>
             <br>
             <div class="d-none d-sm-block">
-              <a href="javascript:void(0)" style="color: darkblue;">paper</a> /
-              <a class="f3" href="https://github.com/hyungkwonko/chart-llm-data/">code</a> /
-              <a class="f3" href="https://hyungkwonko.info/chart-llm-data/">project-page</a>
+              <!-- <a href="javascript:void(0)" style="color: darkblue;">paper</a> / -->
+              <a class="f3" href="https://arxiv.org/abs/2309.10245/">paper</a> /
+              <a class="f3" href="https://github.com/hyungkwonko/chart-llm/">code</a> /
+              <a class="f3" href="https://hyungkwonko.info/chart-llm/">project-page</a>
               <!-- <a class="f3" href="https://youtu.be/QU9XRchhESw">video</a> / -->
               <!-- <a class="f3" href="./data/pumap.bib">bibtex</a> / -->
               <!-- <a class="f3" href="https://doi.org/10.1145/3581641.3584078">doi</a> -->
-              <p style="font-size:11px; margin:0px; text-align:justify;">There is a growing trend of utilizing
-                Visualization-oriented Natural Language Interfaces (V-NLIs) to author charts. However, researchers
-                consistently highlight the lack of high-quality chart and natural language datasets, which impedes the
-                development of more sophisticated and data-driven systems using V-NLIs. In this study, we present a
-                meticulously curated collection of human-generated 1,981 Vega-Lite specifications, derived from
-                real-world data, and use Large Language Models (LLMs) for generating natural language queries for chart
-                generation tasks. Unlike previous datasets that relied on relatively simple and homogeneous templates,
-                our Vega-Lite dataset contains more complex and diverse (i.e., varying interactions, composite views,
-                and different chart types). Using this dataset, we demonstrate generating natural language queries for
-                chart generation, and how the results can be different when different input types are used (e.g.,
-                Vega-Lite, Image, both Vega-Lite and Image).
+              <p style="font-size:11px; margin:0px; text-align:justify;">We introduce a Large Language Model (LLM)
+                framework that generates rich and diverse NL datasets using only Vega-Lite specifications as input,
+                thereby streamlining the development of Natural Language Interfaces (NLIs) for data visualization. We
+                propose two techniques to synthesize relevant chart semantics accurately and enhance syntactic diversity
+                in each NL dataset, respectively: 1) a guided discovery incorporated into prompting so that LLMs can
+                steer themselves to create varying NL datasets in a self-directed manner; 2) a score-based paraphrasing
+                to augment NL syntax along with four well-defined language axes. We also present a new chart collection
+                of 1,981 real-world Vega-Lite specifications that have increased diversity and complexity compared to
+                benchmarks, to demonstrate the generalizability of our framework. The experimental results show that our
+                framework accurately extracts chart semantics and generates L1/L2 captions with 89.4% and 76.0%
+                accuracy, respectively, while generating and paraphrasing utterances and questions with greater
+                diversity than benchmarks.
+
               </p>
             </div>
           </td>
