@@ -21,29 +21,28 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cantarell&family=Pacifico&family=Playfair+Display+SC:wght@900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body data-bs-theme="light">
-  <div class="form-check form-switch mx-4">
-    <input class="form-check-input p-2" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked
-      onclick="switchTheme()">
+<body data-bs-theme="dark">
+  <div class="container text-center mt-5 py-3" style="max-width: 800px;">
+    <h1 class="h1-title mb-4">Hyung-Kwon Ko</h1>
 
-  </div>
-
-  <div class="container text-center mt-5 pt-3" style="max-width: 800px;">
-    <h1 class="mb-4 h1-title">Hyung-Kwon Ko</h1>
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mb-4">
-      <div class="col f2 py-1"><a href="https://hyungkwonko.info/CV/hkko-cv.pdf" class="f2">Curriculum
-          Vitae</a></div>
-      <div class="col py-1">
+    <div class="row">
+      <div class="col-md-4 f2 mb-1"><a href="https://hyungkwonko.info/CV/hkko-cv.pdf" class="f2">Curriculum Vitae</a>
+      </div>
+      <div class="col-md-4 mb-1">
         <a href="#" class="cryptedmail f1" data-name="hyungkwonko" data-domain="gmail" data-tld="com"
           onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
         </a>
       </div>
+      <div class="col-md-3 f1 mb-1">BLOG (Korean)</div>
 
-      <div class="col f1 py-1 f1">BLOG (Korean)</div>
-      <!-- <div class="col f1 py-1"><a href="https://www.google.com" class="f1">BLOG (Korean)</a></div> -->
+      <div class="col-md-1 mb-1">
+        <i class="fa-solid fa-moon cursor-pointer" id="theme-icon" onclick="switchTheme(); toggleIcon();"></i>
+      </div>
     </div>
 
     <div style="align-items: center;" class="row">
@@ -1001,9 +1000,21 @@
     // }
   </script>
 
+
   <script>
     function switchTheme() {
       document.body.dataset.bsTheme = document.body.dataset.bsTheme == "light" ? "dark" : "light";
+    }
+
+    function toggleIcon() {
+      var themeIcon = document.getElementById('theme-icon');
+      if (document.body.dataset.bsTheme == "dark") {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      } else {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
     }
   </script>
 

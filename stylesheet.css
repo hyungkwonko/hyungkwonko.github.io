@@ -171,3 +171,13 @@ span.highlight {
 .headline:hover {
   background-size: 0 3px, 100% 3px;
 } */
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-pointer:hover {
+  color: #ffcc00;
+  transform: scale(1.1);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
