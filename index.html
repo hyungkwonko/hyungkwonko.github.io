@@ -38,7 +38,7 @@
           onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
         </a>
       </div>
-      <div class="col-md-3 f1 mb-1"><a href="https://hyungkwonko.info/blog/" class="f2">Blog</a></div>
+      <div class="col-md-3 f1 mb-1"><a href="https://blog.naver.com/hyungkwonko" class="f2">Blog</a></div>
 
       <div class="col-md-1 mb-1">
         <i class="fa-solid fa-moon cursor-pointer" id="theme-icon" onclick="switchTheme(); toggleIcon();"></i>
@@ -56,14 +56,17 @@
               href="https://www.youtube.com/watch?v=18bZK-0fMio">** I am a
               prospective Ph.D. student for Fall 2023 admission. **</a></span>
           <br> -->
-          Currently I'm with <a class="f4" href="https://www.kixlab.org/">KIXLAB</a> at KAIST
-          under the supervision of <a class="f4" href="https://juhokim.com/">Prof. Juho Kim</a>.
-          I am a prospective Ph.D. student for Fall 2024. I am one of the nominees of the Fulbright scholarship.
+          I am an incoming Ph.D. student at <a class="f4" href="https://hci.stanford.edu/">Stanford
+            University</a>, and my studies will be partially supported by the <a class="f4"
+            href="https://www.fulbright.or.kr/en/">Fulbright Foundation</a>.
         </p>
 
         <p style="margin-bottom:16px">
-          I am broadly interested in Human-Computer Interaction, Human-Centered AI, and Information Visualization.
-          I am eager to find important problems in diverse domains, and help people using novel interaction techniques.
+          I am broadly interested in Generative AI, HCI, and Visualization. I am eager to find important problems in
+          diverse domains, and innovate our lives using technology; it does not have to be AI. I strive to synchronize
+          my ambitions with societal ethos. I am not interested in money, but people and how they function within
+          capitalism. I prefer
+          not to draw a strict boundary between academia and industry.
         </p>
 
         <p style="margin:0px">
@@ -96,6 +99,12 @@
     </button>
     <table style="text-align:justify;" class="table" id="news">
       <tbody class="tbody-expand">
+        <tr>
+          <td class="px-2" style="width:5%;">Apr</td>
+          <td class="px-0" style="width:5%;">2024</td>
+          <td style="padding-left:20px; padding-right:0px;">Invited for a talk at Sungkyunkwan University and <a
+              class="f4" href="https://cse.snu.ac.kr/community/seminar/1024">Seoul National University</a>.</td>
+        </tr>
         <tr>
           <td class="px-2" style="width:5%;">Jan</td>
           <td class="px-0" style="width:5%;">2024</td>
@@ -138,9 +147,9 @@
           <td class="px-0" style="width:5%;">2022</td>
           <td style="padding-left:20px; padding-right:0px;">Attend UIST 2022 in person to present <a class="f4"
               href="https://programs.sigchi.org/uist/2022/index/content/85050">my work</a>, perform SV-ing, and give a
-            lightning talk! Honered to receive <a class="f4"
-              href="https://sigchi.org/awards/gary-marsden-travel-awards/">Gary Marsden Travel Awards</a> to support my
-            traveling expense!</td>
+            lightning talk! Received <a class="f4" href="https://sigchi.org/awards/gary-marsden-travel-awards/">Gary
+              Marsden Travel Awards</a> to support my
+            trip.</td>
         </tr>
         <tr>
           <td class="px-2" style="width:5%;">Oct</td>
@@ -289,7 +298,19 @@
               <!-- <a class="f3" href="https://youtu.be/QU9XRchhESw">video</a> / -->
               <!-- <a class="f3" href="./data/pumap.bib">bibtex</a> / -->
               <!-- <a class="f3" href="https://doi.org/10.1145/3581641.3584078">doi</a> -->
-              <p style="font-size:11px; margin:0px; text-align:justify;">We introduce VL2NL, a Large Language Model (LLM) framework that generates rich and diverse NL datasets using only Vega-Lite specifications as input, thereby streamlining the development of Natural Language Interfaces (NLIs) for data visualization. To synthesize relevant chart semantics accurately and enhance syntactic diversity in each NL dataset, we leverage 1) a guided discovery incorporated into prompting so that LLMs can steer themselves to create faithful NL datasets in a self-directed manner; 2) a score-based paraphrasing to augment NL syntax along with four language axes. We also present a new collection of 1,981 real-world Vega-Lite specifications that have increased diversity and complexity than existing chart collections. When tested on our chart collection, VL2NL extracted chart semantics and generated L1/L2 captions with 89.4% and 76.0% accuracy, respectively. It also demonstrated generating and paraphrasing utterances and questions with greater diversity compared to the benchmarks. Last, we discuss how our NL datasets and framework can be utilized in real-world scenarios. The codes and chart collection are available at this https URL.
+              <p style="font-size:11px; margin:0px; text-align:justify;">We introduce VL2NL, a Large Language Model
+                (LLM) framework that generates rich and diverse NL datasets using only Vega-Lite specifications as
+                input, thereby streamlining the development of Natural Language Interfaces (NLIs) for data
+                visualization. To synthesize relevant chart semantics accurately and enhance syntactic diversity in each
+                NL dataset, we leverage 1) a guided discovery incorporated into prompting so that LLMs can steer
+                themselves to create faithful NL datasets in a self-directed manner; 2) a score-based paraphrasing to
+                augment NL syntax along with four language axes. We also present a new collection of 1,981 real-world
+                Vega-Lite specifications that have increased diversity and complexity than existing chart collections.
+                When tested on our chart collection, VL2NL extracted chart semantics and generated L1/L2 captions with
+                89.4% and 76.0% accuracy, respectively. It also demonstrated generating and paraphrasing utterances and
+                questions with greater diversity compared to the benchmarks. Last, we discuss how our NL datasets and
+                framework can be utilized in real-world scenarios. The codes and chart collection are available at this
+                https URL.
               </p>
             </div>
           </td>
@@ -470,7 +491,8 @@
             <strong>We-toon: A Communication Support System between Writers and
               Artists in Collaborative Webtoon Sketch Revision</strong>
             <br>
-            <u>Hyung-Kwon Ko*</u>, Subin An*, Gwanmo Park, Seung Kwon Kim, Daesik Kim, Bohyoung Kim, Jaemin Jo, Jinwook Seo
+            <u>Hyung-Kwon Ko*</u>, Subin An*, Gwanmo Park, Seung Kwon Kim, Daesik Kim, Bohyoung Kim, Jaemin Jo, Jinwook
+            Seo
             <br>
             <em>UIST 2022</em>
             <br>
