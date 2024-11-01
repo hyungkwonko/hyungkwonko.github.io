@@ -185,7 +185,6 @@ span.highlight {
 /* Tooltip Title Styles */
 .tooltip-title {
   position: relative;
-  font-weight: bold;
   cursor: pointer;
   text-decoration: underline;
   text-decoration-style: dotted;
@@ -195,13 +194,14 @@ span.highlight {
 
 /* Tooltip Title Hover Effect */
 .tooltip-title:hover {
-  color: #007bff; /* Optional: changes color on hover */
+  color: #2569E6; /* Optional: changes color on hover */
 }
 
 /* Tooltip Content Styles */
 .tooltip-content {
   visibility: hidden;
-  font-size: 15px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
   width: 80%;
   background-color: #333;
   color: #fff;
