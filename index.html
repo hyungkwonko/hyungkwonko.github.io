@@ -52,26 +52,34 @@
       </div>
       <div style="text-align: justify;" class="my-4 col-sm-8">
         <p style="border-style: solid; border-color: #2569E6; padding: 10px">
-          <!-- <span style="text-decoration: underline; font-weight: bold; font-style: italic;"><a
-              href="https://www.youtube.com/watch?v=18bZK-0fMio">** I am a
-              prospective Ph.D. student for Fall 2023 admission. **</a></span>
-          <br> -->
-          I am a Computer Science Ph.D. student at <a class="f4" href="https://profiles.stanford.edu/kwon-ko">Stanford
-            University</a>, and my studies will be partially supported by the <a class="f4"
-            href="https://www.fulbright.or.kr/en/">Fulbright Fellowship</a>.
+          I am a Computer Science Ph.D. student at Stanford
+          University, and my studies will be partially supported by the Fulbright Fellowship.
 
           <br><br>
           Please feel free to <a class="f4" href="#chat">connect with me here</a> if you'd like to chat.
         </p>
 
         <p style="margin-bottom:16px">
-          I am broadly interested in Generative AI, HCI, and Visualization. I am eager to find important problems in
+          I studied physics (BS, dropout), math (BS), industrial engineering (BS, minor), and computer science (MS).
+        </p>
+
+        <p style="margin-bottom:16px">
+          Now I am studying neuroscience because I want to know how brain works.
+        </p>
+
+        <p style="margin-bottom:16px">
+          Previously I worked at ROK Army (21 months), broadcasting company (7 months), consulting firm (3 months),
+          manufacturing company (2 months), big tech company (15 months), and IT startup (5 months).
+        </p>
+
+        <!-- <p style="margin-bottom:16px">
+          I am eager to find important problems in
           diverse domains, and innovate our lives using technology; it does not have to be AI. I strive to synchronize
           my ambitions with societal ethos. I am not interested in money, but people and how they function within
           capitalism. I prefer not to draw a strict boundary between academia and industry.
-        </p>
+        </p> -->
 
-        <p style="margin:0px">
+        <!-- <p style="margin:0px">
           I received my Master's degree from
           <a class="f4" href="https://cse.snu.ac.kr/en">the Department of Computer Science and Engineering</a>
           of
@@ -87,14 +95,14 @@
           During my BS, I majored in mathematics, minored in industrial engineering, and earned 16 credits in computer
           science and engineering.
           I was a full-time research scientist at
-          <a class="f4" href="https://webtoonscorp.com/en/">Naver Webtoon Corp.</a>
+          <a class="f4" href="https://webtoonscorp.com/en/">Naver Webtoon Corp.</a> -->
         </p>
       </div>
     </div>
   </div>
 
+  <!-- NEWS -->
   <div class="container my-2 py-3" style="max-width: 800px;">
-    <!-- <h4>NEWS</h4> -->
     <button onclick="extend_news()" class="button">
       <h4>NEWS</h4>
     </button>
@@ -209,6 +217,7 @@
     </table>
   </div>
 
+  <!-- PUBLICATIONS -->
   <div class="container my-2 py-3" style="max-width: 800px;">
     <h4>PUBLICATIONS</h4>
     <!-- <button onclick="extend_pub()" class="button">
@@ -218,6 +227,58 @@
     <table>
       <!-- <table id="publ"> -->
       <tbody>
+        <tr onmouseout="sp_stop()" onmouseover="sp_start()" style="vertical-align:top;">
+          <td class="py-3 px-2 w-25">
+            <div class="one">
+              <div class="two" id="sp_image" style="opacity: 0;">
+                <img src="./images/sp_after.png" class="img1">
+              </div>
+              <img src="./images/sp_before.png" class="img1">
+            </div>
+            <script type="text/javascript">
+              function sp_start() {
+                document.getElementById('sp_image').style.opacity = "1";
+              }
+
+              function sp_stop() {
+                document.getElementById('sp_image').style.opacity = "0";
+              }
+              sp_stop()
+            </script>
+          </td>
+          <td class="py-3 w-75" style="padding-left:15px;">
+            <strong>ChatGPT in Data Visualization Education: A Student Perspective
+            </strong>
+            <br>
+            Nam Wook Kim, <u>Kwon Ko</u>, Hyeon Jeon, Grace Myers, Benjamin Bach
+            <br>
+            <em>VL/HCC 2024</em>
+            <br>
+            <div class="d-none d-sm-block">
+              <!-- <a href="javascript:void(0)" style="color: darkblue;">paper</a> / -->
+              <a class="f3" href="https://arxiv.org/abs/2405.00748">paper</a>
+              <!-- <a class="f3" href="https://github.com/hyungkwonko/chart-llm/">code</a> / -->
+              <!-- <a class="f3" href="https://hyungkwonko.info/chart-llm/">project-page</a> -->
+              <!-- <a class="f3" href="https://youtu.be/QU9XRchhESw">video</a> / -->
+              <!-- <a class="f3" href="./data/pumap.bib">bibtex</a> / -->
+              <!-- <a class="f3" href="https://doi.org/10.1145/3581641.3584078">doi</a> -->
+              <p style="font-size:11px; margin:0px; text-align:justify;">Unlike traditional educational chatbots that
+                rely on pre-programmed responses, large-language model-driven chatbots, such as ChatGPT, demonstrate
+                remarkable versatility to serve as a dynamic resource for addressing student needs from understanding
+                advanced concepts to solving complex problems. This work explores the impact of such technology on
+                student learning in an interdisciplinary, project-oriented data visualization course. Throughout the
+                semester, students engaged with ChatGPT across four distinct projects, designing and implementing data
+                visualizations using a variety of tools such as Tableau, D3, and Vega-lite. We collected conversation
+                logs and reflection surveys after each assignment and conducted interviews with selected students to
+                gain deeper insights into their experiences with ChatGPT. Our analysis examined the advantages and
+                barriers of using ChatGPT, students' querying behavior, the types of assistance sought, and its impact
+                on assignment outcomes and engagement. We discuss design considerations for an educational solution
+                tailored for data visualization education, extending beyond ChatGPT's basic interface.
+              </p>
+            </div>
+          </td>
+        </tr>
+
         <tr onmouseout="vl_stop()" onmouseover="vl_start()" style="vertical-align:top;">
           <td class="py-3 px-2 w-25">
             <div class="one">
