@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Creed - Kwon Ko</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #d0d0d0;
+      background: #1a1a1a;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 80px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+      border-bottom: 1px solid #3a3a3a;
+      padding-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: 400;
+      color: #ffffff;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .author {
+      font-size: 1.1em;
+      color: #b0b0b0;
+      margin-bottom: 10px;
+    }
+
+    .website {
+      font-size: 1em;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .website a {
+      color: #2569E6;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .website a:hover {
+      color: #2ECBE9;
+    }
+
+    .date {
+      font-size: 1em;
+      font-style: italic;
+      color: #888;
+    }
+
+    .introduction {
+      margin-bottom: 40px;
+      font-size: 1.05em;
+      line-height: 1.8;
+      color: #d0d0d0;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: #ffffff;
+      margin-bottom: 15px;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 2px;
+      background: #2569E6;
+      transition: width 0.3s ease;
+    }
+
+    section:hover h2::after {
+      width: 80px;
+    }
+
+    p {
+      font-size: 1.05em;
+      line-height: 1.8;
+      text-align: justify;
+      color: #c0c0c0;
+    }
+
+    .closing {
+      margin-top: 60px;
+      margin-bottom: 40px;
+      font-style: italic;
+      font-size: 1.05em;
+      color: #a0a0a0;
+      line-height: 1.8;
+      padding: 20px;
+      border-left: 3px solid #2569E6;
+      background: rgba(37, 105, 230, 0.05);
+    }
+
+    .signature {
+      text-align: right;
+      font-style: italic;
+      color: #888;
+      font-size: 1.05em;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 30px 20px;
+      }
+
+      .container {
+        padding: 40px 30px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      p,
+      .introduction,
+      .closing {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 15px;
+      }
+
+      .container {
+        padding: 30px 20px;
+      }
+
+      header {
+        margin-bottom: 35px;
+        padding-bottom: 25px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+
+      p,
+      .introduction,
+      .closing {
+        font-size: 1em;
+      }
+
+      .closing {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Personal Creed</h1>
+      <div class="author">Kwon Ko</div>
+      <div class="date">Nov 1, 2025</div>
+    </header>
+
+    <div class="introduction">
+      I, Kwon Ko, declare that I live, think, and act based on the following life principles:
+    </div>
+
+    <section>
+      <h2>Meaning</h2>
+      <p>I acknowledge my mortality and find meaning of life not in pursuing goals, but dreams: to identify and solve
+        the most important problems that confer the greatest benefit to humankind. My contributions stem from rigorous
+        reasoning grounded in new materialism, pragmatism, and existentialism. I always aim to maximize their impact on
+        the greater good.</p>
+    </section>
+
+    <section>
+      <h2>Focus</h2>
+      <p>I hold self-actualization as my highest priority, even over matters required for sustaining my own safety. I
+        devote all my energy and time to this end. I am willing to persevere for it even at the risk of losing
+        everything I possess. I am never discouraged by any hardships that I encounter throughout my life. I do not
+        compromise and remain consistent, refusing to be distracted by money, societal honor, fame, popularity, or
+        desire.</p>
+    </section>
+
+    <section>
+      <h2>Value</h2>
+      <p>I strive to earn objective respect from future generations by learning, growing, and improving everyday upon
+        who I was yesterday. I take responsilibity for my words and actions, and have the courage, despite fear, to
+        forgive, apologize, and let go when necessary. I actively participate in communities of practice,
+        treating all individuals with dignity, free from bias based on appearance, religion, age, race, gender, sexual
+        orientation, political beliefs, or socioeconomic status. I understand people through direct interaction, not
+        through secondhand information. I respect societal norms and systems while evaluating the broader impact of my
+        actions.</p>
+    </section>
+
+    <div class="closing">
+      As I learn and grow, I will refine this creed, but my commitment to humanity and love for society will never
+      change.
+    </div>
+
+    <div class="signature">
+      Kwon Ko<br>
+      Nov 1, 2025
+    </div>
+  </div>
+</body>
+
+</html>
