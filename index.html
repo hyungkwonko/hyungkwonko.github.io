@@ -612,13 +612,9 @@
       color: var(--accent-bright);
     }
 
-    .more-news {
-      display: none;
-    }
-
-    .more-news.visible {
-      display: flex;
-      flex-direction: column;
+    /* Hidden items (auto-toggle) */
+    .hidden-item {
+      display: none !important;
     }
 
     /* Publications */
@@ -746,16 +742,6 @@
     .pub-link:hover {
       border-color: var(--accent);
       color: var(--accent);
-    }
-
-    .more-pubs {
-      display: none;
-    }
-
-    .more-pubs.visible {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
     }
 
     /* Projects */
@@ -1066,68 +1052,66 @@
                 <span class="news-date">May 2024</span>
                 <span class="news-text">Started working as a research engineer at SkillWave, Inc.</span>
               </div>
-              <div class="more-news" id="news-more">
-                <div class="news-item">
-                  <span class="news-date">Apr 2024</span>
-                  <span class="news-text">Invited for a talk at Sungkyunkwan University and <a
-                      href="https://cse.snu.ac.kr/community/seminar/1024">Seoul National University</a></span>
-                </div>
-                <div class="news-item">
-                  <span class="news-date">Jan 2024</span>
-                  <span class="news-text">Chart-LLM is accepted to <a href="https://arxiv.org/abs/2309.10245/">CHI
-                      2024</a></span>
-                </div>
-                <div class="news-item">
-                  <span class="news-date">Sep 2023</span>
-                  <span class="news-text">Nominated as <a href="https://www.fulbrightprogram.org/">Fulbright scholarship
-                      recipient</a></span>
-                </div>
-                <div class="news-item">
-                  <span class="news-date">Aug 2023</span>
-                  <span class="news-text">Two papers are accepted to <a href="https://ieeevis.org/year/2023/welcome">VIS
-                      2023</a> and <a href="https://www.nlvizworkshop2023.com/">NLVIZ Workshop</a>, respectively!</span>
-                </div>
-                <div class="news-item">
-                  <span class="news-date">Mar 2023</span>
-                  <span class="news-text"><i>ExGPTer</i> is accepted to CHI 2023 <a
-                      href="https://generativeaiandhci.github.io/">Gen-AI workshop</a>!</span>
-                </div>
-                <div class="news-item">
-                  <span class="news-date">Jan 2023</span>
-                  <span class="news-text">Our paper about DALL-E is accepted to IUI 2023!</span>
-                </div>
-                <div class="news-item">
-                  <span class="news-date">Nov 2022</span>
-                  <span class="news-text"><a
-                      href="https://www.computer.org/publications/tech-news/build-your-career/road-to-becoming-a-published-researcher">My
-                      interview with IEEE Computer Society</a> was published!</span>
-                </div>
-                <div class="news-item">
-                  <span class="news-date">Oct 2022</span>
-                  <span class="news-text">Attend UIST 2022 in person to present <a
-                      href="https://programs.sigchi.org/uist/2022/index/content/85050">my work</a>, perform SV-ing, and
-                    give a lightning talk! Received <a href="https://sigchi.org/awards/gary-marsden-travel-awards/">Gary
-                      Marsden Travel Awards</a> to support my trip.</span>
-                </div>
-                <div class="news-item">
-                  <span class="news-date">Jun 2022</span>
-                  <span class="news-text">Two papers, UMATO and We-toon, are accepted to IEEE VIS 2022 and ACM UIST
-                    2022, respectively!</span>
-                </div>
-                <div class="news-item">
-                  <span class="news-date">Jun 2022</span>
-                  <span class="news-text">Move to KAIST at Daejeon, Korea to collaborate with KIXLAB led by Prof. Juho
-                    Kim.</span>
-                </div>
-                <div class="news-item">
-                  <span class="news-date">Oct 2021</span>
-                  <span class="news-text">Get a full-time posiiton as a research scientist at Naver Webtoon Corp.</span>
-                </div>
-                <div class="news-item">
-                  <span class="news-date">Apr 2021</span>
-                  <span class="news-text">Graduate from Seoul National University receiving Master's degree in Computer
-                    Science and Engineering under the supervision of Prof. Jinwook Seo (specialty: HCI, InfoVis)</span>
-                </div>
+              <div class="news-item">
+                <span class="news-date">Apr 2024</span>
+                <span class="news-text">Invited for a talk at Sungkyunkwan University and <a
+                    href="https://cse.snu.ac.kr/community/seminar/1024">Seoul National University</a></span>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Jan 2024</span>
+                <span class="news-text">Chart-LLM is accepted to <a href="https://arxiv.org/abs/2309.10245/">CHI
+                    2024</a></span>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Sep 2023</span>
+                <span class="news-text">Nominated as <a href="https://www.fulbrightprogram.org/">Fulbright scholarship
+                    recipient</a></span>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Aug 2023</span>
+                <span class="news-text">Two papers are accepted to <a href="https://ieeevis.org/year/2023/welcome">VIS
+                    2023</a> and <a href="https://www.nlvizworkshop2023.com/">NLVIZ Workshop</a>, respectively!</span>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Mar 2023</span>
+                <span class="news-text"><i>ExGPTer</i> is accepted to CHI 2023 <a
+                    href="https://generativeaiandhci.github.io/">Gen-AI workshop</a>!</span>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Jan 2023</span>
+                <span class="news-text">Our paper about DALL-E is accepted to IUI 2023!</span>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Nov 2022</span>
+                <span class="news-text"><a
+                    href="https://www.computer.org/publications/tech-news/build-your-career/road-to-becoming-a-published-researcher">My
+                    interview with IEEE Computer Society</a> was published!</span>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Oct 2022</span>
+                <span class="news-text">Attend UIST 2022 in person to present <a
+                    href="https://programs.sigchi.org/uist/2022/index/content/85050">my work</a>, perform SV-ing, and
+                  give a lightning talk! Received <a href="https://sigchi.org/awards/gary-marsden-travel-awards/">Gary
+                    Marsden Travel Awards</a> to support my trip.</span>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Jun 2022</span>
+                <span class="news-text">Two papers, UMATO and We-toon, are accepted to IEEE VIS 2022 and ACM UIST
+                  2022, respectively!</span>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Jun 2022</span>
+                <span class="news-text">Move to KAIST at Daejeon, Korea to collaborate with KIXLAB led by Prof. Juho
+                  Kim.</span>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Oct 2021</span>
+                <span class="news-text">Get a full-time posiiton as a research scientist at Naver Webtoon Corp.</span>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Apr 2021</span>
+                <span class="news-text">Graduate from Seoul National University receiving Master's degree in Computer
+                  Science and Engineering under the supervision of Prof. Jinwook Seo (specialty: HCI, InfoVis)</span>
               </div>
             </div>
           </div>
@@ -1152,9 +1136,7 @@
                   <h3 class="pub-title">UMATO: Bridging Local and Global Structures for Reliable Visual Analytics with
                     Dimensionality Reduction</h3>
                   <p class="pub-authors">Hyeon Jeon, <u>Kwon Ko</u>, Soohyun Lee, Jake Hyun, Taehyun Yang, Gyehun Go,
-                    Jaemin
-                    Jo, Jinwook Seo
-                  </p>
+                    Jaemin Jo, Jinwook Seo</p>
                   <p class="pub-venue">TVCG 2025</p>
                   <div class="pub-links">
                     <a href="https://arxiv.org/abs/2508.16227" class="pub-link">paper</a>
@@ -1215,175 +1197,170 @@
                 </div>
               </article>
 
-              <!-- More publications -->
-              <div class="more-pubs" id="pubs-more">
+              <article class="pub-card">
+                <div class="pub-image-container">
+                  <div class="img-after"><img src="./images/zd_after.png" alt=""></div>
+                  <img src="./images/zd_before.png" alt="Zadu">
+                </div>
+                <div class="pub-info">
+                  <h3 class="pub-title">Zadu: A python library for evaluating the reliability of dimensionality
+                    reduction embeddings</h3>
+                  <p class="pub-authors">Hyeon Jeon, Aeri Cho, Jinhwa Jang, Soohyun Lee, Jake Hyun, <u>Kwon Ko</u>,
+                    Jaemin Jo, Jinwook Seo</p>
+                  <p class="pub-venue">VIS 2023 short</p>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2308.00282" class="pub-link">paper</a>
+                    <a href="https://github.com/hj-n/zadu" class="pub-link">code</a>
+                  </div>
+                </div>
+              </article>
 
-                <article class="pub-card">
-                  <div class="pub-image-container">
-                    <div class="img-after"><img src="./images/zd_after.png" alt=""></div>
-                    <img src="./images/zd_before.png" alt="Zadu">
+              <article class="pub-card">
+                <div class="pub-image-container">
+                  <div class="img-after"><img src="./images/ltgm_after.png" alt=""></div>
+                  <img src="./images/ltgm_before.png" alt="Large-scale Text-to-Image Generation Models">
+                </div>
+                <div class="pub-info">
+                  <h3 class="pub-title">Large-scale Text-to-Image Generation Models for Visual Artists' Creative Work
+                  </h3>
+                  <p class="pub-authors"><u>Kwon Ko</u>, Gwanmo Park, Hyeon Jeon, Jaemin Jo, Juho Kim, Jinwook Seo</p>
+                  <p class="pub-venue">IUI 2023</p>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2210.08477" class="pub-link">paper</a>
+                    <a href="https://youtu.be/QU9XRchhESw" class="pub-link">video</a>
+                    <a href="https://doi.org/10.1145/3581641.3584078" class="pub-link">doi</a>
                   </div>
-                  <div class="pub-info">
-                    <h3 class="pub-title">Zadu: A python library for evaluating the reliability of dimensionality
-                      reduction embeddings</h3>
-                    <p class="pub-authors">Hyeon Jeon, Aeri Cho, Jinhwa Jang, Soohyun Lee, Jake Hyun, <u>Kwon Ko</u>,
-                      Jaemin Jo, Jinwook Seo</p>
-                    <p class="pub-venue">VIS 2023 short</p>
-                    <div class="pub-links">
-                      <a href="https://arxiv.org/abs/2308.00282" class="pub-link">paper</a>
-                      <a href="https://github.com/hj-n/zadu" class="pub-link">code</a>
-                    </div>
-                  </div>
-                </article>
+                </div>
+              </article>
 
-                <article class="pub-card">
-                  <div class="pub-image-container">
-                    <div class="img-after"><img src="./images/ltgm_after.png" alt=""></div>
-                    <img src="./images/ltgm_before.png" alt="Large-scale Text-to-Image Generation Models">
+              <article class="pub-card">
+                <div class="pub-image-container">
+                  <div class="img-after"><img src="./images/cs_after.png" alt=""></div>
+                  <img src="./images/cs_before.png" alt="ExGPTer">
+                </div>
+                <div class="pub-info">
+                  <h3 class="pub-title">Moderating Customer Inquiries and Responses to Alleviate Stress and Reduce
+                    Emotional Dissonance of Customer Service Representatives</h3>
+                  <p class="pub-authors"><u>Kwon Ko</u>, Kihoon Son, Hyoungwook Jin, Yoonseo Choi, Xiang Anthony Chen
+                  </p>
+                  <p class="pub-venue">CHI 2023 Generative AI and HCI Workshop</p>
+                  <div class="pub-links">
+                    <a href="./data/customer.pdf" class="pub-link">paper</a>
                   </div>
-                  <div class="pub-info">
-                    <h3 class="pub-title">Large-scale Text-to-Image Generation Models for Visual Artists' Creative Work
-                    </h3>
-                    <p class="pub-authors"><u>Kwon Ko</u>, Gwanmo Park, Hyeon Jeon, Jaemin Jo, Juho Kim, Jinwook Seo</p>
-                    <p class="pub-venue">IUI 2023</p>
-                    <div class="pub-links">
-                      <a href="https://arxiv.org/abs/2210.08477" class="pub-link">paper</a>
-                      <a href="https://youtu.be/QU9XRchhESw" class="pub-link">video</a>
-                      <a href="https://doi.org/10.1145/3581641.3584078" class="pub-link">doi</a>
-                    </div>
-                  </div>
-                </article>
+                </div>
+              </article>
 
+              <article class="pub-card">
+                <div class="pub-image-container">
+                  <div class="img-after">
+                    <video width="160" height="160" muted autoplay loop>
+                      <source src="images/wetoon_after.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <img src="./images/wetoon_before.png" alt="We-toon">
+                </div>
+                <div class="pub-info">
+                  <h3 class="pub-title">We-toon: A Communication Support System between Writers and Artists in
+                    Collaborative Webtoon Sketch Revision</h3>
+                  <p class="pub-authors"><u>Kwon Ko*</u>, Subin An*, Gwanmo Park, Seung Kwon Kim, Daesik Kim, Bohyoung
+                    Kim, Jaemin Jo, Jinwook Seo</p>
+                  <p class="pub-venue">UIST 2022</p>
+                  <div class="pub-links">
+                    <a href="./data/wetoon.pdf" class="pub-link">paper</a>
+                    <a href="https://www.youtube.com/watch?v=csZMW-e5cC0" class="pub-link">video</a>
+                    <a href="https://www.youtube.com/watch?v=txM-TuZawx8&list=PLqhXYFYmZ-Ve-_J8cyVGTTVZBiDC78lyp&t=3145s"
+                      class="pub-link">talk</a>
+                    <a href="https://doi.org/10.1145/3526113.3545612" class="pub-link">doi</a>
+                  </div>
+                </div>
+              </article>
 
-                <article class="pub-card">
-                  <div class="pub-image-container">
-                    <div class="img-after"><img src="./images/cs_after.png" alt=""></div>
-                    <img src="./images/cs_before.png" alt="ExGPTer">
+              <article class="pub-card">
+                <div class="pub-image-container">
+                  <div class="img-after"><img src="./images/umato_after.png" alt=""></div>
+                  <img src="./images/umato_before.png" alt="UMATO">
+                </div>
+                <div class="pub-info">
+                  <h3 class="pub-title">Uniform Manifold Approximation with Two-phase Optimization</h3>
+                  <p class="pub-authors">Hyeon Jeon*, <u>Kwon Ko*</u>, Soohyun Lee, Jaemin Jo, Jinwook Seo</p>
+                  <p class="pub-venue">VIS 2022 short</p>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2205.00420" class="pub-link">paper</a>
+                    <a href="https://github.com/hyungkwonko/umato" class="pub-link">code</a>
+                    <a href="https://www.youtube.com/watch?v=cIJy8N1YhmQ" class="pub-link">video</a>
+                    <a href="https://youtu.be/yPEez2QUTEM?t=3994" class="pub-link">talk</a>
+                    <a href="https://doi.org/10.1109/VIS54862.2022.00025" class="pub-link">doi</a>
                   </div>
-                  <div class="pub-info">
-                    <h3 class="pub-title">Moderating Customer Inquiries and Responses to Alleviate Stress and Reduce
-                      Emotional Dissonance of Customer Service Representatives</h3>
-                    <p class="pub-authors"><u>Kwon Ko</u>, Kihoon Son, Hyoungwook Jin, Yoonseo Choi, Xiang Anthony Chen
-                    </p>
-                    <p class="pub-venue">CHI 2023 Generative AI and HCI Workshop</p>
-                    <div class="pub-links">
-                      <a href="./data/customer.pdf" class="pub-link">paper</a>
-                    </div>
-                  </div>
-                </article>
+                </div>
+              </article>
 
-                <article class="pub-card">
-                  <div class="pub-image-container">
-                    <div class="img-after">
-                      <video width="160" height="160" muted autoplay loop>
-                        <source src="images/wetoon_after.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                    <img src="./images/wetoon_before.png" alt="We-toon">
+              <article class="pub-card">
+                <div class="pub-image-container">
+                  <div class="img-after"><img src="./images/snc_after.png" alt=""></div>
+                  <img src="./images/snc_before.png" alt="Steadiness and Cohesiveness">
+                </div>
+                <div class="pub-info">
+                  <h3 class="pub-title">Measuring and explaining the inter-cluster reliability of multidimensional
+                    projections</h3>
+                  <p class="pub-authors">Hyeon Jeon, <u>Kwon Ko</u>, Jaemin Jo, Youngtaek Kim, Jinwook Seo</p>
+                  <p class="pub-venue">TVCG 2021 (Proc. VIS 2021)</p>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2107.07859" class="pub-link">paper</a>
+                    <a href="https://github.com/hj-n/steadiness-cohesiveness" class="pub-link">code</a>
+                    <a href="https://www.youtube.com/watch?v=_UdT0A1ByKE" class="pub-link">video</a>
+                    <a href="./data/snc.html" class="pub-link">bibtex</a>
+                    <a href="https://doi.org/10.1109/TVCG.2021.3114833" class="pub-link">doi</a>
                   </div>
-                  <div class="pub-info">
-                    <h3 class="pub-title">We-toon: A Communication Support System between Writers and Artists in
-                      Collaborative Webtoon Sketch Revision</h3>
-                    <p class="pub-authors"><u>Kwon Ko*</u>, Subin An*, Gwanmo Park, Seung Kwon Kim, Daesik Kim, Bohyoung
-                      Kim, Jaemin Jo, Jinwook Seo</p>
-                    <p class="pub-venue">UIST 2022</p>
-                    <div class="pub-links">
-                      <a href="./data/wetoon.pdf" class="pub-link">paper</a>
-                      <a href="https://www.youtube.com/watch?v=csZMW-e5cC0" class="pub-link">video</a>
-                      <a href="https://www.youtube.com/watch?v=txM-TuZawx8&list=PLqhXYFYmZ-Ve-_J8cyVGTTVZBiDC78lyp&t=3145s"
-                        class="pub-link">talk</a>
-                      <a href="https://doi.org/10.1145/3526113.3545612" class="pub-link">doi</a>
-                    </div>
-                  </div>
-                </article>
+                </div>
+              </article>
 
-                <article class="pub-card">
-                  <div class="pub-image-container">
-                    <div class="img-after"><img src="./images/umato_after.png" alt=""></div>
-                    <img src="./images/umato_before.png" alt="UMATO">
+              <article class="pub-card">
+                <div class="pub-image-container">
+                  <div class="img-after">
+                    <video width="160" height="160" muted autoplay loop>
+                      <source src="images/invoice_after.mp4" type="video/mp4">
+                    </video>
                   </div>
-                  <div class="pub-info">
-                    <h3 class="pub-title">Uniform Manifold Approximation with Two-phase Optimization</h3>
-                    <p class="pub-authors">Hyeon Jeon*, <u>Kwon Ko*</u>, Soohyun Lee, Jaemin Jo, Jinwook Seo</p>
-                    <p class="pub-venue">VIS 2022 short</p>
-                    <div class="pub-links">
-                      <a href="https://arxiv.org/abs/2205.00420" class="pub-link">paper</a>
-                      <a href="https://github.com/hyungkwonko/umato" class="pub-link">code</a>
-                      <a href="https://www.youtube.com/watch?v=cIJy8N1YhmQ" class="pub-link">video</a>
-                      <a href="https://youtu.be/yPEez2QUTEM?t=3994" class="pub-link">talk</a>
-                      <a href="https://doi.org/10.1109/VIS54862.2022.00025" class="pub-link">doi</a>
-                    </div>
+                  <img src="./images/invoice_before.png" alt="Medical Invoice">
+                </div>
+                <div class="pub-info">
+                  <h3 class="pub-title">Mixed-Initiative Approach to Extract Data from Pictures of Medical Invoice
+                  </h3>
+                  <p class="pub-authors">Seokweon Jung, Kiroong Choe, Seokhyeon Park, <u>Kwon Ko</u>, Youngtaek Kim,
+                    Jinwook Seo</p>
+                  <p class="pub-venue">PacificVis 2021 short</p>
+                  <div class="pub-links">
+                    <a href="./data/invoice.pdf" class="pub-link">paper</a>
+                    <a href="https://www.youtube.com/watch?v=W3l94Q4UOPw" class="pub-link">video</a>
+                    <a href="./data/invoice.html" class="pub-link">bibtex</a>
+                    <a href="https://doi.org/10.1109/PacificVis52677.2021.00022" class="pub-link">doi</a>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <article class="pub-card">
-                  <div class="pub-image-container">
-                    <div class="img-after"><img src="./images/snc_after.png" alt=""></div>
-                    <img src="./images/snc_before.png" alt="Steadiness and Cohesiveness">
+              <article class="pub-card">
+                <div class="pub-image-container">
+                  <div class="img-after">
+                    <video width="160" height="160" muted autoplay loop>
+                      <source src="images/pumap_after.mp4" type="video/mp4">
+                    </video>
                   </div>
-                  <div class="pub-info">
-                    <h3 class="pub-title">Measuring and explaining the inter-cluster reliability of multidimensional
-                      projections</h3>
-                    <p class="pub-authors">Hyeon Jeon, <u>Kwon Ko</u>, Jaemin Jo, Youngtaek Kim, Jinwook Seo</p>
-                    <p class="pub-venue">TVCG 2021 (Proc. VIS 2021)</p>
-                    <div class="pub-links">
-                      <a href="https://arxiv.org/abs/2107.07859" class="pub-link">paper</a>
-                      <a href="https://github.com/hj-n/steadiness-cohesiveness" class="pub-link">code</a>
-                      <a href="https://www.youtube.com/watch?v=_UdT0A1ByKE" class="pub-link">video</a>
-                      <a href="./data/snc.html" class="pub-link">bibtex</a>
-                      <a href="https://doi.org/10.1109/TVCG.2021.3114833" class="pub-link">doi</a>
-                    </div>
+                  <img src="./images/pumap_before.png" alt="Progressive UMAP">
+                </div>
+                <div class="pub-info">
+                  <h3 class="pub-title">Progressive Uniform Manifold Approximation and Projection</h3>
+                  <p class="pub-authors"><u>Kwon Ko</u>, Jaemin Jo, Jinwook Seo</p>
+                  <p class="pub-venue">EuroVis 2020 short</p>
+                  <div class="pub-links">
+                    <a href="./data/pumap.pdf" class="pub-link">paper</a>
+                    <a href="https://github.com/hyungkwonko/progressive-umap" class="pub-link">code</a>
+                    <a href="https://youtu.be/edIPfDIH1p0?t=4669" class="pub-link">talk</a>
+                    <a href="./data/pumap.html" class="pub-link">bibtex</a>
+                    <a href="https://doi.org/10.2312/evs.20201061" class="pub-link">doi</a>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <article class="pub-card">
-                  <div class="pub-image-container">
-                    <div class="img-after">
-                      <video width="160" height="160" muted autoplay loop>
-                        <source src="images/invoice_after.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                    <img src="./images/invoice_before.png" alt="Medical Invoice">
-                  </div>
-                  <div class="pub-info">
-                    <h3 class="pub-title">Mixed-Initiative Approach to Extract Data from Pictures of Medical Invoice
-                    </h3>
-                    <p class="pub-authors">Seokweon Jung, Kiroong Choe, Seokhyeon Park, <u>Kwon Ko</u>, Youngtaek Kim,
-                      Jinwook Seo</p>
-                    <p class="pub-venue">PacificVis 2021 short</p>
-                    <div class="pub-links">
-                      <a href="./data/invoice.pdf" class="pub-link">paper</a>
-                      <a href="https://www.youtube.com/watch?v=W3l94Q4UOPw" class="pub-link">video</a>
-                      <a href="./data/invoice.html" class="pub-link">bibtex</a>
-                      <a href="https://doi.org/10.1109/PacificVis52677.2021.00022" class="pub-link">doi</a>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="pub-card">
-                  <div class="pub-image-container">
-                    <div class="img-after">
-                      <video width="160" height="160" muted autoplay loop>
-                        <source src="images/pumap_after.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                    <img src="./images/pumap_before.png" alt="Progressive UMAP">
-                  </div>
-                  <div class="pub-info">
-                    <h3 class="pub-title">Progressive Uniform Manifold Approximation and Projection</h3>
-                    <p class="pub-authors"><u>Kwon Ko</u>, Jaemin Jo, Jinwook Seo</p>
-                    <p class="pub-venue">EuroVis 2020 short</p>
-                    <div class="pub-links">
-                      <a href="./data/pumap.pdf" class="pub-link">paper</a>
-                      <a href="https://github.com/hyungkwonko/progressive-umap" class="pub-link">code</a>
-                      <a href="https://youtu.be/edIPfDIH1p0?t=4669" class="pub-link">talk</a>
-                      <a href="./data/pumap.html" class="pub-link">bibtex</a>
-                      <a href="https://doi.org/10.2312/evs.20201061" class="pub-link">doi</a>
-                    </div>
-                  </div>
-                </article>
-
-              </div>
             </div>
           </div>
 
@@ -1518,35 +1495,59 @@
       }
     }
 
+    // Auto-hide items after a certain count
+    function initToggleSections() {
+      // News: show first 5
+      const newsItems = document.querySelectorAll('.news-list > .news-item');
+      newsItems.forEach((item, index) => {
+        if (index >= 5) {
+          item.classList.add('hidden-item');
+        }
+      });
+
+      // Publications: show first 4
+      const pubCards = document.querySelectorAll('.pub-list > .pub-card');
+      pubCards.forEach((card, index) => {
+        if (index >= 4) {
+          card.classList.add('hidden-item');
+        }
+      });
+    }
+
     // Toggle news
     function toggleNews() {
-      const moreNews = document.getElementById('news-more');
+      const newsItems = document.querySelectorAll('.news-list > .news-item');
       const toggle = document.getElementById('news-toggle');
+      const isExpanded = toggle.classList.contains('active');
 
-      moreNews.classList.toggle('visible');
+      newsItems.forEach((item, index) => {
+        if (index >= 5) {
+          item.classList.toggle('hidden-item', isExpanded);
+        }
+      });
+
       toggle.classList.toggle('active');
-
-      if (moreNews.classList.contains('visible')) {
-        toggle.querySelector('span').textContent = 'less';
-      } else {
-        toggle.querySelector('span').textContent = 'more';
-      }
+      toggle.querySelector('span').textContent = isExpanded ? 'more' : 'less';
     }
 
     // Toggle publications
     function togglePubs() {
-      const morePubs = document.getElementById('pubs-more');
+      const pubCards = document.querySelectorAll('.pub-list > .pub-card');
       const toggle = document.getElementById('pubs-toggle');
+      const isExpanded = toggle.classList.contains('active');
 
-      morePubs.classList.toggle('visible');
+      pubCards.forEach((card, index) => {
+        if (index >= 4) {
+          card.classList.toggle('hidden-item', isExpanded);
+        }
+      });
+
       toggle.classList.toggle('active');
-
-      if (morePubs.classList.contains('visible')) {
-        toggle.querySelector('span').textContent = 'less';
-      } else {
-        toggle.querySelector('span').textContent = 'all';
-      }
+      toggle.querySelector('span').textContent = isExpanded ? 'all' : 'less';
     }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', initToggleSections);
   </script>
 </body>
 
