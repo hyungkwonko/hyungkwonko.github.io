@@ -23,11 +23,14 @@
       --bg-card: #141414;
       --bg-card-hover: #1a1a1a;
       --text-primary: #ffffff;
-      --text-secondary: #a0a0a0;
-      --text-muted: #606060;
-      --accent: #2569E6;
-      --accent-bright: #4d8eff;
-      --accent-glow: rgba(37, 105, 230, 0.12);
+      --text-secondary: #b0a0a0;
+      --text-muted: #705858;
+      --accent: #c41e3a;
+      --accent-bright: #e63950;
+      --accent-glow: rgba(196, 30, 58, 0.15);
+      --accent-deep: #8b1538;
+      --accent-warm: #d4456a;
+      --gold-highlight: #d4a574;
       --border: #222222;
       --border-hover: #333333;
 
@@ -41,18 +44,21 @@
     }
 
     [data-theme="light"] {
-      --bg-primary: #fafafa;
-      --bg-secondary: #f5f5f5;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f7f2f2;
       --bg-card: #ffffff;
-      --bg-card-hover: #f8f8f8;
-      --text-primary: #0a0a0a;
-      --text-secondary: #505050;
-      --text-muted: #909090;
-      --accent: #1a4fc9;
-      --accent-bright: #2569E6;
-      --accent-glow: rgba(37, 105, 230, 0.06);
-      --border: #e8e8e8;
-      --border-hover: #d0d0d0;
+      --bg-card-hover: #faf5f5;
+      --text-primary: #1a0505;
+      --text-secondary: #3d2525;
+      --text-muted: #6b5050;
+      --accent: #9a1428;
+      --accent-bright: #b81830;
+      --accent-glow: rgba(154, 20, 40, 0.12);
+      --accent-deep: #6e0f1e;
+      --accent-warm: #c43858;
+      --gold-highlight: #9a7548;
+      --border: #d4c0c0;
+      --border-hover: #b89898;
     }
 
     * {
@@ -110,8 +116,22 @@
       font-family: var(--font-display);
       font-size: 3.5rem;
       font-weight: 900;
-      color: var(--text-primary);
       letter-spacing: 0.02em;
+      display: inline-flex;
+      color: var(--text-primary);
+    }
+
+    .logo span {
+      display: inline-block;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        color 0.3s ease,
+        filter 0.3s ease;
+      transition-delay: calc(var(--i) * 0.05s);
+    }
+
+    .logo:hover span {
+      color: var(--accent);
+      transform: translateY(-4px);
     }
 
     @media (max-width: 600px) {
@@ -222,7 +242,7 @@
       object-fit: cover;
       filter: grayscale(100%);
       transition: filter var(--transition-medium);
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.0rem;
     }
 
     .profile-image:hover {
@@ -334,8 +354,9 @@
     }
 
     .section-label {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
+      font-weight: 700;
       letter-spacing: 0.2em;
       color: var(--accent);
       display: flex;
@@ -839,7 +860,11 @@
 
     <!-- Header -->
     <header class="header">
-      <a href="#" class="logo">Kwon Ko</a>
+      <a href="#" class="logo">
+        <span style="--i:0">K</span><span style="--i:1">w</span><span style="--i:2">o</span><span
+          style="--i:3">n</span><span style="--i:4">&nbsp;</span><span style="--i:5">K</span><span
+          style="--i:6">o</span>
+      </a>
       <div class="header-right">
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
           <i class="fa-solid fa-moon" id="theme-icon"></i>
