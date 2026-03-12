@@ -240,13 +240,18 @@
       height: 220px;
       border-radius: 50%;
       object-fit: cover;
-      filter: grayscale(100%);
-      transition: filter var(--transition-medium);
+      filter: grayscale(0%) brightness(0.9);
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       margin-bottom: 1.0rem;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     }
 
     .profile-image:hover {
-      filter: grayscale(0%);
+      filter: grayscale(0%) brightness(1.02) saturate(1.05);
+      transform: scale(1.01) rotate(5deg);
+      box-shadow:
+        0 0 20px rgba(100, 180, 255, 0.2),
+        0 0 60px rgba(100, 180, 255, 0.15);
     }
 
     /* Mobile: larger profile image */
