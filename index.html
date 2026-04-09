@@ -1030,8 +1030,7 @@
               <div class="section-label">Personal</div>
             </div>
             <p class="personal-text">
-              These days, I practice calisthenics like handstand push-ups. I <a
-                href="https://blog.naver.com/hyungkwonko">log my
+              I am a big fan of Tottenham Hotspur since 2009. I <a href="https://blog.naver.com/hyungkwonko">log my
                 daily life</a>
               to keep track of life's beautiful moments I may not want to forget. I love connecting with new people. I
               own more than 400 comic
@@ -1057,6 +1056,10 @@
               </button>
             </div>
             <div class="news-list">
+              <div class="news-item">
+                <span class="news-date">Apr 2026</span>
+                <span class="news-text">Published "Agentic Society" paper</span>
+              </div>
               <div class="news-item">
                 <span class="news-date">Sep 2025</span>
                 <span class="news-text">Back at Stanford, working on human speech BCI project</span>
@@ -1155,6 +1158,21 @@
               </button>
             </div>
             <div class="pub-list">
+
+              <article class="pub-card">
+                <div class="pub-image-container">
+                  <div class="img-after"><img src="./images/agentic_after.png" alt=""></div>
+                  <img src="./images/agentic_before.png" alt="UMATO2">
+                </div>
+                <div class="pub-info">
+                  <h3 class="pub-title">What Do We Need for an Agenic Society?</h3>
+                  <p class="pub-authors"><u>Kwon Ko</u>, Hyoungwook Jin</p>
+                  <p class="pub-venue">Arxiv 2026</p>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2604.03938" class="pub-link">paper</a>
+                  </div>
+                </div>
+              </article>
 
               <article class="pub-card">
                 <div class="pub-image-container">
@@ -1397,6 +1415,10 @@
           <div class="section">
             <div class="section-header">
               <div class="section-label">Projects</div>
+              <button class="section-toggle" id="projects-toggle" onclick="toggleProjects()">
+                <span>all</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
             </div>
             <div class="project-grid">
 
@@ -1541,22 +1563,23 @@
       }
     }
 
-    // Auto-hide items after a certain count
     function initToggleSections() {
       // News: show first 5
       const newsItems = document.querySelectorAll('.news-list > .news-item');
       newsItems.forEach((item, index) => {
-        if (index >= 5) {
-          item.classList.add('hidden-item');
-        }
+        if (index >= 5) item.classList.add('hidden-item');
       });
 
       // Publications: show first 4
       const pubCards = document.querySelectorAll('.pub-list > .pub-card');
       pubCards.forEach((card, index) => {
-        if (index >= 4) {
-          card.classList.add('hidden-item');
-        }
+        if (index >= 4) card.classList.add('hidden-item');
+      });
+
+      // Projects: show first 4
+      const projectCards = document.querySelectorAll('.project-grid > .project-card');
+      projectCards.forEach((card, index) => {
+        if (index >= 4) card.classList.add('hidden-item');
       });
     }
 
@@ -1583,6 +1606,21 @@
       const isExpanded = toggle.classList.contains('active');
 
       pubCards.forEach((card, index) => {
+        if (index >= 4) {
+          card.classList.toggle('hidden-item', isExpanded);
+        }
+      });
+
+      toggle.classList.toggle('active');
+      toggle.querySelector('span').textContent = isExpanded ? 'all' : 'less';
+    }
+
+    function toggleProjects() {
+      const projectCards = document.querySelectorAll('.project-grid > .project-card');
+      const toggle = document.getElementById('projects-toggle');
+      const isExpanded = toggle.classList.contains('active');
+
+      projectCards.forEach((card, index) => {
         if (index >= 4) {
           card.classList.toggle('hidden-item', isExpanded);
         }
