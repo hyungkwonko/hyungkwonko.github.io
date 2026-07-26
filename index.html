@@ -947,8 +947,16 @@
           <div class="section">
             <div class="section-header">
               <div class="section-label">Essay</div>
+              <button class="section-toggle" id="essays-toggle" onclick="toggleEssays()">
+                <span>all</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
             </div>
             <nav class="essay-nav">
+              <a href="./pages/scieng.html" class="essay-nav-item">
+                <span>Science and Engineering</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
               <a href="./pages/anger.html" class="essay-nav-item">
                 <span>Anger</span>
                 <i class="fa-solid fa-arrow-right"></i>
@@ -1588,6 +1596,12 @@
       projectCards.forEach((card, index) => {
         if (index >= 4) card.classList.add('hidden-item');
       });
+
+      // Essays: show first 4
+      const essayItems = document.querySelectorAll('.essay-nav > .essay-nav-item');
+      essayItems.forEach((item, index) => {
+        if (index >= 4) item.classList.add('hidden-item');
+      });
     }
 
     // Toggle news
@@ -1630,6 +1644,22 @@
       projectCards.forEach((card, index) => {
         if (index >= 4) {
           card.classList.toggle('hidden-item', isExpanded);
+        }
+      });
+
+      toggle.classList.toggle('active');
+      toggle.querySelector('span').textContent = isExpanded ? 'all' : 'less';
+    }
+
+    // Toggle essays
+    function toggleEssays() {
+      const essayItems = document.querySelectorAll('.essay-nav > .essay-nav-item');
+      const toggle = document.getElementById('essays-toggle');
+      const isExpanded = toggle.classList.contains('active');
+
+      essayItems.forEach((item, index) => {
+        if (index >= 4) {
+          item.classList.toggle('hidden-item', isExpanded);
         }
       });
 
